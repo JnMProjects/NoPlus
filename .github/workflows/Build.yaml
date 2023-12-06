@@ -4,7 +4,7 @@ env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
 on:
-  workflow_dispatch:
+  pull_request:
 
 jobs:
   testRunner:

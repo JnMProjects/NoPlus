@@ -10,7 +10,7 @@ on:
 
 jobs:
   testRunner:
-    name: Test in ${{ matrix.testMode }} ✨
+    name: Final Test in ${{ matrix.testMode }} ✨
     runs-on: ubuntu-latest
     permissions: write-all
     strategy:
@@ -62,7 +62,7 @@ jobs:
           path: ${{ steps.testRunner.outputs.artifactsPath }}
 
   buildWindows:
-    name: Build for Windows 🖥️
+    name: Final Build for Windows 🖥️
     needs: testRunner
     runs-on: ubuntu-latest
     permissions: write-all

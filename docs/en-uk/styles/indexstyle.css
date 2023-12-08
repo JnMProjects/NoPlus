@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Foldit:wght@600&family=Major+Mono+Display&family=Nabla&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Bungee Spice", sans-serif;
+}
+
+
+header {
+  height: 15%; /* Ändere die Höhe des Headers nach Bedarf */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Stelle sicher, dass der Header über anderen Elementen liegt */
+}
+
+#tlogo {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  border-radius: 15px;
+}
+
+#logoText {
+  color: white;
+  font-size: 69px;
+  margin-left: 20px;
+  font-family: "Nabla", sans-serif;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.Userlogopic img{
+  width: 80px;
+  border-radius: 40px;
+  margin-right: 20px;
+}
+
+.frame {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.frame2 {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+nav button {
+  color: black;
+  margin: 20px;
+  text-decoration: none;
+  font-family: "Foldit", sans-serif;
+}
+
+.csb {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  font-size: medium;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.csbn {
+  width: 130px;
+  height: 40px;
+  color: #000000;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+
+/* Content of page */
+.content {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: black;
+  opacity: 0.5; /* Opacity nach Bedarf anpassen */
+  z-index: 1;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(25%, -50%);
+  z-index: 2;
+  padding: 20px;
+  background-color: transparent; /* Hintergrundfarbe nach Bedarf ändern */
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/* Animation of Buttons */
+.btnanim1 {
+  background-color: #4dccc6;
+background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btnanim1:hover{
+  background-color: #89d8d3;
+background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+}
+.btnanim1 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btnanim1:before,
+.btnanim1:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.9),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  transition: all 0.3s ease;
+}
+.btnanim1:before {
+  height: 0%;
+  width: .1px;
+}
+.btnanim1:after {
+  width: 0%;
+  height: .1px;
+}
+.btnanim1:hover:before {
+  height: 100%;
+}
+.btnanim1:hover:after {
+  width: 100%;
+}
+.btnanim1 span:before,
+.btnanim1 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.9),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  transition: all 0.3s ease;
+}
+.btnanim1 span:before {
+  width: .1px;
+  height: 0%;
+}
+.btnanim1 span:after {
+  width: 0%;
+  height: .1px;
+}
+.btnanim1 span:hover:before {
+  height: 100%;
+}
+.btnanim1 span:hover:after {
+  width: 100%;
+}
+
+.btnanim2 {
+  background-color: #89d8d3;
+  font-family: 'Major Mono Display', sans-serif;
+  font-size: 15px;
+  background-image: linear-gradient(0deg, #ca0d00 0%, #f09d00 74%);
+  border: none;
+  z-index: 1;
+}
+.btnanim2:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #4dccc6;
+  background-image: linear-gradient(360deg, #ca0d00 0%, #f09d00 74%);
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btnanim2:hover {
+  color: #fff;
+}
+.btnanim2:hover:after {
+  top: 0;
+  height: 100%;
+}
+.btnanim2:active {
+  top: 2px;
+}
+
+/* Black Bar */
+
+.black-bar {
+  position: relative;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 20px; /* Passe den Abstand nach Bedarf an */
+  box-sizing: border-box;
+}
+
+.black-bar h3 {
+  margin: 0;
+}
+
+/* Stelle sicher, dass der schwarze Kasten unter dem ersten Bild liegt */
+.content {
+  position: relative;
+}
+
+.image-container + .black-bar {
+  position: absolute;
+  top: 100%; /* Platziere den schwarzen Kasten unter dem ersten Bild */
+  left: 0;
+  width: 100%; /* Fülle die gesamte Breite */
+}
+
+/* Footer */
+
+footer {
+  background: #333;
+  margin-top: 10px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer img {
+  max-width: 30px;
+  height: auto;
+}
+
+.image-container2 {
+  position: relative;
+}
+
+.image-container2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: black;
+  opacity: 0.5; /* Opacity nach Bedarf anpassen */
+  z-index: 1;
+}
+
+.text-container2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(25%, -50%);
+  z-index: 2;
+  padding: 20px;
+  background-color: transparent; /* Hintergrundfarbe nach Bedarf ändern */
+  color: #fff;
+  text-align: center;
+}

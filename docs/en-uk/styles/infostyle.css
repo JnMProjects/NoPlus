@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Foldit:wght@600&family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Foldit:wght@600&family=Major+Mono+Display&family=Nabla&display=swap');
 
 body {
   margin: 0;
@@ -93,11 +93,10 @@ nav button {
 .csbn {
   width: 130px;
   height: 40px;
-  color: #fff;
+  color: #000000;
   border-radius: 5px;
   padding: 10px 25px;
   font-weight: 500;
-  font-size: small;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -223,8 +222,9 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
 
 .btnanim2 {
   background-color: #89d8d3;
-  font-family: 'Bungee Spice', sans-serif;
-  background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+  font-family: 'Major Mono Display', sans-serif;
+  font-size: 15px;
+  background-image: linear-gradient(0deg, #ca0d00 0%, #f09d00 74%);
   border: none;
   z-index: 1;
 }
@@ -237,8 +237,8 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
   left: 0;
   z-index: -1;
   border-radius: 5px;
-   background-color: #4dccc6;
-background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  background-color: #4dccc6;
+  background-image: linear-gradient(360deg, #ca0d00 0%, #f09d00 74%);
   box-shadow:
    -7px -7px 20px 0px #fff9,
    -4px -4px 5px 0px #fff9,

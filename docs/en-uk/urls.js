@@ -21,4 +21,8 @@ function home() {
   function ty() {
     window.location.href = "https://jnmprojects.github.io/thanks";
   }
+
+  function info() {
+    window.location.href = "https://jnmprojects.github.io/robot-city/info";
+  }
   

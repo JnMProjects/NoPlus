@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Foldit:wght@600&family=Major+Mono+Display&family=Nabla&display=swap');
+
+:root {
+    --text: #0f101a;
+    --background: #e7e8f3;
+    --primary: #292f66;
+    --secondary: #5765e6;
+    --accent: #2e3cb8;
+    --downhiglight: #d7ff24;
+    --downsecondary: #c7ba00;
+
+
+
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body{
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Bungee Spice", sans-serif;
+    font-size: medium;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    align-items: center;
+}
+
+.h.left.holder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--primary);
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px var(--accent);
+    transition: 0.5s;
+    letter-spacing: 0.3vw;
+    z-index: 1000;
+    animation: headerlholderstartup 2s ease-in-out both 1s;
+}
+
+
+.h.left.holder img {
+    width: 90px;
+    border-radius: 18px;
+    margin-right: 1vw;
+    margin-left: 2vw;
+    -webkit-user-drag: none;
+}
+.h.left.holder h1 {
+    margin-right: 2vw;
+    font-family: "Nabla", sans-serif;
+    font-size: 2.5em;
+}
+
+.btn.nav {
+    position: relative;
+    background: var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Bungee Spice";
+    font-size: 1.5em;
+    letter-spacing: 0.15vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    transition: 0.5s;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px var(--accent);
+    z-index: 999;
+}
+
+.btn.nav.info {
+    position: relative;
+    animation: infobtnstartup 2s ease-in-out both 1.5s;
+}
+
+.btn.nav.none {
+    position: relative;
+    animation: testbtnstartup 2s ease-in-out both 2s;
+}
+
+.btn.nav.download {
+    position: relative;
+    animation: downloadbtnstartup 4s ease-in-out both 2.5s;
+}
+
+/* Animations of the Header */
+
+.btn.nav:hover {
+    background: var(--secondary);
+    letter-spacing: 0.3vw;
+    box-shadow: 5px 5px 35px var(--accent);
+}
+
+.h.left.holder:hover {
+    background: var(--secondary);
+    box-shadow: 10px 10px 35px var(--accent);
+    letter-spacing: 0.45vw;
+}
+
+@keyframes headerlholderstartup {
+    from {
+        transform: translateY(-20vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes infobtnstartup {
+    0% {
+        transform: opacity(0);
+    }
+    100% {
+        transform: opacity(1);
+    }
+}
+
+@keyframes testbtnstartup {
+    from {
+        transform: opacity(0);
+    }
+    to {
+        transform: opacity(1);
+    }
+}
+
+@keyframes downloadbtnstartup {
+    from {
+        transform: opacity(0);
+    }
+    to {
+        transform: opacity(1);
+    }
+}
+
+/**/
+/*                                  Content                         */
+/**/
+
+.content {
+    display: grid;
+    grid-template-rows: 90vh 10vh 100vh;
+}
+
+/* Hero Section */
+
+.hero {
+    grid: 1/1 1/1;
+    align-items: center;
+    justify-content: center;
+}
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scale(1);
+    animation: startScaleup 4s ease-in-out both 0.5s;
+    -webkit-user-drag: none;
+}
+
+.hero.content h1 {
+    position: relative;
+    transform: translateY(-28vh);
+}
+
+/* Hero Animations */
+
+@keyframes startScaleup {
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}

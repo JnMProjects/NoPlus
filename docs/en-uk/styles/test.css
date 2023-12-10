@@ -61,12 +61,12 @@ header {
     font-size: 2.5em;
 }
 
-.btn.nav {
+.btns.nav {
+    align-items: center;
     position: relative;
     background: var(--primary);
     color: var(--primary);
     text-decoration: none;
-    text-transform: uppercase;
     font-family: "Bungee Spice";
     font-size: 1.5em;
     letter-spacing: 0.15vw;
@@ -76,27 +76,13 @@ header {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 10px 10px 40px var(--accent);
-    z-index: 999;
-}
-
-.btn.nav.info {
-    position: relative;
-    animation: infobtnstartup 2s ease-in-out both 1.5s;
-}
-
-.btn.nav.none {
-    position: relative;
-    animation: testbtnstartup 2s ease-in-out both 2s;
-}
-
-.btn.nav.download {
-    position: relative;
-    animation: downloadbtnstartup 4s ease-in-out both 2.5s;
+    z-index: 1000;
+    animation: headerlholderstartup 2s ease-out both 2s;
 }
 
 /* Animations of the Header */
 
-.btn.nav:hover {
+.btns.nav:hover {
     background: var(--secondary);
     letter-spacing: 0.3vw;
     box-shadow: 5px 5px 35px var(--accent);
@@ -114,33 +100,6 @@ header {
     }
     to {
         transform: translateY(0);
-    }
-}
-
-@keyframes infobtnstartup {
-    0% {
-        transform: opacity(0);
-    }
-    100% {
-        transform: opacity(1);
-    }
-}
-
-@keyframes testbtnstartup {
-    from {
-        transform: opacity(0);
-    }
-    to {
-        transform: opacity(1);
-    }
-}
-
-@keyframes downloadbtnstartup {
-    from {
-        transform: opacity(0);
-    }
-    to {
-        transform: opacity(1);
     }
 }
 
@@ -176,6 +135,7 @@ header {
 .hero.content h1 {
     position: relative;
     transform: translateY(-28vh);
+    animation: herotextstartup 3.5s ease-out both 2s;
 }
 
 /* Hero Animations */
@@ -186,5 +146,14 @@ header {
     }
     to {
         transform: scale(1);
+    }
+}
+
+@keyframes herotextstartup {
+    from {
+        transform: translateY(80vh);
+    }
+    to {
+        transform: translateY(-28vh);
     }
 }

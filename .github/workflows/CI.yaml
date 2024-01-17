@@ -1,0 +1,159 @@
+name: Automatic CI 🤖
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  testRunner:
+    name: Test in ${{ matrix.testMode }} ✨
+    runs-on: ubuntu-latest
+    permissions: write-all
+    strategy:
+      fail-fast: false
+      matrix:
+        testMode:
+          - EditMode
+          - PlayMode
+    steps:
+      - name: Checkout code ✅
+        uses: actions/checkout@v4
+
+      - name: Create LFS file list 📜
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Restore LFS cache 🔄
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull 📥
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+      - name: Restore Library cache 🔄
+        uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-test-project-${{ matrix.targetPlatform }}
+          restore-keys: |
+            Library-test-project-
+            Library-
+            
+      - name: Run ${{ matrix.testMode }} Tests ⏯ 📑
+        id: runningTest
+        uses: game-ci/unity-test-runner@v3.1.0
+        with:
+          projectPath: ${{ vars.projectPath }}
+          testMode: ${{ matrix.testMode }}
+          checkName: ${{ matrix.testMode }} test results
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      # Upload artifacts
+      - name: Upload Artifact 📦
+        uses: actions/upload-artifact@v3
+        with:
+          name: Test results (${{ matrix.testMode }}) 📑
+          path: ${{ steps.runningTest.outputs.artifactsPath }}
+          
+  buildWGL:
+    name: Build for WebGL 🖥️
+    needs: testRunner
+    runs-on: ubuntu-latest
+    permissions: write-all
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout code ✅
+        uses: actions/checkout@v4
+
+      - name: Create LFS file list 📝
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Restore LFS cache 📦
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull 📥
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+
+      - name: Restore Library cache 📦
+        uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-build-WebGL
+          restore-keys: |
+            Library-build-
+            Library-
+
+      - name: Build for WebGL 🖥️
+        uses: game-ci/unity-builder@v3.1.0
+        with:
+          targetPlatform: WebGL
+          projectPath: ${{ vars.projectPath }}
+
+      - name: Upload Artifact 📦
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-WebGL
+          path: build/WebGL
+
+  buildWindows:
+    name: Build for Windows 🖥️
+    needs: testRunner
+    runs-on: ubuntu-latest
+    permissions: write-all
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout code ✅
+        uses: actions/checkout@v4
+
+      - name: Create LFS file list 📝
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Restore LFS cache 📦
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull 📥
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+
+      - name: Restore Library cache 📦
+        uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-build-StandaloneWindows64
+          restore-keys: |
+            Library-build-
+            Library-
+
+      - name: Build for Windows 🖥️
+        uses: game-ci/unity-builder@v3.1.0 
+        with:
+          targetPlatform: StandaloneWindows64
+          projectPath: ${{ vars.projectPath }}
+
+      - name: Upload Artifact 📦
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-StandaloneWindows64
+          path: build/StandaloneWindows64

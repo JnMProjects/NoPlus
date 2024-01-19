@@ -360,11 +360,12 @@
 -r:"Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.dll"
 -r:"Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.iOS.dll"
 -r:"Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.Native.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"D:/git/unity/2022.3.3f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/git/unity/2022.3.3f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Scripts/Startscreen/ExitStartscreen.cs"
+"Assets/Scripts/Startscreen/StartscreenAnimationHandler.cs"
 -langversion:9.0
 
 /deterministic

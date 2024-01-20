@@ -390,9 +390,9 @@
 "Assets/Samples/Sentry Unity/1.8.0/Unity of bugs/Scripts/RuntimeConfiguration.cs"
 "Assets/Samples/Sentry Unity/1.8.0/Unity of bugs/Scripts/SceneButtons.cs"
 "Assets/Samples/Sentry Unity/1.8.0/Unity of bugs/Scripts/ThreadingSamples.cs"
-"Assets/Scripts/SceneLoader/Loader.cs"
 "Assets/Scripts/SceneLoader/LoadingHead.cs"
-"Assets/Scripts/SceneLoader/LoadSelector.cs"
+"Assets/Scripts/SceneLoader/LoadingScreen.cs"
+"Assets/Scripts/SceneLoader/LoadScene.cs"
 "Assets/Scripts/SceneLoader/StaticData.cs"
 -langversion:9.0
 

@@ -1,11 +1,17 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - LoadingHead
+    - LoadingScreen
     Scripts.dll:
-    - ExitStartscreen
+    - StartscreenAnimationHandler
     Sentry.Unity.dll:
     - Sentry.Unity.ScriptableSentryUnityOptions
+    - Sentry.Unity.SentryMonoBehaviour
     Unity.PlasticSCM.Editor.dll:
     - Unity.PlasticSCM.Editor.PlasticWindow
+    Unity.Recorder.Editor.dll:
+    - UnityEditor.Recorder.RecorderPreferencesSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -19,16 +25,19 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.Editor.dll:
+    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - TestRunner.Callbacks.WindowResultUpdaterDataHolder
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     - UnityEditor.TestTools.TestRunner.TestRunnerWindow
@@ -101,15 +110,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1720}
+      Script: {instanceID: 1722}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 3064}
+      Script: {instanceID: 3066}
     - Class: 114
-      Script: {instanceID: 6210}
+      Script: {instanceID: 6212}
     - Class: 114
-      Script: {instanceID: 6738}
+      Script: {instanceID: 6744}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -124,7 +133,64 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Startscreen.unity:
+    - Class: 225
+      Script: {instanceID: 0}
+    Assets/Scenes/SceneLoader.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1722}
+    - Class: 114
+      Script: {instanceID: 2846}
+    - Class: 114
+      Script: {instanceID: 3066}
+    - Class: 114
+      Script: {instanceID: 5604}
+    - Class: 114
+      Script: {instanceID: 6212}
+    - Class: 114
+      Script: {instanceID: 6394}
+    - Class: 114
+      Script: {instanceID: 6680}
+    - Class: 114
+      Script: {instanceID: 6744}
+    - Class: 114
+      Script: {instanceID: 8684}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    Assets/Scenes/Splash.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -148,29 +214,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1720}
+      Script: {instanceID: 1722}
     - Class: 114
-      Script: {instanceID: 2380}
+      Script: {instanceID: 2382}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 3066}
     - Class: 114
-      Script: {instanceID: 3064}
+      Script: {instanceID: 4524}
     - Class: 114
-      Script: {instanceID: 4522}
+      Script: {instanceID: 4814}
     - Class: 114
-      Script: {instanceID: 4812}
+      Script: {instanceID: 5604}
     - Class: 114
-      Script: {instanceID: 5602}
+      Script: {instanceID: 6212}
     - Class: 114
-      Script: {instanceID: 6210}
+      Script: {instanceID: 6394}
     - Class: 114
-      Script: {instanceID: 6392}
+      Script: {instanceID: 6744}
     - Class: 114
-      Script: {instanceID: 6738}
+      Script: {instanceID: 7772}
     - Class: 114
-      Script: {instanceID: 7766}
+      Script: {instanceID: 7812}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -370,12 +436,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_Dropdown
-  - hash:
-      serializedVersion: 2
-      Hash: aeed1b6a9ae1e9cc6db3a2f85a222193
-    assemblyName: Scripts
-    namespaceName: 
-    className: ExitStartscreen
   - hash:
       serializedVersion: 2
       Hash: 684b06ef3de8cea5fbf767704db4f3e4
@@ -1135,6 +1195,18 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LoadScene
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LoadingHead
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerStay2DMessageListener
@@ -1368,6 +1440,12 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 9752e23b5e3a0218714746bbf2c3e40f
+    assemblyName: Scripts
+    namespaceName: 
+    className: StartscreenAnimationHandler
+  - hash:
+      serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1483,6 +1561,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StaticData
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnToggleValueChangedMessageListener
@@ -1498,6 +1582,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineFollowZoom
+  - hash:
+      serializedVersion: 2
+      Hash: f2f10f2e6308b2fa3a3be77a03b73921
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LoadingScreen
   - hash:
       serializedVersion: 2
       Hash: 0e28d8006f33a4c6bf3ef39e20820f9c
@@ -1518,6 +1608,7 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Startscreen.unity
+  - Assets/Scenes/Splash.unity
+  - Assets/Scenes/SceneLoader.unity
   - Assets/Scenes/Lobby.unity
-  playerPath: C:/Users/jackr/Desktop/Current Test Builds/Robot City.exe
+  playerPath: C:/Users/jackr/Desktop/Current Test Builds/NoPlus.exe

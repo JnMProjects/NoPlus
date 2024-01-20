@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LoadingHead : MonoBehaviour
 {
-    string target = StaticData.load;
-    string arrow = null;
-    Animator arrowimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +14,7 @@ public class LoadingHead : MonoBehaviour
 
         foreach (Transform child in transform)
         {
-            LoadSelector childcomponent = child.GetComponent<LoadSelector>();
+            LoadingScreen childcomponent = child.GetComponent<LoadingScreen>();
             Animator childimator = childcomponent.Animator;
 
             childimator.SetBool("selected", false);
@@ -27,7 +24,7 @@ public class LoadingHead : MonoBehaviour
 
         foreach (Transform child in transform)
         {
-            LoadSelector childcomponent = child.GetComponent<LoadSelector>();
+            LoadingScreen childcomponent = child.GetComponent<LoadingScreen>();
             Animator childimator = childcomponent.Animator;
             string childis = childcomponent.IAm;
             string childloads = childcomponent.ILoad;

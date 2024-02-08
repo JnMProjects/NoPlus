@@ -345,6 +345,7 @@
 -r:"Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.Native.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Cinemachine.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/com.unity.cinemachine.editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Discord.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/io.sentry.unity.runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Scripts.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
@@ -390,10 +391,12 @@
 "Assets/Samples/Sentry Unity/1.8.0/Unity of bugs/Scripts/RuntimeConfiguration.cs"
 "Assets/Samples/Sentry Unity/1.8.0/Unity of bugs/Scripts/SceneButtons.cs"
 "Assets/Samples/Sentry Unity/1.8.0/Unity of bugs/Scripts/ThreadingSamples.cs"
-"Assets/Scripts/SceneLoader/LoadingHead.cs"
+"Assets/Scripts/SceneLoader/LoadingHead2.cs"
 "Assets/Scripts/SceneLoader/LoadingScreen.cs"
 "Assets/Scripts/SceneLoader/LoadScene.cs"
 "Assets/Scripts/SceneLoader/StaticData.cs"
+"Assets/Scripts/SceneLoader/Var1.cs"
+"Assets/Scripts/test.cs"
 -langversion:9.0
 
 /deterministic

@@ -15,7 +15,7 @@ C:/Users/jackr/GITHUB/NoPlus/NoPlus
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58458
+53001
 Successfully changed project path to: C:/Users/jackr/GITHUB/NoPlus/NoPlus
 C:/Users/jackr/GITHUB/NoPlus/NoPlus
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Users/jackr/GITHUB/NoPlus/NoPlus
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3412] Host "[IP] 192.168.178.172 [Port] 0 [Flags] 2 [Guid] 2971125786 [EditorId] 2971125786 [Version] 1048832 [Id] WindowsEditor(7,Jacks-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4648] Host "[IP] 192.168.178.172 [Port] 0 [Flags] 2 [Guid] 1217499909 [EditorId] 1217499909 [Version] 1048832 [Id] WindowsEditor(7,Jacks-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3412] Host "[IP] 192.168.178.172 [Port] 0 [Flags] 2 [Guid] 2971125786 [EditorId] 2971125786 [Version] 1048832 [Id] WindowsEditor(7,Jacks-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4648] Host "[IP] 192.168.178.172 [Port] 0 [Flags] 2 [Guid] 1217499909 [EditorId] 1217499909 [Version] 1048832 [Id] WindowsEditor(7,Jacks-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 128.16 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 131.10 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.3f1 (7cdc2969a641)
 [Subsystems] Discovering subsystems at path D:/git/unity/2022.3.3f1/Editor/Data/Resources/UnitySubsystems
@@ -69,46 +69,46 @@ Initialize mono
 Mono path[0] = 'D:/git/unity/2022.3.3f1/Editor/Data/Managed'
 Mono path[1] = 'D:/git/unity/2022.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/git/unity/2022.3.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56592
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56560
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/git/unity/2022.3.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/git/unity/2022.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.032004 seconds.
-- Loaded All Assemblies, in  0.953 seconds
+Registered in 0.023843 seconds.
+- Loaded All Assemblies, in  0.865 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.650 seconds
-Domain Reload Profiling: 1601ms
-	BeginReloadAssembly (276ms)
+- Finished resetting the current domain, in  0.657 seconds
+Domain Reload Profiling: 1521ms
+	BeginReloadAssembly (274ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (86ms)
-	RebuildNativeTypeToScriptingClass (30ms)
-	initialDomainReloadingComplete (182ms)
-	LoadAllAssembliesAndSetupDomain (376ms)
-		LoadAssemblies (276ms)
+	RebuildCommonClasses (77ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (137ms)
+	LoadAllAssembliesAndSetupDomain (352ms)
+		LoadAssemblies (273ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (362ms)
-			TypeCache.Refresh (361ms)
-				TypeCache.ScanAssembly (335ms)
+		AnalyzeDomain (339ms)
+			TypeCache.Refresh (337ms)
+				TypeCache.ScanAssembly (312ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (651ms)
+	FinalizeReload (658ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (509ms)
+		SetupLoadedEditorAssemblies (513ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (23ms)
-			SetLoadedEditorAssemblies (13ms)
+			InitializePlatformSupportModulesInManaged (24ms)
+			SetLoadedEditorAssemblies (12ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (5ms)
-			ProcessInitializeOnLoadAttributes (338ms)
-			ProcessInitializeOnLoadMethodAttributes (129ms)
+			ProcessInitializeOnLoadAttributes (341ms)
+			ProcessInitializeOnLoadMethodAttributes (132ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,8 +118,8 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\jackr\GITHUB\NoPlus\NoPlus\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\jackr\GITHUB\NoPlus\NoPlus\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  2.188 seconds
-Refreshing native plugins compatible for Editor in 57.45 ms, found 6 plugins.
+- Loaded All Assemblies, in  2.048 seconds
+Refreshing native plugins compatible for Editor in 57.62 ms, found 7 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -127,47 +127,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.334 seconds
-Domain Reload Profiling: 3507ms
-	BeginReloadAssembly (377ms)
+- Finished resetting the current domain, in  1.338 seconds
+Domain Reload Profiling: 3373ms
+	BeginReloadAssembly (346ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (14ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (44ms)
-	RebuildCommonClasses (79ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (124ms)
-	LoadAllAssembliesAndSetupDomain (1569ms)
-		LoadAssemblies (968ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (90ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (120ms)
+	LoadAllAssembliesAndSetupDomain (1451ms)
+		LoadAssemblies (909ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (796ms)
-			TypeCache.Refresh (748ms)
-				TypeCache.ScanAssembly (719ms)
-			ScanForSourceGeneratedMonoScriptInfo (36ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (1335ms)
+		AnalyzeDomain (728ms)
+			TypeCache.Refresh (682ms)
+				TypeCache.ScanAssembly (655ms)
+			ScanForSourceGeneratedMonoScriptInfo (34ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1339ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (973ms)
+		SetupLoadedEditorAssemblies (957ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (139ms)
-			ProcessInitializeOnLoadAttributes (752ms)
-			ProcessInitializeOnLoadMethodAttributes (47ms)
-			AfterProcessingInitializeOnLoad (14ms)
-			EditorAssembliesLoaded (1ms)
+			BeforeProcessingInitializeOnLoad (152ms)
+			ProcessInitializeOnLoadAttributes (727ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (26ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 50.96 ms, found 6 plugins.
+		AwakeInstancesAfterBackupRestoration (21ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 59.85 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3597 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 96 unused Assets / (1.4 MB). Loaded Objects now: 4019.
-Memory consumption went from 145.8 MB to 144.4 MB.
-Total: 7.001700 ms (FindLiveObjects: 0.706600 ms CreateObjectMapping: 0.263900 ms MarkObjects: 5.455800 ms  DeleteObjects: 0.573300 ms)
+Unloading 3610 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 100 unused Assets / (1.4 MB). Loaded Objects now: 4029.
+Memory consumption went from 146.2 MB to 144.8 MB.
+Total: 6.777900 ms (FindLiveObjects: 0.682500 ms CreateObjectMapping: 0.266000 ms MarkObjects: 5.243400 ms  DeleteObjects: 0.583900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -182,174 +182,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 56726.410683 seconds.
-  path: Assets/Pictures/Brand/BlueInvisv0.1.png
-  artifactKey: Guid(828fd4b9856028e4ea096e09497c27ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pictures/Brand/BlueInvisv0.1.png using Guid(828fd4b9856028e4ea096e09497c27ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f3b43e1cbbaa42ff3dbe002f5a2afb0') in 0.200087 seconds
+  Time since last request: 4498.905052 seconds.
+  path: Assets/Pakages/Concrete_UP05/Materials
+  artifactKey: Guid(75eb0c32be344a8a81f8f48ea545748c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pakages/Concrete_UP05/Materials using Guid(75eb0c32be344a8a81f8f48ea545748c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '052ab7daaa994bf279dbf34676a1bff7') in 0.003077 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.671523 seconds.
-  path: Assets/Pakages/Concrete_UP05/Textures/DSCF5802_displacement.png
-  artifactKey: Guid(529051b17ce043be897b0500179b26a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pakages/Concrete_UP05/Textures/DSCF5802_displacement.png using Guid(529051b17ce043be897b0500179b26a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2965596d007ce26be4d71884ee8ed139') in 0.180713 seconds
+  Time since last request: 113.978324 seconds.
+  path: Assets/Scripts/SceneLoader/StaticData.cs
+  artifactKey: Guid(93fbd54c1aa94474bbe1d7b35f1041a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SceneLoader/StaticData.cs using Guid(93fbd54c1aa94474bbe1d7b35f1041a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1878cb05f9820f7f1a61d6459867e8fa') in 0.001819 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Pakages/Concrete_UP05/Textures/DSCF6107_normal.png
-  artifactKey: Guid(bc743018c73c4ba98b5b29b2d1c8832f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pakages/Concrete_UP05/Textures/DSCF6107_normal.png using Guid(bc743018c73c4ba98b5b29b2d1c8832f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ffe1b43f4584b1a80b1102d2f4a617a') in 0.172928 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Pictures/Brand/WhiteInvisv0.1.png
-  artifactKey: Guid(2f9e19190edc3c647a485aa5f2a7d8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pictures/Brand/WhiteInvisv0.1.png using Guid(2f9e19190edc3c647a485aa5f2a7d8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e58a5c212e49ff0d34fc5f5ef23dc3ac') in 0.017746 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Pakages/Concrete_UP05/Textures/DSCF7417_albedo_smoothness.png
-  artifactKey: Guid(0748e79a5ca44609be150abbf7281355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pakages/Concrete_UP05/Textures/DSCF7417_albedo_smoothness.png using Guid(0748e79a5ca44609be150abbf7281355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0c437ab897ff70e5a506c7ba6df08ad') in 0.155028 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Jammo-Character/Textures/Alternates/t_jammo_blue.psd
-  artifactKey: Guid(10c532508a2453a48aa766e69193d105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jammo-Character/Textures/Alternates/t_jammo_blue.psd using Guid(10c532508a2453a48aa766e69193d105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28690f96936cb6fcbd5cab71c7773924') in 0.044071 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Jammo-Character/Textures/mixbot_low_mixamo_edit1_AlbedoTransparency.png
-  artifactKey: Guid(fb6e06c953f0d8045bc58e0f5a640f07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jammo-Character/Textures/mixbot_low_mixamo_edit1_AlbedoTransparency.png using Guid(fb6e06c953f0d8045bc58e0f5a640f07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '645136a14cdd706bfd3c1b6b79126ad4') in 0.084043 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Pictures/Brand/LogoAccentv0.1.png
-  artifactKey: Guid(152756564458b974491a9509c50d9392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pictures/Brand/LogoAccentv0.1.png using Guid(152756564458b974491a9509c50d9392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd321a2df052149bdeac753653f904b0') in 0.018954 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Pakages/Concrete_UP05/Textures/DSCF6107_albedo_smoothness.png
-  artifactKey: Guid(65e68e1466f94be9b4c4c2809ca5f030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pakages/Concrete_UP05/Textures/DSCF6107_albedo_smoothness.png using Guid(65e68e1466f94be9b4c4c2809ca5f030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c078e3ca474aead3d98bd0df6b06f54e') in 0.049182 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Pakages/Concrete_UP05/Textures/DSCF6107_displacement.png
-  artifactKey: Guid(4ffff4dbea33445fb675258ee9eb5f89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pakages/Concrete_UP05/Textures/DSCF6107_displacement.png using Guid(4ffff4dbea33445fb675258ee9eb5f89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38a291dc711befc1099e38fee958035c') in 0.035179 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Jammo-Character/Textures/mixbot_low_mixamo_edit1_AO.png
-  artifactKey: Guid(6a0fb4aa4de843c45a776e5a4ac9dd69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jammo-Character/Textures/mixbot_low_mixamo_edit1_AO.png using Guid(6a0fb4aa4de843c45a776e5a4ac9dd69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a7a5f97e5fcf49d9de8749eb3c72b8') in 0.026395 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
-  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac9f62a9dde71344fcbcd7ec5113dd6') in 0.012342 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Pictures/Startscreen/jnmlogo.jpeg
-  artifactKey: Guid(ed5be2d1368aacc49b2b560c073a62f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pictures/Startscreen/jnmlogo.jpeg using Guid(ed5be2d1368aacc49b2b560c073a62f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa6717933a151bbf6ded7f8e96042a92') in 0.022455 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
-  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba4e203b6ea49558599d56a15664e34') in 0.157855 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Pictures/Brand/LogoOnWhitev0.1.png
-  artifactKey: Guid(639d07af52a3150488057cdb09f1ae6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pictures/Brand/LogoOnWhitev0.1.png using Guid(639d07af52a3150488057cdb09f1ae6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d49701855ff2fd6ab098e2e685a8f42') in 0.020237 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Jammo-Character/Textures/mixbot_low_mixamo_edit1_Normal.png
-  artifactKey: Guid(f6c18262b3c0eba4bb830f3d91682a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jammo-Character/Textures/mixbot_low_mixamo_edit1_Normal.png using Guid(f6c18262b3c0eba4bb830f3d91682a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e09ff349803046f639a9d9cee78e15') in 0.041478 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Pictures/Brand/Murecho-VariableFont_wght.ttf
-  artifactKey: Guid(4840a84dc6ee0c243bd77735516005a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pictures/Brand/Murecho-VariableFont_wght.ttf using Guid(4840a84dc6ee0c243bd77735516005a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ff68af9bdb1656c315f331d7f0208de') in 0.028054 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Pakages/Concrete_UP05/Textures/DSCF7173_normal.png
-  artifactKey: Guid(6caf9fd45b1941c7a1f38f173d4b4923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pakages/Concrete_UP05/Textures/DSCF7173_normal.png using Guid(6caf9fd45b1941c7a1f38f173d4b4923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52c945241710bed6a1d20ee48284111f') in 0.050976 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Pakages/Concrete_UP05/Textures/DSCF7178_ao.png
-  artifactKey: Guid(77704eafcc2e4bba8691342b0b91d06d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pakages/Concrete_UP05/Textures/DSCF7178_ao.png using Guid(77704eafcc2e4bba8691342b0b91d06d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f18c98258fa5bfc76eb179788aaab06') in 0.147563 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Pictures/Startscreen/jnmlogogready.png
-  artifactKey: Guid(c5d7d08696e7a2745b3b71aaea779dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pictures/Startscreen/jnmlogogready.png using Guid(c5d7d08696e7a2745b3b71aaea779dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bcf7ed290a7b554058ef495310279d2') in 0.025722 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Pakages/Concrete_UP05/Textures/DSCF5802_normal.png
-  artifactKey: Guid(e90294230fc04a2c9fb5eba311268b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pakages/Concrete_UP05/Textures/DSCF5802_normal.png using Guid(e90294230fc04a2c9fb5eba311268b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70eafca3c4b97cacba038abbb48b2f9a') in 0.155333 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: Der E/A-Vorgang wurde wegen eines Threadendes oder einer Anwendungsanforderung abgebrochen.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 0

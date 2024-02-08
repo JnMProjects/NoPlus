@@ -76,4 +76,5 @@ crashlytics-build.properties
 
 # Custom
 blank
+*.blend1
 >>>>>>> 57620ec22555e410112707b5746adebc17eb435e

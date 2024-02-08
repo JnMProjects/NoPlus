@@ -844,7 +844,9 @@ MonoBehaviour:
   T1: {fileID: 1330548446}
   T2: {fileID: 705409148}
   T3: {fileID: 1594032689}
-  SzeneToLoadAfterSplashscreen: 2
+  LobbyScenes:
+  - Lobby_Head
+  - Lobby_Spawn
 --- !u!1 &1330548444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1260,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638412889123943673
-    m_Hash: 121521967
+      ticks: 638423202765604751
+    m_Hash: 1214872052
   m_LockFileStatus:
     m_FilePath: C:/Users/jackr/GITHUB/NoPlus/NoPlus/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638412889124072301
-    m_Hash: 4162062877
+      ticks: 638423202765730577
+    m_Hash: 1435794272
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,71 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/jackr/GITHUB/NoPlus/NoPlus/Packages
 m_EditorVersion: 2022.3.3f1 (7cdc2969a641)
 m_ResolvedPackages:
+- packageId: com.discord.game-sdk@3.1.0
+  testable: 0
+  isDirectDependency: 1
+  version: 3.1.0
+  source: 1
+  resolvedPath: C:\Users\jackr\GITHUB\NoPlus\NoPlus\Library\PackageCache\com.discord.game-sdk@3.1.0
+  assetPath: Packages/com.discord.game-sdk
+  name: com.discord.game-sdk
+  displayName: Discord Game SDK
+  author:
+    name: Hourai Teahouse
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Discord Game SDK for Unity.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 2.5.5
+    - 2.5.6
+    - 3.1.0
+    compatible:
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 2.5.5
+    - 2.5.6
+    - 3.1.0
+    recommended: 
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: scoped:project:Hourai Teahouse
+    name: Hourai Teahouse
+    url: https://upm.houraiteahouse.net
+    scopes:
+    - com.discord
+    isDefault: 0
+    capabilities: 0
+    configSource: 4
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637464564694030000
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.cinemachine@2.9.5
   testable: 0
   isDirectDependency: 1

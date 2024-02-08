@@ -3,7 +3,7 @@ function home() {
   }
   
   function lhome() {
-    window.location.href = "https://jnmprojects.github.io/robot-city";
+    window.location.href = "https://jnmprojects.github.io/NoPlus";
   }
   
   function jhome() {
@@ -11,7 +11,7 @@ function home() {
   }
   
   function ltsrelease() {
-    window.location.href = "https://github.com/JNMProjects/robot-city/releases/latest";
+    window.location.href = "https://github.com/JNMProjects/NoPlus/releases/latest";
   }
   
   function othprj() {
@@ -23,6 +23,6 @@ function home() {
   }
 
   function info() {
-    window.location.href = "https://jnmprojects.github.io/robot-city/info";
+    window.location.href = "https://jnmprojects.github.io/NoPlus/info";
   }
   

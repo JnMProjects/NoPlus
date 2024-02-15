@@ -1,5 +1,5 @@
 export default function Home() {
-    return {
-        
-    }
+    return (
+        <h1>Workin on dis rn</h1>
+    );
 }

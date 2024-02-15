@@ -16,18 +16,20 @@ public class StartscreenAnimationHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI T1; // Text 1 / First Shown on the Splashscreen (first after) with Text Welcome(welcome is set in unity so no need to define again)
     [SerializeField] TextMeshProUGUI T2; // Text 2
     [SerializeField] TextMeshProUGUI T3; // Text 3
-    [SerializeField] int SzeneToLoadAfterSplashscreen;
+    [SerializeField] List<string> LobbyScenes;
     private int CurrentlyShownText = 1; // Needs to be clamped between 1 and 3
-    private float CProgress = 0; // Current Progress of the Loading Screen
     private float LProgress = -1f; // Progress of the Loading Screen -10 Frames
+    private AsyncOperation[] operations;
+    private bool opsDone = false;
+    private float progress = 0;
 
     void Start()
     {
         StartCoroutine(AnimationHandler());
     }
 
-    IEnumerator AnimationHandler() 
-    { 
+    IEnumerator AnimationHandler()
+    {
         yield return new WaitForSeconds(9); // Wait till Splashscreen is over
 
         // Preset Text ("Connecting to Servers", "Starting Loading Sequence")
@@ -36,41 +38,72 @@ public class StartscreenAnimationHandler : MonoBehaviour
         nextText("Starting Loading Sequence");
         yield return new WaitForSeconds(1);
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync(SzeneToLoadAfterSplashscreen); // Load the LoadingScreen Scene
-        operation.allowSceneActivation = false; // 
+        operations = new AsyncOperation[LobbyScenes.Count];
 
-        while (!operation.isDone)
+        for (int i = 0; i < LobbyScenes.Count; i++)
         {
-            CProgress = Mathf.Clamp01(operation.progress / 0.9f) * 100;
-
-            if (CProgress != LProgress)
-            {
-                LProgress = CProgress;
-                nextText("Loading Progress: " + LProgress + "%");
-                for (int i = 0; i < 10; i++)
-                {
-                    yield return null; // Wartet auf das nächste Frame
-                }
-            } else if (CProgress == 100) 
-            {
-                nextText("Loading Complete!");
-                for (int i = 0; i < 10; i++)
-                {
-                    yield return null; 
-                }
-                animator.SetBool("leave", true);
-                for (int i = 0; i < 40; i++)
-                {
-                    yield return null; // Wartet auf das nächste Frame
-                }
-                operation.allowSceneActivation = true;
-
-            } else    
-            {
-                yield return null; // Wartet auf das nächste Frame
-            }
+            operations[i] = SceneManager.LoadSceneAsync(LobbyScenes[i], LoadSceneMode.Additive);
+            operations[i].allowSceneActivation = false;
         }
 
+        while (!opsDone)
+        {
+            opsDone = AreOpsDone();
+            progress = CalcProgress();
+            if (progress != LProgress)
+            {
+                nextText("Loading: " + progress + "%");
+                yield return new WaitForSeconds(0.2f); // Animation is 20 Frames = 0.2 Seconds
+            }
+            if (progress == 100)
+            {
+                nextText("Loading Complete!");
+                yield return new WaitForSeconds(0.2f);
+                for (int i = 0; i < LobbyScenes.Count; i++)
+                {
+                    nextText("Activating " + LobbyScenes[i]);
+                    operations[i].allowSceneActivation = true;
+                    yield return new WaitForSeconds(0.2f);
+                }
+                nextText("GLHF!");
+                yield return new WaitForSeconds(0.1f);
+                animator.SetTrigger("exit");
+                yield return new WaitForSeconds(1);
+                SceneManager.UnloadSceneAsync(0);
+            }
+        }
+    }
+
+    bool AreOpsDone()
+    {
+        int done = 0;
+        for (int i = 0; i < operations.Length; i++)
+        {
+            if (operations[i].isDone)
+            {
+                done++;
+            }
+        }
+        if (done == operations.Length)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    float CalcProgress()
+    {
+        float progress = 0;
+        for (int i = 0; i < operations.Length; i++)
+        {
+            progress += Mathf.Clamp01(operations[i].progress / 0.9f) * 100;
+            Debug.Log("Progress of " + LobbyScenes[i] + " is " + (Mathf.Clamp01(operations[i].progress / 0.9f) * 100) + "%");
+        }
+        progress = progress / operations.Length;
+        return progress;
     }
 
     void nextText(string text) // Function to set the next text to be shown

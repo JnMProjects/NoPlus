@@ -69,12 +69,12 @@ crashlytics-build.properties
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
-<<<<<<< HEAD
-/[Aa]ssets/[Ss]treamingAssets/aa/*
-=======
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Custom
 blank
 *.blend1
->>>>>>> 57620ec22555e410112707b5746adebc17eb435e
+
+# Ignore backup files
+
+/backup/*

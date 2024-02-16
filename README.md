@@ -1,4 +1,4 @@
-# NoPlus Web Branch (fps)
+# NoPlus Web Branch
 
 This branch is dedicated to the website development of NoPlus and should not be merged into or from any other branch.
 

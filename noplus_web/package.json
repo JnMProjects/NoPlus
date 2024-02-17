@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update+test": "npm i && npm run dev"
   },
   "dependencies": {
     "@sentry/nextjs": "^7.100.1",

@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "localdev": "npm run localscripts && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "update+test": "npm i && npm run dev"
+    "localscripts": "npm i next@14.0.0",
+    "testlatest": "npm i && npm i next@latest && next dev"
   },
   "dependencies": {
     "@sentry/nextjs": "^7.101.1",

@@ -1,107 +1,140 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
+@layer base {
+    :root {
+      --text: #121c63;  
+      --text-50: #e9ecfb;
+      --text-100: #d4d8f7;
+      --text-200: #a9b1ef;
+      --text-300: #7e8ae7;
+      --text-400: #5363df;
+      --text-500: #283cd7;
+      --text-600: #2030ac;
+      --text-700: #182481;
+      --text-800: #101856;
+      --text-900: #080c2b;
+      --text-950: #040616;
+      
+      --background: #e5e5eb;
+      --background-50: #f1f1f4;
+      --background-100: #e2e2e9;
+      --background-200: #c5c5d3;
+      --background-300: #a9a9bc;
+      --background-400: #8c8ca6;
+      --background-500: #6f6f90;
+      --background-600: #595973;
+      --background-700: #434356;
+      --background-800: #2c2c3a;
+      --background-900: #16161d;
+      --background-950: #0b0b0e;
+      
+      --primary: #030735;
+      --primary-50: #e7e9fe;
+      --primary-100: #cfd3fc;
+      --primary-200: #9fa6f9;
+      --primary-300: #6e7af7;
+      --primary-400: #3e4df4;
+      --primary-500: #0e21f1;
+      --primary-600: #0b1ac1;
+      --primary-700: #081491;
+      --primary-800: #060d60;
+      --primary-900: #030730;
+      --primary-950: #010318;
+      
+      --secondary: #eeff70;
+      --secondary-50: #fcffe5;
+      --secondary-100: #f9ffcc;
+      --secondary-200: #f3ff99;
+      --secondary-300: #edff66;
+      --secondary-400: #e7ff33;
+      --secondary-500: #e1ff00;
+      --secondary-600: #b4cc00;
+      --secondary-700: #879900;
+      --secondary-800: #5a6600;
+      --secondary-900: #2d3300;
+      --secondary-950: #171a00;
+      
+      --accent: #cdae23;
+      --accent-50: #fbf8e9;
+      --accent-100: #f8f1d3;
+      --accent-200: #f0e3a8;
+      --accent-300: #e9d57c;
+      --accent-400: #e1c751;
+      --accent-500: #dab925;
+      --accent-600: #ae941e;
+      --accent-700: #836f16;
+      --accent-800: #574a0f;
+      --accent-900: #2c2507;
+      --accent-950: #161204;
+      
+    }
+    .dark {
+      --text: #9ca5ed;  
+      --text-50: #040616;
+      --text-100: #080c2b;
+      --text-200: #101856;
+      --text-300: #182481;
+      --text-400: #2030ac;
+      --text-500: #283cd7;
+      --text-600: #5363df;
+      --text-700: #7e8ae7;
+      --text-800: #a9b1ef;
+      --text-900: #d4d8f7;
+      --text-950: #e9ecfb;
+      
+      --background: #14141a;
+      --background-50: #0b0b0e;
+      --background-100: #16161d;
+      --background-200: #2c2c3a;
+      --background-300: #434356;
+      --background-400: #595973;
+      --background-500: #6f6f90;
+      --background-600: #8c8ca6;
+      --background-700: #a9a9bc;
+      --background-800: #c5c5d3;
+      --background-900: #e2e2e9;
+      --background-950: #f1f1f4;
+      
+      --primary: #cacefc;
+      --primary-50: #010318;
+      --primary-100: #030730;
+      --primary-200: #060d60;
+      --primary-300: #081491;
+      --primary-400: #0b1ac1;
+      --primary-500: #0e21f1;
+      --primary-600: #3e4df4;
+      --primary-700: #6e7af7;
+      --primary-800: #9fa6f9;
+      --primary-900: #cfd3fc;
+      --primary-950: #e7e9fe;
+      
+      --secondary: #7e8f00;
+      --secondary-50: #171a00;
+      --secondary-100: #2d3300;
+      --secondary-200: #5a6600;
+      --secondary-300: #879900;
+      --secondary-400: #b4cc00;
+      --secondary-500: #e1ff00;
+      --secondary-600: #e7ff33;
+      --secondary-700: #edff66;
+      --secondary-800: #f3ff99;
+      --secondary-900: #f9ffcc;
+      --secondary-950: #fcffe5;
+      
+      --accent: #dcbd32;
+      --accent-50: #161204;
+      --accent-100: #2c2507;
+      --accent-200: #574a0f;
+      --accent-300: #836f16;
+      --accent-400: #ae941e;
+      --accent-500: #dab925;
+      --accent-600: #e1c751;
+      --accent-700: #e9d57c;
+      --accent-800: #f0e3a8;
+      --accent-900: #f8f1d3;
+      --accent-950: #fbf8e9;
+      
+    }
   }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+  
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

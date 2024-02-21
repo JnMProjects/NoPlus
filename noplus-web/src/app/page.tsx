@@ -1,10 +1,9 @@
-
+import * as feather from 'react-feather';
 
 export default function Home() {
   return (
-    <div className="fill-inherit bg-bg">
-      <h1 className="text-txt bold justify-center">Home</h1>
-      <p className="text-prim">Heheheha</p>
+    <div className='b bg-l-bg dark:bg-d-bg flex items-center justify-center h-screen'>
+      <h1 className='b text-l-txt dark:text-d-txt text-xl'>Test</h1>
     </div>
   );
 }

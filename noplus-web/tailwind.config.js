@@ -298,6 +298,46 @@ module.exports = {
             900: '#2c2507',
             950: '#161204',
           },
+         },
+         system: {
+          'error': {
+            DEFAULT: 'red',
+            dark: '#e60000',
+            light: '#f33',
+            bright: '#f7d4d6',
+          },
+          'component': {
+            'ui': {
+              'customizationerror': '#780024',
+            },
+          },
+          'success': {
+            DEFAULT: '#0070f3',
+            dark: '#0761d1',
+            light: '#3291ff',
+            bright: '#d3e5ff',
+          },
+          'warning': {
+            DEFAULT: '#f5a623',
+            dark: '#ab570a',
+            light: '#3291ff',
+            bright: '#ffefcf',
+          },
+          'highlight': {
+            'light': {
+              DEFAULT: '#eeff70',
+              purple: '#f81ce5',
+              violet: '#7928ca',
+              cyan: '#79ffe1',
+            },
+            'dark': {
+              DEFAULT: '#dcbd32',
+              purple: '#f81ce5',
+              violet: '#4c2889',
+              cyan: '#50e3c2',
+            }
+
+          }
          }
          
         

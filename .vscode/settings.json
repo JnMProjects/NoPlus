@@ -1,3 +1,9 @@
 {
-    "dotnet.defaultSolution": "NoPlus/NoPlus.sln"
+    "dotnet.defaultSolution": "NoPlus/NoPlus.sln",
+    "tailwindCSS.experimental.classRegex": [
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+      ],
+      "terminal.integrated.shellArgs.linux": ["-c", "cd /noplus-web; exec bash"],
+      "terminal.integrated.shellArgs.windows": ["-NoExit", "-Command", "cd /noplus-web"]
 }

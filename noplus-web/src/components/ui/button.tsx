@@ -5,19 +5,39 @@ const Buttonvariants = cva(
     "flex items-center justify-center font-medium px-4 py-2 rounded",
     {
         variants: {
-            variant: {
-                primary: "",
+            intent: {
+                primary: " bg-l-prim dark:bg-d-prim text-l-txt dark:text-d-txt",
                 secondary: "",
                 error: "",
-                
-            },
-            error: {
-                true: "",
+                success: "",
+                warning: "",
             },
 
             outline: {
-                true: "",
+                true: " outline-2",
             },
+            padding: {
+                sm: "p-2",
+                md: "p-4",
+                lg: "p-8",
+            
+            },
+        },
+        compoundVariants: [
+            {
+                outline: true,
+                intent: "primary",
+                className: " ",
+            },
+            {
+                outline: true,
+                intent: "secondary",
+                className: " bg-l-sec/40 dark:bg-d-sec/40 ",
+            },
+        ],
+        defaultVariants: {
+            intent: "primary",
+            padding: "md",
         },
     }
 )

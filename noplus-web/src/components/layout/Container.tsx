@@ -1,12 +1,12 @@
-import { cva , VariantProps} from "cva";
+import { cva , type VariantProps} from "cva";
 import React, { FC } from "react";
 
 const ContainerVariants = cva(
-    "absolute",
+    "f",
     {
         variants: {
             row: {
-                true: "",
+                true: "flex-row",
             },
             gap: {
                 sm: "gap-4",
@@ -34,6 +34,7 @@ const ContainerVariants = cva(
             },
             main: {
                 true: "w-full h-full bg-l-bg dark:bg-d-bg overflow-hidden",
+                false: "w-auto h-auto",
             },
             flex: {
                 true: "flex",
@@ -54,11 +55,6 @@ const ContainerVariants = cva(
                 className: "grid grid-cols-1 gap-4",
             },
             {
-                row: true,
-                flex: true,
-                className: "flex-row",
-            },
-            {
                 row: false,
                 flex: true,
                 className: "flex-col",
@@ -70,11 +66,13 @@ const ContainerVariants = cva(
             padding: "md",
             gap: "md",
             intent: "invisible",
+            main: false,
+            
         }
     }
 )
 
-interface ContainerProps extends VariantProps<typeof ContainerVariants>, React.HTMLAttributes<HTMLDivElement> {}
+interface ContainerProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof ContainerVariants> {}
 
 const Container: FC<ContainerProps> = ({ children, ...props }) => {
     return (

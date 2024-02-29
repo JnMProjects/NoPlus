@@ -10,7 +10,9 @@ const meta: Meta<typeof Container> = {
     argTypes: {
         children: {
             name: "Children",
-            defaultValue: <Button>Example</Button>,
+            defaultValue: <>
+                <Button></Button>
+            </>,
             description: "In this example, text and icons",
             control: {
                 type: "children",
@@ -104,11 +106,21 @@ type Story = StoryObj<typeof Container>;
 export const Default: Story = {
     args: {
         children: <>
-            <Feather.ChevronUp/>
-            <Feather.ArrowUp/>
-            <Feather.MoreVertical/>
-            <Feather.ArrowDown/>
-            <Feather.ChevronDown/>
+            <Container>
+                <Feather.ChevronUp/>
+            </Container>
+            <Container>
+                <Feather.ArrowUp/>
+            </Container>
+            <Container>
+                <Feather.MoreVertical/>
+            </Container>
+            <Container>
+                <Feather.ArrowDown/>
+            </Container>
+            <Container>
+                <Feather.ChevronDown/>
+            </Container>
         </>,
         row: false,
         center: false,
@@ -122,34 +134,23 @@ export const Default: Story = {
     },
 };
 
-export const DefaultTest = () => {
-    return (
-        <Container padding='md' gap='md' intent='primary' main flex roundsize='md'>
-            <Feather.ChevronUp/>
-            <Feather.ArrowUp/>
-            <Feather.MoreVertical/>
-            <Feather.ArrowDown/>
-            <Feather.ChevronDown/>
-        </Container>
-    )
-
-}
-
-
-export const Row = () => {
-    return (
-        <Container row>
+export const Row: Story = {
+    args: {
+        ...Default.args,
+        row: true,
+        children: <>
             <Feather.ChevronLeft/>
             <Feather.ArrowLeft/>
             <Feather.Code/>
             <Feather.ArrowRight/>
             <Feather.ChevronRight/>
-        </Container>
-    )
-}
+        </>,
+    }
+};
 
 export const Flex: Story = {
     args: {
+        ...Default.args,
         children: <>
             <Button flex='1'>Flex</Button>
             <Button flex='2'>Flex= 2</Button>
@@ -159,3 +160,10 @@ export const Flex: Story = {
         flex: true,
     }
 } 
+
+export const Main: Story = {
+    args: {
+        ...Default.args,
+        main: true,
+    }
+}

@@ -1,4 +1,5 @@
 import { Button } from '@components/ui';
+import { Container } from '@components/layout';
 import * as feather from 'react-feather';
 
 export default function Home() {
@@ -9,7 +10,14 @@ export default function Home() {
         <feather.GitHub size={60}/>
       </a>
       <feather.Airplay/>
-      <Button variant='primary' error>Test</Button>
+      <Button intent='primary' >Test</Button>
+      <Container main >
+        <Button intent='primary'>Test</Button>
+        <Container row>
+          <Button intent='primary' >Test</Button>
+          <Button intent='primary' >Test</Button>
+        </Container>
+      </Container>
     </div>
   );
 }

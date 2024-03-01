@@ -20,8 +20,6 @@ jobs:
       with:
         node-version: 20.11.0  # replace with your Node.js version
 
-    - name: Change directory to noplus-web 📂
-      run: cd noplus-web
-
     - name: Run ghci script 📜
+      run: cd noplus-web
       run: npm run ghci

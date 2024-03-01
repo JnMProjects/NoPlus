@@ -5,7 +5,7 @@ import {
     ItemDescription,
 } from "./Item"
 
-import { Meta, Storyobj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/react"
 
 const meta: Meta<typeof Item> = {
     title: "Layout/Item",

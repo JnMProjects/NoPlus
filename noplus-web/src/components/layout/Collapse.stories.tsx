@@ -1,51 +1,45 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Collapse, CollapseItem, CollapseTrigger, CollapseContent } from "./Collapse";
+import { CollapseGroup, Collapse } from "./Collapse";
 
 const meta: Meta<typeof Collapse> = {
     title: "Layout/Collapse",
     component: Collapse,
     argTypes: {
-        type: {
-            name: "Type",
-            defaultValue: "single",
-            description: "The type of collapse",
+        title: {
+            name: "Title",
+            defaultValue: "Title",
+            description: "The title of the collapse",
             control: {
-                type: "select",
-                options: ["single", "multiple"],
+                type: "text",
             },
         },
-        collapsible: {
-            name: "Collapsible",
-            defaultValue: true,
-            description: "Whether the collapse is collapsible",
+        trigger: {
+            name: "Trigger",
+            defaultValue: "Trigger",
+            description: "The trigger of the collapse",
             control: {
-                type: "boolean",
+                type: "text",
             },
         },
         children: {
             name: "Children",
-            defaultValue: <></>,
+            defaultValue: "Children",
             description: "The children of the collapse",
             control: {
                 type: "children",
             },
         },
-    
-    },
-}
-
-export default meta;
-type Story = StoryObj<typeof Collapse>;
-
-export const Default: Story = {
-    args: {
-        type: "single",
-        collapsible: true,
-        children: <>
-            <CollapseItem value="item-1">
-                <CollapseTrigger>Trigger</CollapseTrigger>
-                <CollapseContent>Content</CollapseContent>
-            </CollapseItem>
-        </>
     },
 };
+
+export default meta;
+
+export const Default = () => {
+    return (
+        <CollapseGroup>
+            <Collapse title="Title" trigger="Trigger">
+                Children
+            </Collapse>
+        </CollapseGroup>
+    );
+}

@@ -22,3 +22,6 @@ jobs:
 
     - name: Run ghci script 📜
       run: cd noplus-web && npm run ghci
+
+    - name: Move folder 📂
+      run: mv noplus-web/storybook-static noplus-web/docs/storybook

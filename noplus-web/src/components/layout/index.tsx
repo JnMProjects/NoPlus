@@ -18,3 +18,10 @@ export {
     DrawerTitle,
     DrawerDescription,
 } from "./Drawer";
+
+export {
+    Collapse,
+    CollapseItem,
+    CollapseTrigger,
+    CollapseContent,
+} from "./Collapse";

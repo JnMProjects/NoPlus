@@ -1,0 +1,202 @@
+import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks';
+import * as LoaderStories from './Loader.stories';
+import Loader from './Loader';
+import {
+    Drawer,
+    DrawerTrigger,
+    DrawerContent,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerDescription,
+    DrawerClose,
+    DrawerFooter,
+    Collapse,
+    CollapseTrigger,
+    CollapseContent,
+    CollapseItem,
+} from '../layout';
+
+<Meta of={LoaderStories} />
+
+# Loader
+## Loading Spinners / Animations <Loader type='hash' size='30'/>
+
+### Default
+<Canvas of={LoaderStories.Default} />
+
+## Arguments
+Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loader.
+
+<Controls of={LoaderStories.Default} />
+
+## Different Types
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='bar' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Bar 
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Bar} />
+            <Controls of={LoaderStories.Bar} exclude={['size', 'margin', 'radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='beat' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Beat 
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Beat} />
+            <Controls of={LoaderStories.Beat} exclude={['width','height','radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='bounce' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Bounce 
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Bounce} />
+            <Controls of={LoaderStories.Bounce} exclude={['width','height','margin','radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='circle' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Circle
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Circle} />
+            <Controls of={LoaderStories.Circle} exclude={['width','height','margin','radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='climbingbox' size={15} />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Climbing Box
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.ClimbingBox} />
+            <Controls of={LoaderStories.ClimbingBox} exclude={['width','height','margin','radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='clip' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Clip
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Clip} />
+            <Controls of={LoaderStories.Clip} exclude={['width','height','margin','radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='clock' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Clock
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Clock} />
+            <Controls of={LoaderStories.Clock} exclude={['width','height','margin','radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='dot' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Dot
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Dot} />
+            <Controls of={LoaderStories.Dot} exclude={['width','height','margin','radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+
+_Spacer_

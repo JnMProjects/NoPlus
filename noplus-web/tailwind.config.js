@@ -342,7 +342,21 @@ module.exports = {
          
         
          
-      }
+      },
+      keyframes: {
+        "Collapse-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-Collapse-content-height)" },
+        },
+        "Collapse-up": {
+          from: { height: "var(--radix-Collapse-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "Collapse-down": "Collapse-down 0.2s ease-out",
+        "Collapse-up": "Collapse-up 0.2s ease-out",
+      },
     },
   },
   plugins: [],

@@ -21,11 +21,11 @@ const ItemVariants = cva(
 const Item = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof ItemVariants>
->(({ className, variant, ...props }, ref) => (
+>(({ className, errored, ...props }, ref) => (
   <div
     ref={ref}
     role="Item"
-    className={cn(ItemVariants({ variant }), className)}
+    className={cn(ItemVariants({ errored }), className)}
     {...props}
   />
 ))

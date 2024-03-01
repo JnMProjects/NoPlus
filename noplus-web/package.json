@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently -k \"npm run dev-devstart\" \"npm run dev-storybook\"",
-    "dev-devstart": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "dev-storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "dev": "concurrently -k \"npm:dev-*\"",
+    "dev-dev": "next dev",
+    "build": "conc \"npm:build-*\"",
+    "build-build": "next build",
+    "start": "conc -k \"npm:start-*\"",
+    "lint": "conc \"npm:lint-*\"",
+    "start-start": "next start",
+    "lint-lint": "next lint",
+    "dev-story": "storybook dev -p 6006",
+    "build-ghci-story": "storybook build",
+    "ghci": "npm ci && conc \"npm:build-ghci-*\" && cd.. && mv noplus-web/storybook-static noplus-web/docs/storybook"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@sentry/nextjs": "^7.102.0",
     "clsx": "^2.1.0",
     "cva": "npm:class-variance-authority@^0.7.0",
@@ -19,6 +24,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-feather": "^2.0.10",
+    "react-spinners": "^0.13.8",
     "tailwind-merge": "^2.2.1",
     "vaul": "^0.9.0"
   },

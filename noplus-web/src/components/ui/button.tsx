@@ -1,16 +1,15 @@
 import { cva, VariantProps } from "cva";
-import { ButtonHTMLAttributes, FC } from "react";
+import React from "react";
+import { ButtonHTMLAttributes } from "react";
+import { cn } from "../twm";
+import { Slot } from "@radix-ui/react-slot";
 
 const Buttonvariants = cva(
-    "flex items-center justify-center font-medium px-4 py-2 rounded",
+    "inline-flex items-center justify-center ",
     {
         variants: {
-            intent: {
-                primary: " bg-l-prim dark:bg-d-prim text-l-txt dark:text-d-txt",
-                secondary: "",
-                error: "",
-                success: "",
-                warning: "",
+            primary: {
+                true: " bg-l-prim dark:bg-d-prim text-l-sec dark:text-d-sec",
             },
 
             outline: {
@@ -24,34 +23,33 @@ const Buttonvariants = cva(
             },
         },
         compoundVariants: [
-            {
-                outline: true,
-                intent: "primary",
-                className: " ",
-            },
-            {
-                outline: true,
-                intent: "secondary",
-                className: " bg-l-sec/40 dark:bg-d-sec/40 ",
-            },
+            
         ],
         defaultVariants: {
-            intent: "primary",
-            padding: "md",
+            
         },
     }
 )
 
-interface btnextraprops {
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof Buttonvariants> {
     flex?: boolean | string | number;
+    asChild?: boolean;
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof Buttonvariants>, btnextraprops {}
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+    ({ className, asChild = false, ...props }, ref) => { // alle cva props anfügen!
+      const Comp = asChild ? Slot : "button" 
+      return (
+        <Comp
+          className={cn(Buttonvariants({ className }))} // Hier auch alle cva props anfügen!
+          ref={ref}
+          {...props}
+        />
+      )
+    }
+)
+Button.displayName = "Button"
 
-const Button: FC<ButtonProps> = ({ ...props }) => {
-    return (
-        <button {...props}>{props.children}</button>
-    );
-}
 
-export { Button };
+export { Button, Buttonvariants };

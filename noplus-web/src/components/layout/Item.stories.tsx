@@ -12,7 +12,7 @@ const meta: Meta<typeof Item> = {
 }
 
 export default meta;
-type Story = Storyobj<typeof Item>;
+type Story = StoryObj<typeof Item>;
 
 export const Default = () => {
     return (

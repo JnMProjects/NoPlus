@@ -1,27 +1,46 @@
-import { Button } from "@/components/ui";
-import { Container } from "@/components/layout";
+import {
+    Item,
+    ItemTitle,
+    ItemDescription,
+    Drawer,
+    DrawerTrigger,
+    DrawerContent,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerDescription,
+    DrawerClose,
+    DrawerFooter
+} from "@components/layout"
+
+import * as Feather from "react-feather";
 
 export default function test() {
-    return (
-        <Container main>
-            <Button>1</Button>
-            <Button>2</Button>
-            <Button>3</Button>
-            <Container row>
-                <Button>4</Button>
-                <Button>5</Button>
-                <Button>6</Button>
-                <Container>
-                    <Button>7</Button>
-                    <Button>8</Button>
-                    <Button>9</Button>
-                    <Container row>
-                        <Button>10</Button>
-                        <Button>11</Button>
-                        <Button>12</Button>
-                    </Container>
-                </Container>
-            </Container>
-        </Container>
+    return (<>
+        <Drawer>
+        <Item >
+            <Feather.Edit />
+            <ItemTitle>Normal Item</ItemTitle>
+            <ItemDescription>This is a Normal Item</ItemDescription>
+        </Item>
+        <DrawerTrigger>
+            Press Me
+        </DrawerTrigger>
+            <DrawerContent>
+                <DrawerHeader>
+                    <DrawerTitle>Test Drawer</DrawerTitle>
+                    <DrawerDescription>Drawer Description</DrawerDescription>
+                    <Item errored>
+                        <Feather.AlertTriangle />
+                        <ItemTitle>Item Title</ItemTitle>
+                        <ItemDescription>Item Description</ItemDescription>
+                    </Item>
+                    <DrawerClose><Feather.X/></DrawerClose>
+                </DrawerHeader>
+                <DrawerFooter>
+                    <Feather.Cloud/>
+                </DrawerFooter>
+            </DrawerContent>
+        </Drawer>
+        </>
     );
 }

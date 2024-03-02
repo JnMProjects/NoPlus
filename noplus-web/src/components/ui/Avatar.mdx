@@ -1,0 +1,150 @@
+import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks';
+import { Avatar, AvatarGroup } from './Avatar';
+import * as AvatarStories from './Avatar.stories';
+import {
+    Drawer,
+    DrawerTrigger,
+    DrawerContent,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerDescription,
+    DrawerClose,
+    DrawerFooter,
+    Collapse,
+    CollapseGroup
+} from '../layout';
+
+<Meta of={AvatarStories} />
+# Avatar
+<Primary />
+<CollapseGroup>
+    <Collapse trigger="Code" title="">
+        ## Avatar
+        ### Usage
+        ```tsx
+        import { Avatar } from './Avatar';
+
+        <Avatar username="github" />
+        ```	
+
+        ### Arguments
+        username: string // The username of the user
+
+        size: number // The size of the avatar in px
+        
+        placeholder: boolean // If the avatar should be a placeholder
+        
+        links: boolean // If the avatar should be a link to the user's profile
+
+        ## AvatarGroup
+        ### Usage
+        ```tsx
+        import { AvatarGroup } from './Avatar';
+
+        <AvatarGroup users={["derjacklive", "octocat", "github"]} />
+        ```
+
+        ### Arguments
+        users: string[] // The usernames of the users
+        
+        size: number // The size of the avatar in px
+
+        limit: number // The maximum amount of avatars to display // Rest will be displayed as a number
+        
+    </Collapse>
+</CollapseGroup>
+
+## Types
+
+<Drawer>
+    <DrawerTrigger>
+        <Avatar username="derjacklive" size={50} />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Default Avatar
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={AvatarStories.Default} />
+            <Controls of={AvatarStories.Default} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Avatar placeholder size={50} />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Placeholder in Style of an Avatar
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={AvatarStories.Placeholder} />
+            <Controls of={AvatarStories.Placeholder} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <AvatarGroup users={["derjacklive", "octocat", "github"]} size={50} />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Avatar Group
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <AvatarGroup users={["derjacklive", "octocat", "github"]} size={150} />
+            ```tsx
+            import { AvatarGroup } from './Avatar';
+
+            <AvatarGroup users={["derjacklive", "octocat", "github"]} />
+            ```
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <AvatarGroup users={["github", "octocat", "derjacklive", "mutebefehl"]} limit={3} size={50} />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Limited Avatar Group
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <AvatarGroup users={["github", "octocat", "derjacklive", "mutebefehl"]} limit={3} size={100} />
+            ```tsx
+            import { AvatarGroup } from './Avatar';
+
+            <AvatarGroup users={["github", "octocat", "derjacklive", "mutebefehl"]} limit={3} />
+            ```
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>

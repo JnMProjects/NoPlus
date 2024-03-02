@@ -65,4 +65,4 @@ const Loader: React.FC<LoaderProps> = ({ type, size = 15, color = '#CDAE23', act
     }
 };
 
-export default Loader;
+export { Loader };

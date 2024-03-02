@@ -21,7 +21,5 @@ export {
 
 export {
     Collapse,
-    CollapseItem,
-    CollapseTrigger,
-    CollapseContent,
+    CollapseGroup
 } from "./Collapse";

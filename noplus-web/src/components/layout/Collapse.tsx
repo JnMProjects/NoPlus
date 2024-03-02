@@ -83,7 +83,7 @@ const Collapse: React.FC<CollapseProps> = ({ title, trigger, children, className
     <CollapseItem className={cn("border-b border-t")} value={value}>
       <CollapseHeadRaw>{trigger}</CollapseHeadRaw>
       <CollapseContentRaw>
-        <h1 className=" font-bold border-collapse">{title}</h1>
+        <h1 className=" font-bold border-collapse top-2">{title}</h1>
         <div className={cn("", className)} {...props} >{children}</div>
       </CollapseContentRaw>
     </CollapseItem>

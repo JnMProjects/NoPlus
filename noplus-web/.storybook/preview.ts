@@ -5,7 +5,7 @@ import "../src/app/globals.css"; // Add this line to import global styles
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: {},
     controls: {
       matchers: {
         color: /(background|color)$/i,

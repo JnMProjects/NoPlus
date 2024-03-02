@@ -344,18 +344,18 @@ module.exports = {
          
       },
       keyframes: {
-        "Collapse-down": {
+        "collapse-down": {
           from: { height: "0" },
-          to: { height: "var(--radix-Collapse-content-height)" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
-        "Collapse-up": {
-          from: { height: "var(--radix-Collapse-content-height)" },
+        "collapse-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
       },
       animation: {
-        "Collapse-down": "Collapse-down 0.2s ease-out",
-        "Collapse-up": "Collapse-up 0.2s ease-out",
+        "collapse-down": "collapse-down 0.2s ease-out",
+        "collapse-up": "collapse-up 0.2s ease-out",
       },
     },
   },

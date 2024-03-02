@@ -1,0 +1,43 @@
+import { Meta, Canvas, Controlls,Primary } from '@storybook/blocks';
+import { CollapseGroup, Collapse } from './Collapse';
+import * as CollapseStories from './Collapse.stories';
+
+<Meta of={CollapseStories}/>
+# Collapse
+
+<Primary/>
+
+## Different Types
+<CollapseGroup>
+    <Collapse trigger="Single Collapse" title="Title">
+        ```tsx
+        import { Collapse, CollapseGroup} from '@components/layout'
+
+        <CollapseGroup>
+            <Collapse trigger="Single Collapse" title="Title">
+            // Children
+            </Collapse>
+        </CollapseGroup>
+        ```
+    </Collapse>
+    <Collapse trigger="Multiple Collapses" title="">
+        <CollapseGroup defaultExpanded="99">
+            <Collapse trigger="Description" title="" no="99">
+                This Multicolapse can hold multiple collapses
+            </Collapse>
+            <Collapse trigger="Code" title="Title">
+                ```tsx
+                import { Collapse, CollapseGroup } from '@components/layout'
+                <CollapseGroup>
+                    <Collapse trigger="Description" title="Title">
+                        // Description
+                    </Collapse>
+                    <Collapse trigger="Code" title="Title">
+                        // Code
+                    </Collapse>
+                </CollapseGroup>
+                ```
+            </Collapse>
+        </CollapseGroup>
+    </Collapse>
+</CollapseGroup>

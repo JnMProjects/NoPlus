@@ -1,18 +1,12 @@
-name: CI Scripts 🧾 for Web Branches ✔
+name: Local CI Scripts 🧾 for Web Branches ✔
 
 on:
-  push:
-    branches:
-      - web-dev
-  pull_request:
-    branches:
-      - web
-      - web-dev
+  workflow_dispatch:
 
 jobs:
   storybook:
     name: Storybook 📚
-    runs-on: ubuntu-latest
+    runs-on: 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

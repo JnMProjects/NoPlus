@@ -1,7 +1,6 @@
 name: Local CI Scripts 🧾 for Web Branches ✔
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   storybook:

@@ -6,7 +6,7 @@ on:
 jobs:
   storybook:
     name: Storybook 📚
-    runs-on: 
+    runs-on: JnMP
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

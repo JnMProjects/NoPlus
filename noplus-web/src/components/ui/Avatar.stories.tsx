@@ -16,7 +16,7 @@ const meta: Meta = {
         username: {
             name: "Username",
             description: "Username // Github",
-            defaultValue: "github",
+            defaultValue: "octocat",
             control: {
                 type: "text",
             },
@@ -38,7 +38,7 @@ type Story = StoryObj<typeof Avatar>;
 export const Default: Story = {
     args: {
         size: 120,
-        username: "github",
+        username: "octocat",
         placeholder: false,
     },
 };
@@ -53,12 +53,12 @@ export const Placeholder: Story = {
 
 export const Group = () => {
     return (
-        <AvatarGroup users={["github", "octocat", "derjacklive", "mutebefehl"]} />
+        <AvatarGroup users={["a", "octocat", "derjacklive", "mutebefehl"]} />
     )
 }
 
 export const GroupLimited = () => {
     return (
-        <AvatarGroup users={["github", "octocat", "derjacklive", "mutebefehl"]} limit={3} />
+        <AvatarGroup users={["mutebefehl", "octocat", "derjacklive", "o"]} limit={3} />
     )
 }

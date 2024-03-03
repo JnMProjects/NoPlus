@@ -45,24 +45,35 @@ interface AvatarGroupProps extends React.HTMLAttributes<HTMLImageElement> {
     size?: number;
     limit?: number;
     users: string[];
+    holderstyle?: string;
 }
 
-const AvatarGroup: React.FC<AvatarGroupProps> = ({ users, limit = users.length, size = 100, className, ...props }) => {
+const AvatarGroup: React.FC<AvatarGroupProps> = ({ users, limit = users.length, size = 100, className, holderstyle, ...props }) => {
     const visibleUsers = users.slice(0, limit);
     const hiddenUsers = users.length - limit
     return (
-        <div>
+        <div className="">
             {visibleUsers.map((user, index) => (
-                <div key={user} style={{ marginLeft: index > 0 ? -size / 2 : 0,  }}>
+                <div key={index} style={{ 
+                    marginLeft: index > 0 ? size * index / 2 : 0, 
+                    marginTop: index > 0 ? -size : 0,
+                }}>
                     <Avatar username={user} size={size} />
                 </div>
             ))}
             {hiddenUsers > 0 && (
-            <span 
-                className={cn("rounded-full border-2 border-l-prim dark:border-d-prim", className)}
-              >
-                +{hiddenUsers}
-              </span>
+                <div
+                    className={cn("rounded-full border-2 border-l-prim dark:border-d-prim p-1", className)}
+                    style={{ 
+                        zIndex: 0,
+                        marginLeft: size * (visibleUsers.length - 1),
+                        transform: `translateY(-${size}px)`, // Fix for Problem 1
+                        fontSize: size/3/2,
+                        width: size/3,
+                    }}
+                >
+                    +{hiddenUsers}
+                </div>
             )}
         </div>
     )

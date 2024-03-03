@@ -1,6 +1,6 @@
 import * as React from "react"
 import { cn } from "../twm"
-import axios from "axios"
+import { parseGitAvatar } from "../apiaccess"
 
 interface AvatarProps extends React.HTMLAttributes<HTMLImageElement> {
     size?: number;
@@ -10,21 +10,15 @@ interface AvatarProps extends React.HTMLAttributes<HTMLImageElement> {
 }
 
 
+
 const Avatar: React.FC<AvatarProps> = ({ username, placeholder = false, size, className, links, ...props }) => {
     const [avatarUrl, setAvatarUrl] = React.useState<string | undefined>(undefined);
     const [profileLink, setProfileLink] = React.useState<string | undefined>(undefined);
     React.useEffect(() => {
-        const fetchGHa = async () => {
-            try {
-                const response = await axios.get(`https://api.github.com/users/${username}?Authentication=${process.env.GH_PFP_TOKEN})`);
-                setAvatarUrl(response.data.avatar_url);
-                setProfileLink(response.data.html_url);
-            } catch (error) {
-                console.error('Error fetching ' + username + ' from Github // ' + error);
-            }
-        };
         if (!placeholder) {
-            fetchGHa();
+            parseGitAvatar(username).then((url) => {
+                setAvatarUrl(url);
+            });
         }
     })
 

@@ -10,12 +10,12 @@ export default function Home() {
         <feather.GitHub size={60}/>
       </a>
       <feather.Airplay/>
-      <Button intent='primary' >Test</Button>
+      <Button>Test</Button>
       <Container main >
-        <Button intent='primary'>Test</Button>
+        <Button>Test</Button>
         <Container row>
-          <Button intent='primary' >Test</Button>
-          <Button intent='primary' >Test</Button>
+          <Button>Test</Button>
+          <Button>Test</Button>
         </Container>
       </Container>
     </div>

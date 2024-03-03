@@ -42,7 +42,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
             </DrawerDescription>
             <Canvas of={LoaderStories.Bar} />
-            <Controls of={LoaderStories.Bar} exclude={['size', 'margin', 'radius']} />
+            <Controls of={LoaderStories.Bar} exclude={['Size', 'Margin', 'Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -63,7 +63,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
             </DrawerDescription>
             <Canvas of={LoaderStories.Beat} />
-            <Controls of={LoaderStories.Beat} exclude={['width','height','radius']} />
+            <Controls of={LoaderStories.Beat} exclude={['Width','Height','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -84,7 +84,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
             </DrawerDescription>
             <Canvas of={LoaderStories.Bounce} />
-            <Controls of={LoaderStories.Bounce} exclude={['width','height','margin','radius']} />
+            <Controls of={LoaderStories.Bounce} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -105,7 +105,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
             </DrawerDescription>
             <Canvas of={LoaderStories.Circle} />
-            <Controls of={LoaderStories.Circle} exclude={['width','height','margin','radius']} />
+            <Controls of={LoaderStories.Circle} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -126,7 +126,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
             </DrawerDescription>
             <Canvas of={LoaderStories.ClimbingBox} />
-            <Controls of={LoaderStories.ClimbingBox} exclude={['width','height','margin','radius']} />
+            <Controls of={LoaderStories.ClimbingBox} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -147,7 +147,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
             </DrawerDescription>
             <Canvas of={LoaderStories.Clip} />
-            <Controls of={LoaderStories.Clip} exclude={['width','height','margin','radius']} />
+            <Controls of={LoaderStories.Clip} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -168,7 +168,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
             </DrawerDescription>
             <Canvas of={LoaderStories.Clock} />
-            <Controls of={LoaderStories.Clock} exclude={['width','height','margin','radius']} />
+            <Controls of={LoaderStories.Clock} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -189,7 +189,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
             </DrawerDescription>
             <Canvas of={LoaderStories.Dot} />
-            <Controls of={LoaderStories.Dot} exclude={['width','height','margin','radius']} />
+            <Controls of={LoaderStories.Dot} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -198,5 +198,326 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
         </DrawerFooter>
     </DrawerContent>
 </Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='fade' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Fade
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Fade} />
+            <Controls of={LoaderStories.Fade} exclude={['Size']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='grid' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Grid
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Grid} />
+            <Controls of={LoaderStories.Grid} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='hash' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Hash
+            </DrawerTitle>
+            <DrawerDescription>
+                My Favorite
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Hash} />
+            <Controls of={LoaderStories.Hash} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='moon' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Moon
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Moon} />
+            <Controls of={LoaderStories.Moon} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='pacman' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Pacman
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Pacman} />
+            <Controls of={LoaderStories.Pacman} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='ppg' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Propagate
+            </DrawerTitle>
+            <DrawerDescription>
+                shortend to ppg
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Propagate} />
+            <Controls of={LoaderStories.Propagate} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='puff' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Puff
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Puff} />
+            <Controls of={LoaderStories.Puff} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='pulse' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Pulse
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Pulse} />
+            <Controls of={LoaderStories.Pulse} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='ring' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Ring
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Ring} />
+            <Controls of={LoaderStories.Ring} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='rise' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Rise
+            </DrawerTitle>
+            <DrawerDescription>
+                Ugly af
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Rise} />
+            <Controls of={LoaderStories.Rise} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='rotate' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Rotate
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Rotate} />
+            <Controls of={LoaderStories.Rotate} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='scale' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Scale
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Scale} />
+            <Controls of={LoaderStories.Scale} exclude={['Size']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='skew' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Skew
+            </DrawerTitle>
+            <DrawerDescription>
+                Beautiful
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Skew} />
+            <Controls of={LoaderStories.Skew} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Loader type='square' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Square
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Square} />
+            <Controls of={LoaderStories.Square} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        
+        <Loader type='sync' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Sync
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={LoaderStories.Sync} />
+            <Controls of={LoaderStories.Sync} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+
 
 _Spacer_

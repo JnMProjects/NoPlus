@@ -4,6 +4,7 @@ import { Badge } from "./Badge";
 const meta: Meta = {
     title: "UI/Badge",
     component: Badge,
+    tags: ["autodocs"],
     argTypes: {
         variant: {
             name: "Variant",

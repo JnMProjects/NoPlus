@@ -28,9 +28,9 @@ const BadgeVariants = cva(
                 lg: " py-2 px-5 font-black rounded-xl ",
             },
             shadow: {
-                sm: " shadow-md",
-                md: " shadow-lg",
-                lg: " shadow-2xl",
+                sm: " shadow-md shadow-zinc-300 dark:shadow-zinc-600",
+                md: " shadow-lg shadow-zinc-400 dark:shadow-zinc-500",
+                lg: " shadow-2xl shadow-zinc-700 dark:shadow-zinc-300",
                 none: " shadow-none",
             }
         },
@@ -44,7 +44,7 @@ const BadgeVariants = cva(
 
 const Badge = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement> & VariantProps<typeof BadgeVariants>>(({ variant="secondary", size="sm", shadow="sm", children="unset", className, ...props}) => {
     return (
-        <span className={cn(BadgeVariants({ variant, size }), className)} {...props}>
+        <span className={cn(BadgeVariants({ variant, size, shadow }), className)} {...props}>
             {children}
         </span>
     )

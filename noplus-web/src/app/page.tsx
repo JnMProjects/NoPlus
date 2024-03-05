@@ -1,4 +1,3 @@
-import { Button } from '@components/ui';
 import { Container } from '@components/layout';
 import * as feather from 'react-feather';
 
@@ -9,15 +8,6 @@ export default function Home() {
       <a href="#" className='justify-center bg-system-highlight-light dark:bg-system-highlight-dark ring-4 rounded-md ring-system-highlight-light-purple dark:ring-system-highlight-dark-purple'>
         <feather.GitHub size={60}/>
       </a>
-      <feather.Airplay/>
-      <Button>Test</Button>
-      <Container main >
-        <Button>Test</Button>
-        <Container row>
-          <Button>Test</Button>
-          <Button>Test</Button>
-        </Container>
-      </Container>
     </div>
   );
 }

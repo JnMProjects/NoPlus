@@ -137,4 +137,7 @@ suffix?: keyof typeof Feather;
 })
 Button.displayName = "Button";
 
-export { Button };
+export default Button;
+
+export { Button}
+

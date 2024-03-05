@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Container } from "./Container";
-import { Button } from "../ui";
 import * as Feather from "react-feather";
 
 const meta: Meta<typeof Container> = {
@@ -11,7 +10,7 @@ const meta: Meta<typeof Container> = {
         children: {
             name: "Children",
             defaultValue: <>
-                <Button></Button>
+                <h1>1</h1>
             </>,
             description: "In this example, text and icons",
             control: {
@@ -151,12 +150,7 @@ export const Row: Story = {
 export const Flex: Story = {
     args: {
         ...Default.args,
-        children: <>
-            <Button flex='1'>Flex</Button>
-            <Button flex='2'>Flex= 2</Button>
-            <Button flex='3'>Flex= 3</Button>
-            <Button flex='10px'>10px</Button>
-        </>,
+        children: <></>,
         flex: true,
     }
 } 

@@ -4,8 +4,8 @@ import { cva, type VariantProps } from "cva"
 import { cn } from "../twm"
 
 const ItemVariants = cva(
-  "relative rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground w-auto",
   {
+    base: "relative rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground w-auto",
     variants: {
       errored: {
         true: "border-system-error dark:border-system-error-dark text-system-error-dark dark:text-system-error-light  [&>svg]:text-system-error bg-system-error-light/20 dark:bg-system-error-dark/20",

@@ -2,7 +2,6 @@ import { cva , type VariantProps} from "cva";
 import React, { FC } from "react";
 
 const ContainerVariants = cva(
-    "f",
     {
         variants: {
             row: {

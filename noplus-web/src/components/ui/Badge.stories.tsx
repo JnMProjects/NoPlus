@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Badge } from "./Badge";
+import { Feather } from "react-feather";
 
 const meta: Meta = {
     title: "UI/Badge",
@@ -41,6 +42,22 @@ const meta: Meta = {
                 options: ["sm", "md", "lg", "none"],
             },
         },
+        prefix: {
+            name: "Prefix",
+            description: "Set the prefix icon of the badge",
+            control: {
+                type: "select",
+                options: Object.keys(Feather),
+            },
+        },
+        suffix: {
+            name: "Suffix",
+            description: "Set the suffix icon of the badge",
+            control: {
+                type: "select",
+                options: Object.keys(Feather),
+            },
+        },
     },
 };
 
@@ -73,6 +90,24 @@ export const Large: Story = {
         children: "Large Sized Badge With Large Shadow",
         shadow: "lg",
     },
+};
+
+export const InfoPrefix: Story = {
+    args: {
+        ...Default.args,
+        prefix: "Info",
+        children: "Info Badge With Info Prefix",
+    },
+};
+
+export const DangerSuffix: Story = {
+    args: {
+        ...Default.args,
+        type: "danger",
+        suffix: "XCircle",
+        children: "Danger Badge With Danger Suffix",
+    },
+
 };
 
 export const Primary: Story = {

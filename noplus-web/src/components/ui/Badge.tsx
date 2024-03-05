@@ -1,9 +1,9 @@
 import { cva, type VariantProps } from "cva";
 import { cn } from "../twm";
 import React from "react";
+import * as Feather from "react-feather";
 
 const BadgeVariants = cva(
-    "",
     {
         variants: {
             variant: {
@@ -15,7 +15,7 @@ const BadgeVariants = cva(
                 oaccent: " bg-l-acc/40 text-l-txt/80 dark:bg-d-bg-400/40 dark:text-d-acc-400/80",
                 success: " bg-system-success text-system-success-bright dark:bg-system-success-dark",
                 osuccess: " bg-system-success-bright/40 text-system-success-dark/80 dark:bg-d-bg-400/40 dark:text-system-success-light/80",
-                danger: " bg-system-error-light text-l-txt-200 dark:bg-system-error dark:text-system-error-bright",
+                danger: " bg-system-error-light text-l-txt-100 dark:bg-system-error dark:text-system-error-bright",
                 odanger: " bg-system-error/40 text-l-txt/80 dark:bg-system-error-light/20 dark:text-system-error-dark/80",
                 warning: " bg-system-warning text-d-acc-800 dark:bg-system-warning-dark dark:text-d-acc-400",
                 owarning: " bg-system-warning/40 text-l-acc-900/80 dark:bg-system-warning-dark/40 dark:text-d-acc-400/80",
@@ -26,6 +26,9 @@ const BadgeVariants = cva(
                 sm: " rounded-xl py-1 px-2 font-normal",
                 md: " py-2 px-3 font-semibold rounded-xl",
                 lg: " py-2 px-5 font-black rounded-xl ",
+                nsm: " rounded-full p-1",
+                nmd: " rounded-full p-2",
+                nlg: " rounded-full p-3",
             },
             shadouu: { // double u / w
                 sm: " shadow-md shadow-zinc-300 dark:shadow-zinc-600",
@@ -47,14 +50,26 @@ const BadgeVariants = cva(
 
 const Badge = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement> & VariantProps<typeof BadgeVariants> & {
     opacity?: boolean;
+    prefix?: keyof typeof Feather;
+    suffix?: keyof typeof Feather;
     type?: "primary" | "secondary" | "accent" | "success" | "danger" | "warning" | "info";
     shadow?: "sm" | "md" | "lg"; // Updated type
-}>(({ type="secondary", size="sm", shadow="sm", children="unset", opacity=false, className, ...props}) => {
+}>(({ type="secondary", size="sm", shadow="sm", children="unset", opacity=false, className, prefix, suffix, ...props}) => {
     const variant: "primary" | "oprimary" | "secondary" | "osecondary" | "accent" | "oaccent" | "success" | "osuccess" | "danger" | "odanger" | "warning" | "owarning" | "info" | "oinfo" | null | undefined = opacity ? `o${type}` : type;
     const shadouu: "sm" | "md" | "lg" | "osm" | "omd" | "olg" = opacity ? `o${shadow}` : shadow; // Updated type
+    const Prefix = prefix ? Feather[prefix] : null;
+    const Suffix = suffix ? Feather[suffix] : null;
+    const iconSize = size === "sm" ? 10 : size === "md" ? 15 : size === "lg" ? 20 : 10; // Default to 16 if size is not "sm", "md", or "lg"
+
     return (
-        <span className={cn(BadgeVariants({ variant, size, shadouu }), className)} {...props}>
+        <span className={cn(BadgeVariants({ variant, size, shadouu }), className)} {...props} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }}>
+            {Prefix && <Prefix size={iconSize} style={{
+                marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
+            }} />}
             {children}
+            {Suffix && <Suffix size={iconSize} style={{
+                marginLeft: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
+            }} />}
         </span>
     )
 })

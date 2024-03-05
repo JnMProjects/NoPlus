@@ -1,11 +1,10 @@
 import { execSync } from "child_process";
-import { Button } from "./button";
+import { Button } from "./Button";
 import { Meta, StoryObj } from "@storybook/react";
 import "../../app/globals.css"; 
 
 const meta: Meta<typeof Button> = {
     title: "UI/Button",
-    component: Button,
     tags: ['autodocs'],
     argTypes: {
         children: {

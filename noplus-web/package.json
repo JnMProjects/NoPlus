@@ -49,7 +49,6 @@
     "@storybook/addon-essentials": "^8.0.0-rc.1",
     "@storybook/addon-interactions": "^8.0.0-rc.1",
     "@storybook/addon-links": "^8.0.0-rc.1",
-    "@storybook/addon-mdx-gfm": "^8.0.0-rc.1",
     "@storybook/addon-onboarding": "^8.0.0-rc.1",
     "@storybook/blocks": "^8.0.0-rc.1",
     "@storybook/nextjs": "^8.0.0-rc.1",

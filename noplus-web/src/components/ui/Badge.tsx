@@ -27,24 +27,33 @@ const BadgeVariants = cva(
                 md: " py-2 px-3 font-semibold rounded-xl",
                 lg: " py-2 px-5 font-black rounded-xl ",
             },
-            shadow: {
+            shadouu: { // double u / w
                 sm: " shadow-md shadow-zinc-300 dark:shadow-zinc-600",
                 md: " shadow-lg shadow-zinc-400 dark:shadow-zinc-500",
                 lg: " shadow-2xl shadow-zinc-700 dark:shadow-zinc-300",
+                osm: " shadow-md shadow-zinc-100/70 dark:shadow-zinc-800/70",
+                omd: " shadow-lg shadow-zinc-100/70 dark:shadow-zinc-800/70",
+                olg: " shadow-2xl shadow-zinc-100/70 dark:shadow-zinc-800/70",
                 none: " shadow-none",
             }
         },
         defaultVariants: {
             variant: "secondary",
             size: "sm",
-            shadow: "sm",
+            shadouu: "sm",
         }
     }
 )
 
-const Badge = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement> & VariantProps<typeof BadgeVariants>>(({ variant="secondary", size="sm", shadow="sm", children="unset", className, ...props}) => {
+const Badge = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement> & VariantProps<typeof BadgeVariants> & {
+    opacity?: boolean;
+    type?: "primary" | "secondary" | "accent" | "success" | "danger" | "warning" | "info";
+    shadow?: "sm" | "md" | "lg"; // Updated type
+}>(({ type="secondary", size="sm", shadow="sm", children="unset", opacity=false, className, ...props}) => {
+    const variant: "primary" | "oprimary" | "secondary" | "osecondary" | "accent" | "oaccent" | "success" | "osuccess" | "danger" | "odanger" | "warning" | "owarning" | "info" | "oinfo" | null | undefined = opacity ? `o${type}` : type;
+    const shadouu: "sm" | "md" | "lg" | "osm" | "omd" | "olg" = opacity ? `o${shadow}` : shadow; // Updated type
     return (
-        <span className={cn(BadgeVariants({ variant, size, shadow }), className)} {...props}>
+        <span className={cn(BadgeVariants({ variant, size, shadouu }), className)} {...props}>
             {children}
         </span>
     )

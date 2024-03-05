@@ -6,206 +6,127 @@ const meta: Meta = {
     component: Badge,
     tags: ["autodocs"],
     argTypes: {
-        variant: {
-            name: "Variant",
-            defaultValue: "primary",
-            description: "The variant of the badge",
+        type: {
+            name: "Type",
+            description: "Set the type of the badge",
+            defaultValue: "secondary",
             control: {
                 type: "select",
-                options: ["primary", "oprimary", "secondary", "osecondary", "accent", "oaccent", "success", "osuccess", "danger", "odanger", "warning", "owarning"],
+                options: ["primary", "secondary", "accent", "success", "danger", "warning", "info"],
+            },
+        },
+        opacity: {
+            name: "Opacity",
+            description: "Set the badge to be opaque",
+            defaultValue: false,
+            control: {
+                type: "boolean",
             },
         },
         size: {
             name: "Size",
+            description: "Set the size of the badge",
             defaultValue: "sm",
-            description: "The size of the badge",
             control: {
                 type: "select",
                 options: ["sm", "md", "lg"],
-            },
-        },
-        children: {
-            name: "Children / Text",
-            description: "The text of the badge",
-            defaultValue: "Badge",
-            control: {
-                type: "text",
             },
         },
         shadow: {
             name: "Shadow",
+            description: "Set the shadow of the badge",
             defaultValue: "sm",
-            description: "The shadow of the badge",
             control: {
                 type: "select",
-                options: ["sm", "md", "lg"],
+                options: ["sm", "md", "lg", "none"],
             },
-        }
+        },
     },
 };
 
 export default meta;
 type Story = StoryObj<typeof Badge>;
 
-export const Small: Story = {
+export const Default: Story = {
     args: {
-        variant: "secondary",
-        size: "sm",
-        shadow: "sm",
-        children: "Small / Default",
+        type: "secondary",
+        children: "Default Badge",
+        size: "md",
+        opacity: false,
+        shadow: "md",
     },
 };
 
 export const Medium: Story = {
     args: {
-        ...Small.args,
+        ...Default.args,
         size: "md",
-        children: "Medium",
+        children: "Medium Sized Badge With Medium Shadow",
+        shadow: "md",
     },
 };
 
 export const Large: Story = {
     args: {
-        ...Small.args,
+        ...Default.args,
         size: "lg",
-        children: "Large",
-    },
-};
-
-export const NoShadow: Story = {
-    args: {
-        ...Small.args,
-        shadow: "none",
-        children: "No Shadow",
-    },
-};
-
-export const SmallShadow: Story = {
-    args: {
-        ...Small.args,
-        shadow: "sm",
-        children: "Small Shadow",
-    },
-};
-
-export const MediumShadow: Story = {
-    args: {
-        ...Small.args,
-        shadow: "md",
-        children: "Medium Shadow",
-    },
-};
-
-export const LargeShadow: Story = {
-    args: {
-        ...Small.args,
+        children: "Large Sized Badge With Large Shadow",
         shadow: "lg",
-        children: "Large Shadow",
     },
 };
 
 export const Primary: Story = {
     args: {
-        variant: "primary",
-        size: "sm",
-        shadow: "sm",
-        children: "Primary",
+        ...Default.args,
+        type: "primary",
+        children: "Primary Badge",
     },
 };
 
-export const OPrimary: Story = {
-    args: {
-        ...Primary.args,
-        variant: "oprimary",
-    }
-}
-
 export const Secondary: Story = {
     args: {
-        ...Primary.args,
-        variant: "secondary",
-        children: "Secondary / Default",
-    }
-}
-
-export const OSecondary: Story = {
-    args: {
-        ...Secondary.args,
-        variant: "osecondary",
-    }
-}
+        ...Default.args,
+        type: "secondary",
+        children: "Secondary Badge",
+    },
+};
 
 export const Accent: Story = {
     args: {
-        ...Primary.args,
-        variant: "accent",
-        children: "Accent",
-    }
-}
-
-export const OAccent: Story = {
-    args: {
-        ...Accent.args,
-        variant: "oaccent",
-    }
-}
+        ...Default.args,
+        type: "accent",
+        children: "Accent Badge",
+    },
+};
 
 export const Success: Story = {
     args: {
-        ...Primary.args,
-        variant: "success",
-        children: "Success",
-    }
-}
-
-export const OSuccess: Story = {
-    args: {
-        ...Success.args,
-        variant: "osuccess",
-    }
-}
+        ...Default.args,
+        type: "success",
+        children: "Success Badge",
+    },
+};
 
 export const Danger: Story = {
     args: {
-        ...Primary.args,
-        variant: "danger",
-        children: "Danger",
-    }
-}
-
-export const ODanger: Story = {
-    args: {
-        ...Danger.args,
-        variant: "odanger",
-    }
-}
+        ...Default.args,
+        type: "danger",
+        children: "Danger Badge",
+    },
+};
 
 export const Warning: Story = {
     args: {
-        ...Primary.args,
-        variant: "warning",
-        children: "Warning",
-    }
-}
-
-export const OWarning: Story = {
-    args: {
-        ...Warning.args,
-        variant: "owarning",
-    }
-}
+        ...Default.args,
+        type: "warning",
+        children: "Warning Badge",
+    },
+};
 
 export const Info: Story = {
     args: {
-        ...Primary.args,
-        variant: "info",
-        children: "Info",
-    }
-}
-
-export const OInfo: Story = {
-    args: {
-        ...Info.args,
-        variant: "oinfo",
-    }
-}
+        ...Default.args,
+        type: "info",
+        children: "Info Badge",
+    },
+};

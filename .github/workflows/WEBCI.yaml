@@ -36,4 +36,3 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           workingDir: noplus-web
-          onlyChaged: true

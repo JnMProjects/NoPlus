@@ -73,6 +73,27 @@ const Badge = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanEle
         </span>
     )
 })
-Badge.displayName = "Badge"; // Add display name
+Badge.displayName = "Badge";
 
-export { Badge };
+const BadgedIcon = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement> & VariantProps<typeof BadgeVariants> & {
+    type?: "primary" | "secondary" | "accent" | "success" | "danger" | "warning" | "info";
+    shadow?: "sm" | "md" | "lg";
+    opacity?: boolean;
+    icon: keyof typeof Feather;
+    color?: string;
+    IconSize?: number;
+}>(({ type="secondary", size, shadow="sm", opacity=false, icon, className, color, ...props}) => {
+    const variant: "primary" | "oprimary" | "secondary" | "osecondary" | "accent" | "oaccent" | "success" | "osuccess" | "danger" | "odanger" | "warning" | "owarning" | "info" | "oinfo" | null | undefined = opacity ? `o${type}` : type;
+    const shadouu: "sm" | "md" | "lg" | "osm" | "omd" | "olg" = opacity ? `o${shadow}` : shadow; // Updated type
+    const Icon = Feather[icon] ? Feather[icon] : Feather['Code'];
+    const IconSize = size === "sm" ? 30 : size === "md" ? 45 : size === "lg" ? 60 : 30;
+    return (
+        <span className={cn(BadgeVariants({ variant, size, shadouu }), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }}>
+            {Icon && <Icon size={IconSize} color={color} />}
+        </span>
+    )
+})
+BadgedIcon.displayName = "BadgeIcon";
+
+
+export { Badge, BadgedIcon };

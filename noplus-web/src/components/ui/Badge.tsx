@@ -31,12 +31,12 @@ const BadgeVariants = cva(
                 nlg: " rounded-full p-3",
             },
             shadouu: { // double u / w
-                sm: " shadow-md shadow-zinc-300 dark:shadow-zinc-600",
+                sm: " shadow-md shadow-zinc-100 dark:shadow-zinc-950/70",
                 md: " shadow-lg shadow-zinc-400 dark:shadow-zinc-500",
-                lg: " shadow-2xl shadow-zinc-700 dark:shadow-zinc-300",
-                osm: " shadow-md shadow-zinc-100/70 dark:shadow-zinc-800/70",
-                omd: " shadow-lg shadow-zinc-100/70 dark:shadow-zinc-800/70",
-                olg: " shadow-2xl shadow-zinc-100/70 dark:shadow-zinc-800/70",
+                lg: " shadow-2xl shadow-zinc-600 dark:shadow-zinc-400",
+                osm: " shadow-md shadow-zinc-100/70 dark:shadow-zinc-600/70",
+                omd: " shadow-lg shadow-zinc-100/70 dark:shadow-zinc-500/70",
+                olg: " shadow-2xl shadow-zinc-100/70 dark:shadow-zinc-500/70",
                 none: " shadow-none",
             }
         },

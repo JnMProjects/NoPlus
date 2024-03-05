@@ -5,3 +5,5 @@ export { Loader } from './Loader';
 export { Badge } from './Badge';
 
 export { Icon } from './Feather';
+
+export { Button } from './Button';

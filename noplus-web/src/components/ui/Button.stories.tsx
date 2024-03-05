@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./";
+import { Button } from "./Button";
 
 import { Feather } from 'react-feather';
 

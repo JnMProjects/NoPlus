@@ -47,7 +47,7 @@ export const SingleCollapse = () => {
 
 export const MultipleCollapses = () => {
     return (
-        <CollapseGroup defaultExpanded="2">
+        <CollapseGroup>
             <Collapse title="Title 1" trigger="Trigger 1">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -56,7 +56,7 @@ export const MultipleCollapses = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </Collapse>
-            <Collapse title="Title 3" trigger="Im Default Expanded" >
+            <Collapse title="Title 3" trigger="Im Default Expanded" defaultExpanded >
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </Collapse>

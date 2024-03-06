@@ -8,12 +8,11 @@ import { cn } from "../twm"
 
 interface CGroupProps {
     children?: React.ReactNode;
-    defaultExpanded?: string;
 }
 
-const CollapseGroup: React.FC<CGroupProps> = ({ children, defaultExpanded, ...props }) => {
+const CollapseGroup: React.FC<CGroupProps> = ({ children, ...props }) => {
   return (
-    <CollapsePrimitive.Root type="multiple" {...props} defaultValue={defaultExpanded ? ["collapse-" + defaultExpanded] : []} >
+    <CollapsePrimitive.Root type="multiple" {...props} defaultValue={["default"]} >
       {children}
     </CollapsePrimitive.Root>
   );
@@ -73,21 +72,33 @@ interface CollapseProps {
     trigger: React.ReactNode;
     className?: string;
     no?: string;
+    defaultExpanded?: boolean;
 }
-
 let collapseCounter = 0;
-const Collapse: React.FC<CollapseProps> = ({ title, trigger, children, className, no, ...props }) => {
+const Collapse: React.FC<CollapseProps> = ({ defaultExpanded, title, trigger, children, className, no, ...props }) => {
   const value = no || `collapse-${collapseCounter++}`;
-  return (
-
-    <CollapseItem className={cn("border-b border-t")} value={value}>
-      <CollapseHeadRaw>{trigger}</CollapseHeadRaw>
-      <CollapseContentRaw>
-        <h1 className=" font-bold border-collapse top-2">{title}</h1>
-        <div className={cn("", className)} {...props} >{children}</div>
-      </CollapseContentRaw>
-    </CollapseItem>
-  );
+  
+  if (!defaultExpanded) {
+    return (
+      <CollapseItem className={cn("border-b border-t")} value={value}>
+        <CollapseHeadRaw>{trigger}</CollapseHeadRaw>
+        <CollapseContentRaw>
+          <h1 className=" font-bold border-collapse top-2">{title}</h1>
+          <div className={cn("", className)} {...props} >{children}</div>
+        </CollapseContentRaw>
+      </CollapseItem>
+    );
+  } else {
+    return (
+      <CollapseItem className={cn("border-b border-t")} value={"default"}>
+        <CollapseHeadRaw>{trigger}</CollapseHeadRaw>
+        <CollapseContentRaw>
+          <h1 className=" font-bold border-collapse top-2">{title}</h1>
+          <div className={cn("", className)} {...props} >{children}</div>
+        </CollapseContentRaw>
+      </CollapseItem>
+    );
+  }
 };
 
 export { CollapseGroup, Collapse };

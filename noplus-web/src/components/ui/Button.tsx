@@ -1,15 +1,15 @@
 import { cva, VariantProps } from "cva";
 import React from "react";
 import { cn } from "../twm";
-import * as Loader from ".";
+import * as Loader from "./";
 import * as Feather from "react-feather";
 
 const ButtonVariants = cva({
     base: " duration-200 border",
     variants: {
         variant: {
-            primary: "bg-l-prim text-d-txt border-l-prim-700 hover:border-l-acc-600 active:border-l-sec-500  hover:bg-l-prim-700 hover:text-d-txt-200 active:bg-l-prim-800 dark:bg-d-bg dark:text-d-txt-500 dark:hover:bg-d-prim-800 dark:hover:text-d-txt-100 dark:hover:border-indigo-900 dark:active:bg-d-prim-800 dark:active:text-d-sec-600 dark:active:border-d-acc-600",
-            secondary: "bg-l-sec text-l-txt dark:bg-d-sec-600 dark:text-d-txt-600",
+            primary: "bg-l-prim-800 text-d-txt-100 border-l-prim-600 hover:border-l-acc-600 active:border-l-sec-500  hover:bg-l-prim-700 hover:text-d-txt-200 active:bg-l-prim-800 dark:bg-d-bg dark:text-d-txt-500 dark:hover:bg-d-prim-800 dark:hover:text-d-txt-100 dark:hover:border-indigo-900 dark:active:bg-d-prim-800 dark:active:text-d-sec-600 dark:active:border-d-acc-600",
+            secondary: "bg-l-sec text-l-txt border-amber-400 dark:bg-d-sec-600 dark:text-d-txt-600",
             tertiary: " bg-l-acc text-l-txt dark:bg-d-acc-600 dark:text-d-txt-600",
             oprimary: "", // o for outlined
             osecondary: "",

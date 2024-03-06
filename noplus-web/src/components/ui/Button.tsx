@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "cva";
 import React from "react";
 import { cn } from "../twm";
-import * as Loader from "./";
+import * as Loader from ".";
 import * as Feather from "react-feather";
 
 const ButtonVariants = cva({
@@ -137,7 +137,7 @@ suffix?: keyof typeof Feather;
 })
 Button.displayName = "Button";
 
-export default Button;
+export { Button };
 
 
 

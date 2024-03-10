@@ -11,12 +11,12 @@ const ButtonVariants = cva({
             primary: "bg-l-prim-800 text-d-txt-100 border-l-prim-600 hover:border-l-acc-600 active:border-l-sec-500  hover:bg-l-prim-700 hover:text-d-txt-200 active:bg-l-prim-800 dark:bg-d-bg dark:text-d-txt-500 dark:hover:bg-d-prim-800 dark:hover:text-d-txt-100 dark:hover:border-indigo-900 dark:active:bg-d-prim-800 dark:active:text-d-sec-600 dark:active:border-d-acc-600",
             secondary: "bg-l-sec text-l-txt border-amber-300 hover:bg-yellow-200 hover:text-l-txt-600 hover:border-orange-300 active:bg-yellow-300 active:text-l-txt-700 active:border-amber-600 dark:bg-yellow-300 dark:text-d-txt-800 dark:border-amber-500 dark:hover:bg-yellow-400 dark:hover:text-d-txt-900 dark:hover:border-amber-600 dark:active:bg-yellow-500 dark:active:text-d-txt-900 dark:active:border-amber-800",
             tertiary: "bg-violet-300 text-l-txt border-fuchsia-500 hover:bg-indigo-300 hover:text-l-txt-900 hover:border-violet-700 active:bg-violet-300 active:border-violet-800 dark:bg-purple-500 dark:text-fuchsia-200 dark:border-violet-600 dark:hover:bg-purple-700 dark:hover:text-teal-300 dark:hover:border-indigo-400 dark:active:bg-purple-800 dark:active:text-teal-400 dark:active:border-indigo-700",
-            soft: "", // teal and da blue stuff very beautiful
-            osoft: "",
-            oprimary: "", // o for outlined
+            soft: " bg-cyan-300 text-blue-800 border-teal-400 hover:bg-sky-300 hover:text-indigo-700 hover:border-emerald-500 active:border-lime-400 active:text-indigo-800 dark:bg-teal-600 dark:text-sky-100 dark:hover:bg-emerald-700 dark:hover:text-cyan-100 dark:active:text-emerald-100 dark:active:border-teal-600", // teal and da blue stuff very beautiful
+            osoft: "", 
+            oprimary: " border-l-prim-800 bg-l-txt-200/40 hover:bg-l-txt-200/50 hover:border-l-prim-700 active:bg-l-txt-300/50 dark:bg-d-prim-300/40", // o for outlined
             osecondary: "",
             otertiary: "",
-            text: "", // invis bg just hover and active effect
+            text: "border-none bg-transparent text-l-txt hover:bg-slate-200/80 active:bg-gray-400/80", // invis bg just hover and active effect
             otext: "",
         },
         size: {
@@ -91,10 +91,10 @@ const ICObuttonVariants = cva({
     }
 })
 
+
 const Button = React.forwardRef<HTMLButtonElement, React.HTMLAttributes<HTMLButtonElement> & VariantProps<typeof ButtonVariants> & VariantProps<typeof ICObuttonVariants> & {
 // Different return Controllers
 icon?: keyof typeof Feather;
-// Loading aber der ist tiefer
 disabled?: boolean;
 loading?: keyof typeof Loader;
 outlined?: boolean;
@@ -150,7 +150,7 @@ textexpand?: boolean;
     } else if (!icon && !loading && !disabled) {
         const Prefix = prefix ? Feather[prefix] : null;
         const Suffix = suffix ? Feather[suffix] : null;
-        const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "oprimary" | "osecondary" | "osoft" | "otext" | undefined = outlined ? `o${type}` : type; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
+        const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
         return (
             <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled:false}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }}>
                 {Prefix && <Prefix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{

@@ -13,6 +13,7 @@
     "lint:next": "next lint",
     "dev:storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "build-storydocs": "storybook build --docs",
     "bst": "concurrently \"npm:build:storybook\"",
     "ghci": "npm ci && conc \"npm:ghci:*\"",
     "chromatic": "npx chromatic --storybook-base-dir=noplus-web --zip",

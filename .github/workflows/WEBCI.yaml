@@ -36,7 +36,7 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           workingDir: noplus-web
-  StoryPages:
+  StoryBook:
     name: Build Storybook 📚
     runs-on: ubuntu-latest
     steps:
@@ -95,7 +95,7 @@ jobs:
   upstream:
     name: Upload Authority 📦
     runs-on: ubuntu-latest
-    needs: [StoryPages, StoryDocs]
+    needs: [StoryBook, StoryDocs]
     steps:
       - name: Checkout code 📦
         uses: actions/checkout@v4
@@ -112,7 +112,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: storydocs
-          path: noplus-web/src/app/docs/components/storydocs
+          path: noplus-web/public/storydocs
 
       - name: Activate Vercel Deployment
         run: |

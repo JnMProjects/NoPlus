@@ -3,11 +3,13 @@ import type { StorybookConfig } from "@storybook/nextjs";
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
+    "@storybook/addon-onboarding",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-onboarding",
+    "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    "@chromatic-com/storybook"
+    "@storybook/addon-styling-webpack",
+    "@storybook/addon-themes"
   ],
   framework: {
     name: "@storybook/nextjs",
@@ -16,5 +18,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs: ["..\\public"],
 };
 export default config;

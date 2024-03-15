@@ -25,7 +25,7 @@ const CollapseItem = React.forwardRef<
   <CollapsePrimitive.Item
     ref={ref}
     {...props}
-    className={cn("border-t border-b", className)}
+    className={cn("border-t border-b border-d-bg dark:border-l-bg", className)}
   />
 ))
 CollapseItem.displayName = "AccordionItem"

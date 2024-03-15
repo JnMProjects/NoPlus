@@ -18,7 +18,8 @@
     "ghci": "npm ci && conc \"npm:ghci:*\"",
     "chromatic": "npx chromatic --storybook-base-dir=noplus-web --zip",
     "test": "conc \"npm:test-*\"",
-    "test-jest": "jest"
+    "test-jest": "jest",
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -51,10 +52,14 @@
     "@storybook/addon-interactions": "^8.0.0-rc.1",
     "@storybook/addon-links": "^8.0.0-rc.1",
     "@storybook/addon-onboarding": "^8.0.0-rc.1",
+    "@storybook/addon-styling-webpack": "^0.0.6",
+    "@storybook/addon-themes": "^8.0.0-rc.1",
     "@storybook/blocks": "^8.0.0-rc.1",
+    "@storybook/manager-api": "^8.0.0",
     "@storybook/nextjs": "^8.0.0-rc.1",
     "@storybook/react": "^8.0.0-rc.1",
     "@storybook/test": "^8.0.0-rc.1",
+    "@storybook/theming": "^8.0.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -67,7 +72,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "jest": "^29.7.0",
     "postcss": "^8.4.35",
-    "storybook": "^8.0.0-rc.1",
+    "storybook": "^8.0.0",
     "tailwindcss": "^3.4.1",
     "ts-jest": "^29.1.2",
     "typescript": "^5"

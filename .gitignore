@@ -78,3 +78,5 @@ blank
 # Ignore backup files
 
 /backup/*
+
+dev.bash

@@ -4,6 +4,7 @@ import { Button } from "./Button";
 const meta: Meta = {
     title: "UI/Button",
     component: Button,
+    tags: ["autodocs"],
     argTypes: {
         children: {
             name: "Children / Text",
@@ -70,6 +71,7 @@ export const Primary: Story = {
     args: {
         ...Default.args,
         type: "primary",
+        children: "Primary",
     }
 }
 
@@ -77,6 +79,7 @@ export const Secondary: Story = {
     args: {
         ...Default.args,
         type: "secondary",
+        children: "Secondary",
     }
 }
 
@@ -84,6 +87,7 @@ export const Tertiary: Story = {
     args: {
         ...Default.args,
         type: "tertiary",
+        children: "Tertiary",
     }
 }
 
@@ -91,5 +95,41 @@ export const Soft: Story = {
     args: {
         ...Default.args,
         type: "soft",
+        children: "Soft"
+    }
+}
+
+export const OutlinedPrimary: Story = {
+    args: {
+        ...Primary.args,
+        outlined: true,
+    }
+}
+
+export const OutlinedSecondary: Story = {
+    args: {
+        ...Secondary.args,
+        outlined: true,
+    }
+}
+
+export const OutlinedTertiary: Story = {
+    args: {
+        ...Tertiary.args,
+        outlined: true,
+    }
+}
+
+export const OutlinedSoft: Story = {
+    args: {
+        ...Soft.args,
+        outlined: true,
+    }
+}
+
+export const DisabledDefault: Story = {
+    args: {
+        ...Default.args,
+        disabled: true,
     }
 }

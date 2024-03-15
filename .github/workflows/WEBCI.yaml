@@ -1,4 +1,4 @@
-name: CI Scripts 🧾 for Web Branches ✔
+name: CI Scripts 🧾 for Web Branches ✔ 
 
 on:
   push:

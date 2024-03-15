@@ -115,10 +115,8 @@ jobs:
           path: noplus-web/src/app/docs/components/storydocs
 
       - name: Activate Vercel Deployment
-        run: 
-        - name: Update vercel.json
-          run: |
-            echo '{"github": {"enabled": true}}' > vercel.json
+        run: |
+          echo '{"github": {"enabled": true}}' > vercel.json
 
       - name: Commit and Push to Current Branch 📦
         uses: ad-m/github-push-action@master

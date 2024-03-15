@@ -90,7 +90,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: storydocs
-          path: noplus-web/storydocs
+          path: noplus-web/storybook-static
 
   upstream:
     name: Upload Authority 📦

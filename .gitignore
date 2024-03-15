@@ -80,3 +80,4 @@ blank
 /backup/*
 
 dev.bash
+*.tmp

@@ -92,33 +92,33 @@ jobs:
           name: storydocs
           path: noplus-web/storydocs
 
-  upstream:
-    name: Upload Authority 📦
-    runs-on: ubuntu-latest
-    needs: [StoryPages, StoryDocs]
-    steps:
-      - name: Checkout code 📦
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      
-      - name: Download Storybook 📚
-        uses: actions/download-artifact@v2
-        with:
-          name: storybook
-          path: docs/storybook
-
-      - name: Download StoryDocs 📚
-        uses: actions/download-artifact@v2
-        with:
-          name: storydocs
-          path: noplus-web/src/app/docs/components/storydocs
-
-      - name: Activate Vercel Deployment
-        run: echo '{"github": {"enabled": true}}' > vercel.json
-
-      - name: Commit and Push to Current Branch 📦
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+#  upstream:
+#    name: Upload Authority 📦
+#    runs-on: ubuntu-latest
+#    needs: [StoryPages, StoryDocs]
+#    steps:
+#      - name: Checkout code 📦
+#        uses: actions/checkout@v4
+#        with:
+#          fetch-depth: 0
+#      
+#      - name: Download Storybook 📚
+#        uses: actions/download-artifact@v2
+#        with:
+#          name: storybook
+#          path: docs/storybook
+#
+#      - name: Download StoryDocs 📚
+#        uses: actions/download-artifact@v2
+#        with:
+#          name: storydocs
+#          path: noplus-web/src/app/docs/components/storydocs
+#
+#      - name: Activate Vercel Deployment
+#        run: echo '{"github": {"enabled": true}}' > vercel.json
+#
+#      - name: Commit and Push to Current Branch 📦
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          branch: ${{ github.ref }}

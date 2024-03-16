@@ -120,15 +120,10 @@ jobs:
 
       - name: Commit Changes 📦
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "${{ secrets.BOT_EMAIL }}"
           git config --local user.name "github-actions[bot]"
           git add vercel.json
           git add noplus-web/public/storydocs
           git add docs/storybook
           git commit -m "Deploy Storybook and StoryDocs to Vercel 📚"
-
-      - name: Push to Current Branch 📦
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: web-dev
+          git push origin HEAD:web-dev

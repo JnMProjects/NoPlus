@@ -4,36 +4,14 @@ on:
   push:
     branches:
       - web-dev
+  pull_request:
+    branches:
+      - web
+      - web-dev
 
 jobs:
-  chromatic:
-    name: Publish Storybook to Chromatic 📚
-    env:
-      GH_PFP_TOKEN: ${{ secrets.GH_PFP_TOKEN }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.11.0'
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
-
-      - name: Install dependencies
-        run: cd noplus-web && npm i
-
-      - name: Publish to Chromatic
-        uses: chromaui/action@latest
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          workingDir: noplus-web
-  StoryBook:
-    name: Build StoryBook 📚
+  test-next:
+    name: Test Next.js 🧪
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code 📦
@@ -51,79 +29,5 @@ jobs:
       - name: Install dependencies 📦
         run: cd noplus-web && npm i
 
-      - name: Build Storybook 📚
-        run: cd noplus-web && npm run build-storybook
-
-      - name: Send Build to Upload Authority
-        uses: actions/upload-artifact@v2
-        with:
-          name: storybook
-          path: noplus-web/storybook-static
-
-  StoryDocs:
-    name: Build StoryDocs 📚
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code 📦
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup node 📦
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.11.0'
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
-
-      - name: Install dependencies 📦
-        run: cd noplus-web && npm i
-
-      - name: Build StoryDocs 📚
-        run: cd noplus-web && npm run build-storydocs
-
-      - name: Send Build to Upload Authority
-        uses: actions/upload-artifact@v2
-        with:
-          name: storydocs
-          path: noplus-web/storybook-static
-
-  upstream:
-    name: Upload Authority 📦
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-      pull-requests: write
-    needs: [StoryBook, StoryDocs]
-    steps:
-      - name: Checkout code 📦
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      
-      - name: Download Storybook 📚
-        uses: actions/download-artifact@v2
-        with:
-          name: storybook
-          path: docs/storybook
-
-      - name: Download StoryDocs 📚
-        uses: actions/download-artifact@v2
-        with:
-          name: storydocs
-          path: noplus-web/public/storydocs
-
-      - name: Activate Vercel Deployment
-        run: |
-          echo '{"github": {"enabled": true}}' > vercel.json
-
-      - name: Commit Changes 📦
-        run: |
-          git config --local user.email "${{ secrets.BOT_EMAIL }}"
-          git config --local user.name "github-actions[bot]"
-          git add vercel.json
-          git add noplus-web/public/storydocs
-          git add docs/storybook
-          git commit -m "Deploy Storybook and StoryDocs to Vercel 📚"
-          git push origin HEAD:web-dev
+      - name: Test Next.js 🧪
+        run: cd noplus-web && npm run test

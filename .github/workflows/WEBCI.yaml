@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - web-dev
-  pull_request:
-    branches:
-      - web
-      - web-dev
 
 jobs:
   chromatic:
@@ -135,4 +131,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: web-dev

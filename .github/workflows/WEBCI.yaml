@@ -37,7 +37,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           workingDir: noplus-web
   StoryBook:
-    name: Build Storybook 📚
+    name: Build StoryBook 📚
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code 📦
@@ -118,7 +118,16 @@ jobs:
         run: |
           echo '{"github": {"enabled": true}}' > vercel.json
 
-      - name: Commit and Push to Current Branch 📦
+      - name: Commit Changes 📦
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add vercel.json
+          git add noplus-web/public/storydocs
+          git add docs/storybook
+          git commit -m "Deploy Storybook and StoryDocs to Vercel 📚"
+
+      - name: Push to Current Branch 📦
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

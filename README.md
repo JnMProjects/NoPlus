@@ -1,4 +1,5 @@
 # NoPlus Web Branch
+[![CI Scripts 🧾 for Web Branches ✔](https://github.com/JnMProjects/NoPlus/actions/workflows/WEBCI.yaml/badge.svg)](https://github.com/JnMProjects/NoPlus/actions/workflows/WEBCI.yaml)
 
 This branch is dedicated to the website development of NoPlus and should not be merged into or from any other branch.
 

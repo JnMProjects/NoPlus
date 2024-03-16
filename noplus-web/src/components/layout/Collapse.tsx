@@ -12,7 +12,7 @@ interface CGroupProps {
 
 const CollapseGroup: React.FC<CGroupProps> = ({ children, ...props }) => {
   return (
-    <CollapsePrimitive.Root type="multiple" {...props} defaultValue={["default"]} >
+    <CollapsePrimitive.Root type="multiple" {...props} defaultValue={["default"]} className="border-t border-b border-d-bg dark:border-l-bg" >
       {children}
     </CollapsePrimitive.Root>
   );
@@ -25,7 +25,7 @@ const CollapseItem = React.forwardRef<
   <CollapsePrimitive.Item
     ref={ref}
     {...props}
-    className={cn("border-t border-b border-d-bg dark:border-l-bg", className)}
+    className={cn("border-t border-b border-d-bg/70 dark:border-l-bg/70", className)}
   />
 ))
 CollapseItem.displayName = "AccordionItem"

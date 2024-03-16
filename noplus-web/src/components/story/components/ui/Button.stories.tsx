@@ -127,9 +127,19 @@ export const OutlinedSoft: Story = {
     }
 }
 
-export const DisabledDefault: Story = {
+export const Disabled: Story = {
     args: {
         ...Default.args,
         disabled: true,
+        children: "Disabled",
+    }
+}
+
+export const Loading: Story = {
+    args: {
+        ...Default.args,
+        loading: "hash",
+        children: "Loading",
+        type: "soft",
     }
 }

@@ -1,5 +1,5 @@
 import { Meta, Canvas, Controlls,Primary } from '@storybook/blocks';
-import { CollapseGroup, Collapse } from './Collapse';
+import { CollapseGroup, Collapse } from '@layout/Collapse';
 import * as CollapseStories from './Collapse.stories';
 
 <Meta of={CollapseStories}/>
@@ -8,28 +8,33 @@ import * as CollapseStories from './Collapse.stories';
 <Primary/>
 
 ## Different Types
-<CollapseGroup defaultExpanded="10">
-    <Collapse trigger="Single Collapse" title="Title" no="10">
+<CollapseGroup>
+    <Collapse trigger="Single Collapse" title="Title" defaultExpanded>
         ```tsx
         import { Collapse, CollapseGroup} from '@components/layout'
 
         <CollapseGroup>
-            <Collapse trigger="Single Collapse" title="Title">
+            <Collapse trigger="Single Collapse" title="Title" defaultExpanded>
             // Children
             </Collapse>
         </CollapseGroup>
         ```
     </Collapse>
     <Collapse trigger="Multiple Collapses" title="">
-        <CollapseGroup defaultExpanded="99">
-            <Collapse trigger="Description" title="" no="99">
+        <CollapseGroup>
+            <Collapse trigger=" " title="Description" defaultExpanded>
                 This Multicolapse can hold multiple collapses
+
+                Collapses can be nested in a CollapseGroup
+                if you pass the defaultExpanded prop to the Collapse it will be expanded by default
+
+                After you close any Collapse its Components state will be resetet to default
             </Collapse>
-            <Collapse trigger="Code" title="Title">
+            <Collapse trigger="Code" title="Code">
                 ```tsx
                 import { Collapse, CollapseGroup } from '@components/layout'
                 <CollapseGroup>
-                    <Collapse trigger="Description" title="Title">
+                    <Collapse trigger="Description" title="Title" defaultExpanded>
                         // Description
                     </Collapse>
                     <Collapse trigger="Code" title="Title">

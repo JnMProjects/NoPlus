@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { CollapseGroup, Collapse } from "./Collapse";
+import { Collapse, CollapseGroup } from "@layout/Collapse";
 
 const meta: Meta<typeof Collapse> = {
-    title: "Layout/Collapse",
+    title: "Components/Layout/Collapse",
     component: Collapse,
     argTypes: {
         title: {

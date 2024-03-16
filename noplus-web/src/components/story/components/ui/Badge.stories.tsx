@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Badge } from "./Badge";
+import { Badge } from "@ui/Badge";
 import { Feather } from "react-feather";
 
 const meta: Meta = {
-    title: "UI/Badge",
+    title: "Components/UI/Badge",
     component: Badge,
     tags: ["autodocs"],
     argTypes: {

@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./Button";
+import { Button } from "@ui/Button";
 
 const meta: Meta = {
-    title: "UI/Button",
+    title: "Components/UI/Button",
     component: Button,
     tags: ["autodocs"],
     argTypes: {

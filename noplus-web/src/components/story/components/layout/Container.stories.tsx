@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Container } from "./Container";
+import { Container } from "@layout/Container";
 import * as Feather from "react-feather";
 
 const meta: Meta<typeof Container> = {
-    title: "Layout/Container",
+    title: "Components/Layout/Container",
     component: Container,
     tags: ['autodocs'],
     argTypes: {

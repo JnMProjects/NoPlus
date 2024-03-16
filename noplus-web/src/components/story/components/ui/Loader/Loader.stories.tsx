@@ -1,8 +1,8 @@
-import { Loader } from "./Loader";
+import { Loader } from "@ui/Loader";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Loader> = {
-    title: "UI/Loader",
+    title: "Components/UI/Loader",
     component: Loader,
     argTypes: {
         type: {

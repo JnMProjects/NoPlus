@@ -7,12 +7,12 @@ import {
     DrawerHeader,
     DrawerTitle,
     DrawerTrigger,
-  } from "./Drawer";
+  } from "@layout/Drawer";
   
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Drawer> = {
-    title: "Layout/Drawer",
+    title: "Components/Layout/Drawer",
 };
 
 export default meta;

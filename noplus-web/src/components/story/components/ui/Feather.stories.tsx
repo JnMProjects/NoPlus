@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Icon } from "./Feather";
+import { Icon } from "@ui/Feather";
 
 const meta: Meta = {
-    title: "UI/Feather",
+    title: "Components/UI/Feather",
     component: Icon,
     tags: ['autodocs'],
     argTypes: {

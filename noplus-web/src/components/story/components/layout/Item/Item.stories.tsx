@@ -3,12 +3,12 @@ import {
     Item,
     ItemTitle,
     ItemDescription,
-} from "./Item"
+} from "@layout/Item"
 
 import { Meta, StoryObj } from "@storybook/react"
 
 const meta: Meta<typeof Item> = {
-    title: "Layout/Item",
+    title: "Components/Layout/Item",
 }
 
 export default meta;

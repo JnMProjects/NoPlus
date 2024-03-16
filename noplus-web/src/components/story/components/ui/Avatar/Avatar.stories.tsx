@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Avatar, AvatarGroup } from "./Avatar";
+import { Avatar, AvatarGroup } from "@ui/Avatar";
 
 const meta: Meta = {
-    title: "UI/Avatar",
+    title: "Components/UI/Avatar",
     component: Avatar,
     argTypes: {
         size: {

@@ -95,6 +95,10 @@ jobs:
   upstream:
     name: Upload Authority 📦
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      pull-requests: write
     needs: [StoryBook, StoryDocs]
     steps:
       - name: Checkout code 📦

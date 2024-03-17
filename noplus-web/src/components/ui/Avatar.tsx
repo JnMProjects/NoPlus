@@ -26,7 +26,7 @@ const Avatar: React.FC<AvatarProps> = ({ username, placeholder = false, size, cl
     switch (placeholder) {
         case true:
             return (
-                <img width={size || 100} height={size || 100} className={cn(" rounded-full bg-l-bg dark:bg-d-bg border-4 border-l-prim dark:border-d-prim", className)} alt="" />
+                <img width={size || 100} height={size || 100} className={cn(" rounded-full bg-l-bg/20 dark:bg-d-bg/20 softblur border-4 border-l-prim dark:border-d-prim", className)} alt="" />
             )
         case false:
             return (

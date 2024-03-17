@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { AlertDialog, AlertDialogWrapper, Dialog, DialogWrapper } from "@layout/.";
+import { ModalDialog, ModalDialogWrapper, Dialog, DialogWrapper } from "@layout/.";
 import { Badge } from "@ui/.";
 
 
@@ -9,16 +9,16 @@ const meta: Meta = {
 
 export default meta;
 
-export const Alert = () => {
+export const Modal = () => {
     return (<>
-        <AlertDialogWrapper>
-            <AlertDialog trigger="Open" title="Title" description="Description"/>
-        </AlertDialogWrapper>
+        <ModalDialogWrapper>
+            <ModalDialog trigger="Open" title="Title" description="Description"/>
+        </ModalDialogWrapper>
     </>
     )
 }
 
-export const Dialogs = () => {
+export const NonModal = () => {
     return (
         <DialogWrapper trigger="Open" >
             <Dialog title="Title" description="Description">

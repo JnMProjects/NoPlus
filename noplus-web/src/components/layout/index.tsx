@@ -23,8 +23,8 @@ export {
 } from "./Collapse";
 
 export {
-    AlertDialog,
-    AlertDialogWrapper,
+    ModalDialog,
+    ModalDialogWrapper,
     Dialog,
     DialogWrapper,
 } from "./Dialog";

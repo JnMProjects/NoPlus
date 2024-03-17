@@ -10,7 +10,7 @@ import {
     DrawerDescription,
     DrawerClose,
     DrawerFooter
-} from "@components/layout"
+} from "@layout/."
 
 import * as Feather from "react-feather";
 

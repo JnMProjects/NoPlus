@@ -1,4 +1,4 @@
-import { Container } from '@components/layout';
+import { Container } from '@layout/.';
 import * as feather from 'react-feather';
 
 export default function Home() {

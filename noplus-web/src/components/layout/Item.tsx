@@ -9,7 +9,7 @@ const ItemVariants = cva(
     variants: {
       errored: {
         true: "border-system-error dark:border-system-error-dark text-system-error-dark dark:text-system-error-light  [&>svg]:text-system-error bg-system-error-light/20 dark:bg-system-error-dark/20",
-        false: "bg-background text-foreground",
+        false: " bg-l-bg text-l-txt dark:bg-d-bg dark:text-d-txt border-l-acc dark:border-d-acc",
       },
     },
     defaultVariants: {

@@ -3,6 +3,7 @@ import React from "react";
 import { cn } from "../twm";
 import {Loader} from "@ui/Loader";
 import * as Feather from "react-feather";
+import { Icon } from "./Feather";
 
 const ButtonVariants = cva({
     base: " duration-150 border",
@@ -60,48 +61,38 @@ const ButtonVariants = cva({
 })
 
 const ICObuttonVariants = cva({
-    base: "",
     variants: {
-        variant: {
-            primary: "",
-            secondary: "",
-            tertiary: "",
-            oprimary: "", // o for outlined
-            osecondary: "",
-            otertiary: "",
-            icon: "",
+        shape: {
+            round: " rounded-full",
+            square: " rounded-xl",
         },
         size: {
-            sm: "",
-            md: "",
-            lg: "",
-        },
-        shape: {
-            round: "",
-            square: "",
-        },
-        disabled: {
-            true: "",
+            sm: "p-2",
+            md: "p-3",
+            lg: "p-4",
         }
     },
     defaultVariants: {
-        variant: "secondary",
+        shape: "round",
         size: "md",
-        shape: "square",
     }
 })
 
-const calcLoaderCollor = (variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined, loadercolor:string | undefined) => {
-    if (variant === "primary" || variant === "oprimary") {
-        return "#CDAE23"
-    } else if (variant === "secondary" || variant === "osecondary") {
-        return "#059669"
-    } else if (variant === "tertiary" || variant === "otertiary") {
-        return "#84cc16"
-    } else if (variant === "soft" || variant === "osoft") {
-        return "#d97706"
-    } else if (variant === "text" || variant === "otext") {
-        return ""
+const calcColor = (variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined, Color:string | undefined) => {
+    if (Color) {
+        return Color;
+    } else {
+        if (variant === "primary" || variant === "oprimary") {
+            return "#CDAE23"
+        } else if (variant === "secondary" || variant === "osecondary") {
+            return "#059669"
+        } else if (variant === "tertiary" || variant === "otertiary") {
+            return "#84cc16"
+        } else if (variant === "soft" || variant === "osoft") {
+            return "#d97706"
+        } else if (variant === "text" || variant === "otext") {
+            return ""
+        }
     }
 }
 
@@ -110,54 +101,64 @@ const Button = React.forwardRef<HTMLButtonElement, React.HTMLAttributes<HTMLButt
 icon?: keyof typeof Feather;
 disabled?: boolean;
 loading?: 'circle' | 'bar' | 'beat' | 'bounce' | 'clip' | 'clock' | 'climbingbox' | 'dot' | 'fade' | 'grid' | 'hash' | 'moon' | 'pacman' | 'ppg' | 'puff' | 'pulse' | 'rise' | 'ring' | 'rotate' | 'scale' | 'skew' | 'square' | 'sync';
-loadercolor?: string | undefined;
+Color?: string | undefined;
 outlined?: boolean;
+shape?: "round" | "square";
 
 // addatives of normal button
 prefix?: keyof typeof Feather;
 suffix?: keyof typeof Feather;
 type?: "primary" | "secondary" | "tertiary" | "soft" | "text";
 textexpand?: boolean;
-}>(({ loading, disabled, icon, children, textexpand=false, size="lg", rounded=true, className, prefix, suffix, outlined, type, loadercolor, ...props }) => {
-    if (icon && loading && disabled) {
-        return (
-            <button {...props} disabled>
-                placeholder
-            </button>
-        )
-    } else if (icon && loading && !disabled) {
-        return (
-            <button {...props}>
-                placeholder
-            </button>
-        )
-    } else if (icon && !loading && disabled) {
-        return (
-            <button {...props} disabled>
-                placeholder
-            </button>
-        )
-    } else if (icon && !loading && !disabled) {
-        return (
-            <button {...props}>
-                placeholder
-            </button>
-        )
+}>(({ loading, disabled, icon, children, textexpand=false, size="md", rounded=true, className, prefix, suffix, outlined, type, shape, Color, ...props }) => {
+    if (icon && !loading) {
+        const Suffix = suffix ? Feather[suffix] : null;
+        const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
+        if (children) {
+            return (
+                <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled}>
+                    <div style={{
+                        marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px',
+                        marginLeft: '2px'
+                    }}><Icon icon={icon} color={calcColor(variant,Color)} size={size}/></div>
+                    {children}
+                    {Suffix && <Suffix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{
+                        marginLeft: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
+                    }} />}
+                </button>
+            )
+        } else {
+            // without 4-2 padding uniform...
+            return (
+                <button className={cn(cn(ButtonVariants({variant,size,disabled}), ICObuttonVariants({shape})))} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }}>
+                    <Icon icon={icon} color={calcColor(variant,Color)}/>
+                </button>
+            )
+        }
     } else if (!icon && loading) {
         const Suffix = suffix ? Feather[suffix] : null;
         const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
-        return (
-            <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled}>
-                <div style={{
-                    marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px',
-                    marginLeft: '2px'
-                }}><Loader type={loading} size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} color={calcLoaderCollor(variant, loadercolor)}/></div>
-                {children}
-                {Suffix && <Suffix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{
-                    marginLeft: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
-                }} />}
-            </button>
-        )
+        if (children) {
+            return (
+                <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled}>
+                    <div style={{
+                        marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px',
+                        marginLeft: '2px'
+                    }}><Loader type={loading} size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} color={calcColor(variant, Color)}/></div>
+                    {children}
+                    {Suffix && <Suffix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{
+                        marginLeft: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
+                    }} />}
+                </button>
+            )
+        } else {
+            // without 4-2 padding uniform...
+            return (
+                <button className={cn(cn(ButtonVariants({variant,size,disabled}), ICObuttonVariants({shape})))} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }}>
+                    <div><Loader type={loading} size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} color={calcColor(variant, Color)}/></div>
+                </button>
+            )
+        }
     } else if (!icon && !loading) {
         const Prefix = prefix ? Feather[prefix] : null;
         const Suffix = suffix ? Feather[suffix] : null;

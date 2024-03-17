@@ -49,6 +49,14 @@ const meta: Meta = {
             defaultValue: false,
             control: "boolean",
         },
+        shape: {
+            name: "Shape",
+            description: "The shape of the button",
+            control: {
+                type: "select",
+                options: ["round", "square"],
+            },
+        },
     }
 }
 
@@ -140,6 +148,22 @@ export const Loading: Story = {
         ...Default.args,
         loading: "hash",
         children: "Loading",
-        type: "soft",
+    }
+}
+
+export const JustLoading: Story = {
+    args: {
+        ...Default.args,
+        loading: "hash",
+        children: "",
+        shape: "round",
+    }
+}
+
+export const Icon: Story = {
+    args: {
+        ...Default.args,
+        icon: "GitHub",
+        children: "",
     }
 }

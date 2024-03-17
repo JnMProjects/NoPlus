@@ -4,6 +4,7 @@ import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "../twm"
+import { Button } from "@ui/Button"
 
 const Drawer = ({
   shouldScaleBackground = true,
@@ -19,18 +20,32 @@ Drawer.displayName = "Drawer"
 const DrawerTrigger = React.forwardRef<
     React.ElementRef<typeof DrawerPrimitive.Trigger>,
     React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger>
->(({ className, ...props }, ref) => (
+>(({ className, children, ...props }, ref) => (
     <DrawerPrimitive.Trigger
         ref={ref}
-        className={cn(" bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt rounded-lg py-2 px-4 font-semibold", className)}
+        className={cn("", className)}
         {...props}
-    />
+    >
+      <Button type="secondary" outlined>{children}</Button>
+    </DrawerPrimitive.Trigger>
 ))
 DrawerTrigger.displayName = DrawerPrimitive.Trigger.displayName
 
 const DrawerPortal = DrawerPrimitive.Portal
 
-const DrawerClose = DrawerPrimitive.Close
+const DrawerClose = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Close>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Close>
+>(({ className, children, ...props }, ref) => (
+  <DrawerPrimitive.Close
+    ref={ref}
+    className={cn("", className)}
+    {...props}
+  >
+    <Button type="soft" >{children}</Button>
+  </DrawerPrimitive.Close>
+))
+DrawerClose.displayName = "DrawerClose"
 
 const DrawerOverlay = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Overlay>,
@@ -38,7 +53,7 @@ const DrawerOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Overlay
     ref={ref}
-    className={cn("fixed inset-0 z-50 bg-l-bg/60 dark:bg-d-bg/40", className)}
+    className={cn("fixed inset-0 z-50 bg-l-bg-200/60 dark:bg-d-bg-600/40", className)}
     {...props}
   />
 ))

@@ -1,0 +1,33 @@
+name: CI Scripts 🧾 for Web Branches ✔ 
+
+on:
+  push:
+    branches:
+      - web-dev
+  pull_request:
+    branches:
+      - web
+      - web-dev
+
+jobs:
+  test-next:
+    name: Test Next.js 🧪
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code 📦
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup node 📦
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.11.0'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install dependencies 📦
+        run: cd noplus-web && npm i
+
+      - name: Test Next.js 🧪
+        run: cd noplus-web && npm run test

@@ -1,0 +1,95 @@
+name: CD Scripts 🧾 for Web Branches ✔ 
+
+on:
+  push:
+    branches:
+      - web
+
+jobs:
+  StoryBook:
+    name: Build StoryBook 📚
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code 📦
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup node 📦
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.11.0'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install dependencies 📦
+        run: cd noplus-web && npm i
+
+      - name: Build Storybook 📚
+        run: cd noplus-web && npm run build-storybook
+
+      - name: Send Build to Upload Authority
+        uses: actions/upload-artifact@v2
+        with:
+          name: storybook
+          path: noplus-web/storybook-static
+
+  StoryDocs:
+    name: Build StoryDocs 📚
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code 📦
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup node 📦
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.11.0'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install dependencies 📦
+        run: cd noplus-web && npm i
+
+      - name: Build StoryDocs 📚
+        run: cd noplus-web && npm run build-storydocs
+
+      - name: Send Build to Upload Authority
+        uses: actions/upload-artifact@v2
+        with:
+          name: storydocs
+          path: noplus-web/storybook-static
+
+  upstream:
+    name: Upload Authority 📦
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      pull-requests: write
+    needs: [StoryBook, StoryDocs]
+    steps:
+      - name: Checkout code 📦
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Download Storybook 📚
+        uses: actions/download-artifact@v2
+        with:
+          name: storybook
+          path: docs/storybook
+
+      - name: Download StoryDocs 📚
+        uses: actions/download-artifact@v2
+        with:
+          name: storydocs
+          path: noplus-web/public/storydocs
+
+      - name: Upload Authority 📦
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Update from workflow'
+

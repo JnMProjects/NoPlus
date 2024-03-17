@@ -1,0 +1,35 @@
+{
+  "name": "noplus-web",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "localdev": "npm run localscripts && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "localscripts": "npm i next@14.0.0",
+    "testlatest": "npm i && npm i next@latest && next dev"
+  },
+  "dependencies": {
+    "@sentry/nextjs": "^7.101.1",
+    "@vercel/analytics": "^1.1.3",
+    "cva": "npm:class-variance-authority@^0.7.0",
+    "geist": "^1.2.2",
+    "next": "^14.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-feather": "^2.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

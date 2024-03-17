@@ -1,20 +1,24 @@
 "use client"
 
 import * as React from "react"
-import * as RawAlertDialogPrimitive from "@radix-ui/react-alert-dialog"
+import * as RawAlertRawDialogPrimitive from "@radix-ui/react-alert-dialog"
+import * as RawDialogPrimitive from "@radix-ui/react-dialog"
+import { X } from "react-feather"
 
 import { cn } from "../twm"
 import { Button } from "@ui/."
 
-const AlertDialogWrapper = RawAlertDialogPrimitive.Root
+// ALERT DIALOG
 
-const RawAlertDialogTrigger = React.forwardRef<
-  React.ElementRef<typeof RawAlertDialogPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof RawAlertDialogPrimitive.Trigger> & {
+const AlertDialogWrapper = RawAlertRawDialogPrimitive.Root
+
+const RawAlertRawDialogTrigger = React.forwardRef<
+  React.ElementRef<typeof RawAlertRawDialogPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof RawAlertRawDialogPrimitive.Trigger> & {
     triggervariant?: "primary" | "secondary" | "tertiary" | "soft" | "text"
   }
 >(({ className, triggervariant, children, ...props }, ref) => (
-  <RawAlertDialogPrimitive.Trigger
+  <RawAlertRawDialogPrimitive.Trigger
     className={cn(
       "",
       className
@@ -24,17 +28,17 @@ const RawAlertDialogTrigger = React.forwardRef<
     asChild
   >
     <Button type={triggervariant="primary"}>{children}</Button>
-  </RawAlertDialogPrimitive.Trigger>
+  </RawAlertRawDialogPrimitive.Trigger>
 ))
-RawAlertDialogTrigger.displayName = RawAlertDialogPrimitive.Trigger.displayName
+RawAlertRawDialogTrigger.displayName = RawAlertRawDialogPrimitive.Trigger.displayName
 
-const RawAlertDialogPortal = RawAlertDialogPrimitive.Portal
+const RawAlertRawDialogPortal = RawAlertRawDialogPrimitive.Portal
 
-const RawAlertDialogOverlay = React.forwardRef<
-  React.ElementRef<typeof RawAlertDialogPrimitive.Overlay>,
-  React.ComponentPropsWithoutRef<typeof RawAlertDialogPrimitive.Overlay>
+const RawAlertRawDialogOverlay = React.forwardRef<
+  React.ElementRef<typeof RawAlertRawDialogPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof RawAlertRawDialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
-  <RawAlertDialogPrimitive.Overlay
+  <RawAlertRawDialogPrimitive.Overlay
     className={cn(
       "fixed inset-0 z-50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
@@ -43,15 +47,15 @@ const RawAlertDialogOverlay = React.forwardRef<
     ref={ref}
   />
 ))
-RawAlertDialogOverlay.displayName = RawAlertDialogPrimitive.Overlay.displayName
+RawAlertRawDialogOverlay.displayName = RawAlertRawDialogPrimitive.Overlay.displayName
 
-const RawAlertDialogContent = React.forwardRef<
-  React.ElementRef<typeof RawAlertDialogPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof RawAlertDialogPrimitive.Content>
+const RawAlertRawDialogContent = React.forwardRef<
+  React.ElementRef<typeof RawAlertRawDialogPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof RawAlertRawDialogPrimitive.Content>
 >(({ className, ...props }, ref) => (
-  <RawAlertDialogPortal>
-    <RawAlertDialogOverlay className=" bg-l-bg/20 dark:bg-d-bg/20 softblur"/>
-    <RawAlertDialogPrimitive.Content
+  <RawAlertRawDialogPortal>
+    <RawAlertRawDialogOverlay className=" bg-l-bg/20 dark:bg-d-bg/20 softblur"/>
+    <RawAlertRawDialogPrimitive.Content
       ref={ref}
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border border-l-prim bg-l-bg/60 glassblur text-l-txt dark:border-d-prim dark:bg-d-bg/60 dark:text-d-txt p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
@@ -59,11 +63,11 @@ const RawAlertDialogContent = React.forwardRef<
       )}
       {...props}
     />
-  </RawAlertDialogPortal>
+  </RawAlertRawDialogPortal>
 ))
-RawAlertDialogContent.displayName = RawAlertDialogPrimitive.Content.displayName
+RawAlertRawDialogContent.displayName = RawAlertRawDialogPrimitive.Content.displayName
 
-const RawAlertDialogHeader = ({
+const RawAlertRawDialogHeader = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -75,9 +79,9 @@ const RawAlertDialogHeader = ({
     {...props}
   />
 )
-RawAlertDialogHeader.displayName = "RawAlertDialogHeader"
+RawAlertRawDialogHeader.displayName = "RawAlertRawDialogHeader"
 
-const RawAlertDialogFooter = ({
+const RawAlertRawDialogFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -89,67 +93,67 @@ const RawAlertDialogFooter = ({
     {...props}
   />
 )
-RawAlertDialogFooter.displayName = "RawAlertDialogFooter"
+RawAlertRawDialogFooter.displayName = "RawAlertRawDialogFooter"
 
-const RawAlertDialogTitle = React.forwardRef<
-  React.ElementRef<typeof RawAlertDialogPrimitive.Title>,
-  React.ComponentPropsWithoutRef<typeof RawAlertDialogPrimitive.Title>
+const RawAlertRawDialogTitle = React.forwardRef<
+  React.ElementRef<typeof RawAlertRawDialogPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof RawAlertRawDialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
-  <RawAlertDialogPrimitive.Title
+  <RawAlertRawDialogPrimitive.Title
     ref={ref}
     className={cn("text-lg font-semibold", className)}
     {...props}
   />
 ))
-RawAlertDialogTitle.displayName = RawAlertDialogPrimitive.Title.displayName
+RawAlertRawDialogTitle.displayName = RawAlertRawDialogPrimitive.Title.displayName
 
-const RawAlertDialogDescription = React.forwardRef<
-  React.ElementRef<typeof RawAlertDialogPrimitive.Description>,
-  React.ComponentPropsWithoutRef<typeof RawAlertDialogPrimitive.Description>
+const RawAlertRawDialogDescription = React.forwardRef<
+  React.ElementRef<typeof RawAlertRawDialogPrimitive.Description>,
+  React.ComponentPropsWithoutRef<typeof RawAlertRawDialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
-  <RawAlertDialogPrimitive.Description
+  <RawAlertRawDialogPrimitive.Description
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
 ))
-RawAlertDialogDescription.displayName =
-  RawAlertDialogPrimitive.Description.displayName
+RawAlertRawDialogDescription.displayName =
+  RawAlertRawDialogPrimitive.Description.displayName
 
 const RawAlertDialogAction = React.forwardRef<
-  React.ElementRef<typeof RawAlertDialogPrimitive.Action>,
-  React.ComponentPropsWithoutRef<typeof RawAlertDialogPrimitive.Action> & {
+  React.ElementRef<typeof RawAlertRawDialogPrimitive.Action>,
+  React.ComponentPropsWithoutRef<typeof RawAlertRawDialogPrimitive.Action> & {
     actionvariant?: "primary" | "secondary" | "tertiary" | "soft" | "text"
   }
 >(({ className, children, actionvariant, ...props }, ref) => (
-  <RawAlertDialogPrimitive.Action
+  <RawAlertRawDialogPrimitive.Action
     ref={ref}
     className={cn("", className)}
     {...props} asChild
   >
     <Button type={actionvariant}>{children}</Button>
-  </RawAlertDialogPrimitive.Action>
+  </RawAlertRawDialogPrimitive.Action>
 ))
-RawAlertDialogAction.displayName = RawAlertDialogPrimitive.Action.displayName
+RawAlertDialogAction.displayName = RawAlertRawDialogPrimitive.Action.displayName
 
-const RawAlertDialogCancel = React.forwardRef<
-  React.ElementRef<typeof RawAlertDialogPrimitive.Cancel>,
-  React.ComponentPropsWithoutRef<typeof RawAlertDialogPrimitive.Cancel> & {
+const RawAlertRawDialogCancel = React.forwardRef<
+  React.ElementRef<typeof RawAlertRawDialogPrimitive.Cancel>,
+  React.ComponentPropsWithoutRef<typeof RawAlertRawDialogPrimitive.Cancel> & {
     closevariant?: "primary" | "secondary" | "tertiary" | "soft" | "text"
   }
 >(({ className, closevariant, children, ...props }, ref) => (
-  <RawAlertDialogPrimitive.Cancel
+  <RawAlertRawDialogPrimitive.Cancel
     ref={ref}
     className={cn("mt-2 sm:mt-0",className
     )}
     {...props} asChild
   >
     <Button type={closevariant="soft"} outlined>{children}</Button>
-  </RawAlertDialogPrimitive.Cancel>
+  </RawAlertRawDialogPrimitive.Cancel>
 ))
-RawAlertDialogCancel.displayName = RawAlertDialogPrimitive.Cancel.displayName
+RawAlertRawDialogCancel.displayName = RawAlertRawDialogPrimitive.Cancel.displayName
 
-interface AlertDialogProps {
+interface AlertRawDialogProps {
   trigger?: string
   triggervariant?: "primary" | "secondary" | "tertiary" | "soft" | "text"
   title: string
@@ -166,37 +170,234 @@ interface AlertDialogProps {
   onAction?: () => void
   onOpen?: () => void
 }
-const AlertDialog: React.FC<AlertDialogProps & React.HTMLAttributes<HTMLElement>> = ({ children, trigger, triggervariant, title, titlestyle, description, descriptionstyle, close, closevariant, action, actionvariant, onOpen, onClose, onAction, ...props }) => {
+const AlertDialog: React.FC<AlertRawDialogProps & React.HTMLAttributes<HTMLElement>> = ({ children, trigger, triggervariant, title, titlestyle, description, descriptionstyle, close, closevariant, action, actionvariant, onOpen, onClose, onAction, ...props }) => {
   return (<>
-    <RawAlertDialogTrigger triggervariant={triggervariant} onClick={onOpen}>
+    <RawAlertRawDialogTrigger triggervariant={triggervariant} onClick={onOpen}>
         {trigger="Open"}
-    </RawAlertDialogTrigger>
-    <RawAlertDialogContent>
-      <RawAlertDialogHeader>
-        <RawAlertDialogTitle className={titlestyle}>
+    </RawAlertRawDialogTrigger>
+    <RawAlertRawDialogContent>
+      <RawAlertRawDialogHeader>
+        <RawAlertRawDialogTitle className={titlestyle}>
           {title}
-        </RawAlertDialogTitle>
-        <RawAlertDialogDescription className={descriptionstyle}>
+        </RawAlertRawDialogTitle>
+        <RawAlertRawDialogDescription className={descriptionstyle}>
           {description}
-        </RawAlertDialogDescription>
+        </RawAlertRawDialogDescription>
         {props.plusheader}
-      </RawAlertDialogHeader>
+      </RawAlertRawDialogHeader>
       {props.extracontent}
-      <RawAlertDialogFooter>
-        <RawAlertDialogCancel closevariant={closevariant} onClick={onClose}>
+      <RawAlertRawDialogFooter>
+        <RawAlertRawDialogCancel closevariant={closevariant} onClick={onClose}>
           {close="Cancel"}
-        </RawAlertDialogCancel>
+        </RawAlertRawDialogCancel>
         <RawAlertDialogAction actionvariant={actionvariant} onClick={onAction}>
           {action="Proceed"}
         </RawAlertDialogAction>
-      </RawAlertDialogFooter>
-    </RawAlertDialogContent>
+      </RawAlertRawDialogFooter>
+    </RawAlertRawDialogContent>
   </>
   )
 }
 
+// DIALOG
+
+const RawDialog = RawDialogPrimitive.Root
+
+const RawDialogTrigger = React.forwardRef<
+  React.ElementRef<typeof RawDialogPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof RawDialogPrimitive.Trigger> & {
+    triggervariant?: "primary" | "secondary" | "tertiary" | "soft" | "text"
+  }
+>(({ className, triggervariant="primary", children, ...props }, ref) => (
+  <RawDialogPrimitive.Trigger
+    ref={ref}
+    className={cn("mt-2 sm:mt-0", className)}
+    {...props}
+  >
+    <Button type={triggervariant}>{children}</Button>
+  </RawDialogPrimitive.Trigger>
+))
+RawDialogTrigger.displayName = RawDialogPrimitive.Trigger.displayName
+
+const RawDialogPortal = RawDialogPrimitive.Portal
+
+const RawDialogClose = React.forwardRef<
+  React.ElementRef<typeof RawDialogPrimitive.Close>,
+  React.ComponentPropsWithoutRef<typeof RawDialogPrimitive.Close> & {
+    closevariant?: "primary" | "secondary" | "tertiary" | "soft" | "text"
+  }
+>(({ className, closevariant="secondary", children, ...props }, ref) => (
+  <RawDialogPrimitive.Close
+    ref={ref}
+    className={cn("mt-2 sm:mt-0", className)}
+    {...props}
+  >
+    {children && <Button type={closevariant}>{children}</Button>}
+  </RawDialogPrimitive.Close>
+))
+RawDialogClose.displayName = RawDialogPrimitive.Close.displayName
+
+const RawDialogOverlay = React.forwardRef<
+  React.ElementRef<typeof RawDialogPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof RawDialogPrimitive.Overlay>
+>(({ className, ...props }, ref) => (
+  <RawDialogPrimitive.Overlay
+    ref={ref}
+    className={cn(
+      "fixed inset-0 z-50 softblur bg-l-bg/20 dark:bg-d-bg/20  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      className
+    )}
+    {...props}
+  />
+))
+RawDialogOverlay.displayName = RawDialogPrimitive.Overlay.displayName
+
+const RawDialogContent = React.forwardRef<
+  React.ElementRef<typeof RawDialogPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof RawDialogPrimitive.Content>
+>(({ className, children, ...props }, ref) => (
+  <RawDialogPortal>
+    <RawDialogOverlay />
+    <RawDialogPrimitive.Content
+      ref={ref}
+      className={cn(
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border border-l-sec dark:border-d-sec bg-l-bg/40 dark:bg-d-bg/40 glassblur text-l-txt dark:text-d-txt dar p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
+        className
+      )}
+      {...props}
+    >
+      {children}
+      <RawDialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+        <X className="h-4 w-4 text-l-txt dark:text-d-txt" />
+        <span className="sr-only">Close</span>
+      </RawDialogPrimitive.Close>
+    </RawDialogPrimitive.Content>
+  </RawDialogPortal>
+))
+RawDialogContent.displayName = RawDialogPrimitive.Content.displayName
+
+const RawDialogHeader = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "flex flex-col space-y-1.5 text-center sm:text-left",
+      className
+    )}
+    {...props}
+  />
+)
+RawDialogHeader.displayName = "RawDialogHeader"
+
+const RawDialogFooter = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+      className
+    )}
+    {...props}
+  />
+)
+RawDialogFooter.displayName = "RawDialogFooter"
+
+const RawDialogTitle = React.forwardRef<
+  React.ElementRef<typeof RawDialogPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof RawDialogPrimitive.Title>
+>(({ className, ...props }, ref) => (
+  <RawDialogPrimitive.Title
+    ref={ref}
+    className={cn(
+      "text-lg font-semibold leading-none tracking-tight",
+      className
+    )}
+    {...props}
+  />
+))
+RawDialogTitle.displayName = RawDialogPrimitive.Title.displayName
+
+const RawDialogDescription = React.forwardRef<
+  React.ElementRef<typeof RawDialogPrimitive.Description>,
+  React.ComponentPropsWithoutRef<typeof RawDialogPrimitive.Description>
+>(({ className, ...props }, ref) => (
+  <RawDialogPrimitive.Description
+    ref={ref}
+    className={cn("text-sm text-muted-foreground", className)}
+    {...props}
+  />
+))
+RawDialogDescription.displayName = RawDialogPrimitive.Description.displayName
+
+const DialogWrapper: React.FC<React.HTMLAttributes<HTMLElement> & {
+  triggeraschild?: React.ReactNode
+  trigger?: string
+  before?: React.ReactNode
+}> = ({ children, triggeraschild, trigger, ...props }) => {
+  if (triggeraschild) {
+    return (
+      <RawDialog>
+        {props.before}
+        <RawDialogTrigger asChild>{triggeraschild}</RawDialogTrigger>
+        {children}
+      </RawDialog>
+    )
+  } else {
+    return (
+      <RawDialog>
+        {props.before}
+        <RawDialogTrigger>{trigger}</RawDialogTrigger>
+        {children}
+      </RawDialog>
+    )
+  }
+}
+
+interface DialogProps {
+  title?: string
+  description?: string
+  close?: string
+  closeaschild?: React.ReactNode
+  footer?: React.ReactNode
+}
+
+const Dialog: React.FC<DialogProps & React.HTMLAttributes<HTMLElement>> = ({ children, title, description, close, closeaschild, footer, ...props }) => {
+  if (closeaschild) {
+    return (
+      <RawDialogContent>
+        <RawDialogHeader>
+          <RawDialogTitle>{title}</RawDialogTitle>
+          <RawDialogDescription>{description}</RawDialogDescription>
+        </RawDialogHeader>
+        {children}
+        <RawDialogFooter>
+          {footer}
+          <RawDialogClose asChild>{closeaschild}</RawDialogClose>
+        </RawDialogFooter>
+      </RawDialogContent>
+    )
+  } else {
+    return (
+      <RawDialogContent>
+        <RawDialogHeader>
+          <RawDialogTitle>{title}</RawDialogTitle>
+          <RawDialogDescription>{description}</RawDialogDescription>
+        </RawDialogHeader>
+        {children}
+        <RawDialogFooter>
+          {footer}
+          <RawDialogClose>{close}</RawDialogClose>
+        </RawDialogFooter>
+      </RawDialogContent>
+    )
+  }
+}
 
 export {
   AlertDialog,
   AlertDialogWrapper,
+  Dialog,
+  DialogWrapper,
 }

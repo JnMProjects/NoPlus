@@ -20,14 +20,21 @@ const ItemVariants = cva(
 
 const Item = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof ItemVariants>
->(({ className, errored, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof ItemVariants> & {
+    title?: string
+    pre?: React.ReactNode
+  }
+>(({ className, errored, title, children, pre, ...props }, ref) => (
   <div
     ref={ref}
     role="Item"
     className={cn(ItemVariants({ errored }), className)}
     {...props}
-  />
+  >
+    {pre}
+    <ItemTitle>{title}</ItemTitle>
+    <ItemDescription>{children}</ItemDescription>
+  </div>
 ))
 Item.displayName = "Item"
 
@@ -55,4 +62,4 @@ const ItemDescription = React.forwardRef<
 ))
 ItemDescription.displayName = "ItemDescription"
 
-export { Item, ItemTitle, ItemDescription }
+export { Item }

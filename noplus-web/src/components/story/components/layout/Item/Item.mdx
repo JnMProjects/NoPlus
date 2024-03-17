@@ -19,14 +19,9 @@ import * as ItemStories from "./Item.stories"
 ```tsx
 import {
     Item,
-    ItemTitle,
-    ItemDescription,
-} from "@components/layout/"
+} from "@layout/."
 
-<Item {/*Optionaly errored*/}>
-    <ItemTitle>Just an Example Text</ItemTitle>
-    <ItemDescription>
-        This is the description
-    </ItemDescription>
+<Item {/*Optionaly errored*/} pre={/* for example an icon */}>
+    {/*Your Content Here*/}
 </Item>
 ```

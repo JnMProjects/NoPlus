@@ -1,9 +1,7 @@
 import * as Feather from "react-feather";
 import {
     Item,
-    ItemTitle,
-    ItemDescription,
-} from "@layout/Item"
+} from "@layout/."
 
 import { Meta, StoryObj } from "@storybook/react"
 
@@ -16,24 +14,18 @@ type Story = StoryObj<typeof Item>;
 
 export const Default = () => {
     return (
-        <Item>
+        <Item title="This is Just a Example" pre={
             <Feather.GitBranch />
-            <ItemTitle>Just an Example Text</ItemTitle>
-            <ItemDescription>
-                This is the description
-            </ItemDescription>
+        }>
+            This is the description
         </Item>
     )
 }
 
 export const Error = () => {
     return (
-        <Item errored>
-            <Feather.GitCommit />
-            <ItemTitle>You had trouble Pushing your Commit</ItemTitle>
-            <ItemDescription>
-                *Sad*
-            </ItemDescription>
+        <Item errored title="You had trouble Pushing your Commit" pre={<Feather.GitCommit />}>
+            *Sad*
         </Item>
     )
 }

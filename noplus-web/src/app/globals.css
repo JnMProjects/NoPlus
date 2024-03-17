@@ -10,4 +10,6 @@
 .softblur {
   backdrop-filter: blur(5px);
 }
-  
+.tinyblur {
+  backdrop-filter: blur(2px);
+}

@@ -5,6 +5,7 @@ import * as Feather from "react-feather";
 
 const BadgeVariants = cva(
     {
+        base: " items-center justify-around h-auto w-auto",
         variants: {
             variant: {
                 primary: " bg-l-prim text-d-txt dark:bg-d-bg dark:text-d-txt",

@@ -2,8 +2,6 @@ export { Container } from './Container';
 
 export {
     Item,
-    ItemTitle,
-    ItemDescription,
 } from "./Item";
 
 export {
@@ -27,4 +25,6 @@ export {
 export {
     AlertDialog,
     AlertDialogWrapper,
+    Dialog,
+    DialogWrapper,
 } from "./Dialog";

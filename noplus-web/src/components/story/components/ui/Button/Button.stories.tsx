@@ -1,10 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@ui/Button";
+import * as Feather from "react-feather";
+import * as FIcon from "@ui/Feather";
 
 const meta: Meta = {
     title: "Components/UI/Button",
     component: Button,
-    tags: ["autodocs"],
     argTypes: {
         children: {
             name: "Children / Text",
@@ -57,6 +58,38 @@ const meta: Meta = {
                 options: ["round", "square"],
             },
         },
+        Prefix: {
+            name: "Prefix",
+            description: "The prefix icon of the button",
+            control: {
+                type: "select",
+                options: Object.keys(Feather),
+            },
+        },
+        Suffix: {
+            name: "Suffix",
+            description: "The suffix icon of the button",
+            control: {
+                type: "select",
+                options: Object.keys(Feather),
+            },
+        },
+        Icon: {
+            name: "Icon",
+            description: "The icon of the button",
+            control: {
+                type: "select",
+                options: Object.keys(Feather),
+            },
+        },
+        Loading: {
+            name: "Loading",
+            description: "The loading state of the button",
+            control: {
+                type: "select",
+                options: Object.keys(FIcon.Icon),
+            },
+        },
     }
 }
 
@@ -104,6 +137,14 @@ export const Soft: Story = {
         ...Default.args,
         type: "soft",
         children: "Soft"
+    }
+}
+
+export const Text: Story = {
+    args: {
+        ...Default.args,
+        type: "text",
+        children: "Text",
     }
 }
 

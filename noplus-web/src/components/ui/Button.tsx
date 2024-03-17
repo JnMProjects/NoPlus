@@ -17,8 +17,8 @@ const ButtonVariants = cva({
             oprimary: " border-l-prim-400 bg-l-txt-300/40 hover:bg-l-txt-200/50 hover:border-l-prim-700 active:bg-l-txt-300/50 dark:bg-d-prim-600/50 dark:border-slate-700 dark:text-cyan-50/80 dark:hover:bg-d-prim-500/50 dark:hover:border-violet-200", // o for outlined
             osecondary: "bg-l-sec-300/50 border-amber-500 hover:border-amber-600 hover:bg-l-sec-400/50 active:bg-l-sec-500/50 dark:bg-d-sec-500/40 dark:border-yellow-500 dark:hover:bg-d-sec-500/50 dark:hover:border-yellow-600 dark:active:border-yellow-700",
             otertiary: "bg-violet-300/40 text-l-txt border-fuchsia-500 hover:bg-indigo-300/40 hover:text-l-txt-900 hover:border-violet-700 active:bg-violet-300/40 active:border-violet-800 dark:bg-purple-500/50 dark:text-fuchsia-200 dark:border-violet-600 dark:hover:bg-purple-700/50 dark:hover:text-teal-300 dark:hover:border-indigo-400 dark:active:bg-purple-800/40 dark:active:text-teal-400 dark:active:border-indigo-700",
-            text: "border-none bg-transparent text-l-txt hover:bg-slate-200/80 active:bg-gray-400/80", // invis bg just hover and active effect
-            otext: "",
+            text: "border-none bg-transparent text-l-txt hover:bg-slate-200/60 active:bg-gray-400/80 dark:text-d-txt dark:hover:bg-slate-900/60 dark:active:bg-gray-800/80", // invis bg just hover and active effect
+            otext: "border-none bg-transparent text-l-txt hover:bg-slate-200/60 active:bg-gray-400/80 dark:text-d-txt dark:hover:bg-slate-900/60 dark:active:bg-gray-800/80",
         },
         size: {
             sm: " px-2 py-1 text-sm font-normal ",

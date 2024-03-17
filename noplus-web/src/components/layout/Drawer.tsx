@@ -19,14 +19,14 @@ Drawer.displayName = "Drawer"
 
 const DrawerTrigger = React.forwardRef<
     React.ElementRef<typeof DrawerPrimitive.Trigger>,
-    React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
+    React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger> & { variant: "primary" | "secondary" | "tertiary" | "soft" | "text" }
+>(({ className, children,variant, ...props }, ref) => (
     <DrawerPrimitive.Trigger
         ref={ref}
-        className={cn("", className)}
+        className={cn(" w-auto h-auto", className)}
         {...props}
     >
-      <Button type="secondary" outlined>{children}</Button>
+      <Button type={variant="secondary"} outlined>{children}</Button>
     </DrawerPrimitive.Trigger>
 ))
 DrawerTrigger.displayName = DrawerPrimitive.Trigger.displayName

@@ -28,3 +28,5 @@ export {
     Dialog,
     DialogWrapper,
 } from "./Dialog";
+
+export { Popup } from "./Popup";

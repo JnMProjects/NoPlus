@@ -23,3 +23,8 @@ export {
     Collapse,
     CollapseGroup
 } from "./Collapse";
+
+export {
+    AlertDialog,
+    AlertDialogWrapper,
+} from "./Dialog";

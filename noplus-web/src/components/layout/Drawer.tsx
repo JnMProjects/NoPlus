@@ -19,7 +19,7 @@ Drawer.displayName = "Drawer"
 
 const DrawerTrigger = React.forwardRef<
     React.ElementRef<typeof DrawerPrimitive.Trigger>,
-    React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger> & { variant: "primary" | "secondary" | "tertiary" | "soft" | "text" }
+    React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger> & { variant?: "primary" | "secondary" | "tertiary" | "soft" | "text"}
 >(({ className, children,variant, ...props }, ref) => (
     <DrawerPrimitive.Trigger
         ref={ref}

@@ -4,53 +4,10 @@
 
 /* Loaders */
 
-.intextloader {
-    width: 48px;
-    height: 48px;
-    display: inline-block;
-    position: relative;
-    border: 2px solid #FFF;
-    box-sizing: border-box;
-    animation: itlrotation 2s linear infinite;
-  }
-  .intextloader::after,
-  .intextloader::before {
-    content: '';  
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    border: 2px solid #FF3D00;
-    width: 38px;
-    height: 38px;
-    animation: itlrotationBack 1.5s linear infinite;
-    transform-origin: center center;
-  }
-  .intextloader::before {
-    width: 28px;
-    height: 28px;
-    border-color: #FFF;
-    box-sizing: border-box;
-    animation: itlrotation 1s linear infinite;
-  }
-  
-  @keyframes itlrotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } 
-  @keyframes itlrotationBack {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
+.glassblur {
+  backdrop-filter: blur(10px);
+}
+.softblur {
+  backdrop-filter: blur(5px);
+}
   

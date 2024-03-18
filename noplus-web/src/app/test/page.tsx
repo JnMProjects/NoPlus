@@ -1,7 +1,5 @@
 import {
     Item,
-    ItemTitle,
-    ItemDescription,
     Drawer,
     DrawerTrigger,
     DrawerContent,
@@ -17,10 +15,8 @@ import * as Feather from "react-feather";
 export default function test() {
     return (<>
         <Drawer>
-        <Item >
-            <Feather.Edit />
-            <ItemTitle>Normal Item</ItemTitle>
-            <ItemDescription>This is a Normal Item</ItemDescription>
+        <Item title="Item" errored pre={<Feather.Codepen/>}>
+            HEHEHEHA
         </Item>
         <DrawerTrigger>
             Press Me
@@ -29,10 +25,8 @@ export default function test() {
                 <DrawerHeader>
                     <DrawerTitle>Test Drawer</DrawerTitle>
                     <DrawerDescription>Drawer Description</DrawerDescription>
-                    <Item errored>
-                        <Feather.AlertTriangle />
-                        <ItemTitle>Item Title</ItemTitle>
-                        <ItemDescription>Item Description</ItemDescription>
+                    <Item title="Test">
+                        <Feather.Cloud/>
                     </Item>
                     <DrawerClose><Feather.X/></DrawerClose>
                 </DrawerHeader>

@@ -178,7 +178,7 @@ textexpand?: boolean;
 })
 Button.displayName = "Button";
 
-export { Button };
+export { Button, ButtonVariants };
 
 
 

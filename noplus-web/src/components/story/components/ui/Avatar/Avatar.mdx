@@ -1,6 +1,7 @@
 import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks';
 import { Avatar, AvatarGroup } from '@ui/Avatar';
 import * as AvatarStories from './Avatar.stories';
+import { Popup } from '@ui/.';
 import {
     Drawer,
     DrawerTrigger,
@@ -22,7 +23,7 @@ import {
         ## Avatar
         ### Usage
         ```tsx
-        import { Avatar } from './Avatar';
+        import { Avatar } from '@ui/.';
 
         <Avatar username="github" />
         ```	
@@ -39,7 +40,7 @@ import {
         ## AvatarGroup
         ### Usage
         ```tsx
-        import { AvatarGroup } from './Avatar';
+        import { AvatarGroup } from '@ui/.';
 
         <AvatarGroup users={["derjacklive", "octocat", "github"]} />
         ```
@@ -50,6 +51,10 @@ import {
         size: number // The size of the avatar in px
 
         limit: number // The maximum amount of avatars to display // Rest will be displayed as a number
+
+        <Popup trigger="Limit" >
+            <AvatarGroup users={["derjacklive", "octocat", "github", "mutebefehl"]} limit={3} />
+        </Popup>
         
     </Collapse>
 </CollapseGroup>

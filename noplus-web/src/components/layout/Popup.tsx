@@ -28,7 +28,7 @@ PopoverTrigger.displayName = PopoverPrimitive.Trigger.displayName
 const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+>(({ className="", align = "center", sideOffset = 4, ...props }, ref) => (
   <PopoverPrimitive.Portal>
     <PopoverPrimitive.Content
       ref={ref}
@@ -46,7 +46,7 @@ PopoverContent.displayName = PopoverPrimitive.Content.displayName
 
 
 const Popup: React.FC<React.ComponentProps<typeof Popover> & {
-    trigger: string
+    trigger: string | undefined
     prefix?: keyof typeof Feather
     align?: "center" | "start" | "end"
     sideOffset?: number

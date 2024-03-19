@@ -32,14 +32,15 @@ const preview: Preview = {
     },
   },
 
-  decorators: [withThemeByClassName({
+  decorators: [
+    withThemeByClassName({
       themes: {
           // nameOfTheme: 'classNameForTheme',
           light: '',
           dark: 'dark',
       },
       defaultTheme: 'dark',
-  })]
+  }),]
 };
 addons.setConfig({
   theme: jnmp,

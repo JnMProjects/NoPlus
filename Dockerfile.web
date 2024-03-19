@@ -1,0 +1,15 @@
+FROM node:20.11.1
+
+COPY noplus-web/package.json .
+
+COPY noplus-web/package-lock.json .
+
+RUN npm ci
+
+COPY noplus-web/ .
+
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "run", "start:next"]

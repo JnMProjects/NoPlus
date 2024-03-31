@@ -1,5 +1,6 @@
 import { Popup, Item } from '@layout/.';
 import * as feather from 'react-feather';
+import { ThemeToggleCircle } from '@components/Theme';
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Popup trigger="Press Me">
         <Item errored ><feather.Code /></Item>
       </Popup>
+      <ThemeToggleCircle className=' invisible'/>
     </div>
   );
 }

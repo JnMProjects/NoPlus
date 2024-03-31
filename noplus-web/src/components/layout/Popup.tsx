@@ -18,6 +18,7 @@ React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger> & { variant?: "p
 <PopoverPrimitive.Trigger
     ref={ref}
     className={cn(" w-auto h-auto", className)}
+    asChild
     {...props}
 >
   <Button type={variant="tertiary"} outlined prefix={prefix}>{children}</Button>

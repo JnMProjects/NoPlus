@@ -83,8 +83,8 @@ const Collapse: React.FC<CollapseProps> = ({ defaultExpanded, title, trigger, ch
       <CollapseItem className={cn("border-b border-t")} value={value}>
         <CollapseHeadRaw>{trigger}</CollapseHeadRaw>
         <CollapseContentRaw>
-          <h1 className=" font-bold border-collapse top-2">{title}</h1>
-          <div className={cn("", className)} {...props} >{children}</div>
+          <h1 className=" font-bold border-collapse top-2 text-l-txt-800 dark:text-d-txt-400">{title}</h1>
+          <div className={cn("text-l-txt dark:text-d-txt", className)} {...props} >{children}</div>
         </CollapseContentRaw>
       </CollapseItem>
     );
@@ -93,8 +93,8 @@ const Collapse: React.FC<CollapseProps> = ({ defaultExpanded, title, trigger, ch
       <CollapseItem className={cn("border-b border-t")} value={"default"}>
         <CollapseHeadRaw>{trigger}</CollapseHeadRaw>
         <CollapseContentRaw>
-          <h1 className=" font-bold border-collapse top-2">{title}</h1>
-          <div className={cn("", className)} {...props} >{children}</div>
+          <h1 className=" font-bold border-collapse top-2 text-l-txt-800 dark:text-d-txt-400">{title}</h1>
+          <div className={cn("text-l-txt dark:text-d-txt", className)} {...props} >{children}</div>
         </CollapseContentRaw>
       </CollapseItem>
     );

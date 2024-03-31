@@ -344,6 +344,10 @@ module.exports = {
         
          
       },
+      fontFamily: {
+        oxanium: ['var(--font-family-oxanium)', 'sans-serif'],
+        bungeeSpice: ['var(--font-family-bungee-spice)', 'sans-serif'],
+      },
       keyframes: {
         "collapse-down": {
           from: { height: "0" },
@@ -390,5 +394,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 }

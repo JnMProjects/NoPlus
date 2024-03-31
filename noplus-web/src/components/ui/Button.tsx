@@ -110,13 +110,13 @@ prefix?: keyof typeof Feather;
 suffix?: keyof typeof Feather;
 type?: "primary" | "secondary" | "tertiary" | "soft" | "text";
 textexpand?: boolean;
-}>(({ loading, disabled, icon, children, textexpand=false, size="md", rounded=true, className, prefix, suffix, outlined, type, shape, Color, ...props }) => {
+}>(({ loading, disabled, icon, children, textexpand=false, size="md", rounded=true, className, prefix, suffix, outlined, type, shape, Color, ...props }, ref) => {
     if (icon && !loading) {
         const Suffix = suffix ? Feather[suffix] : null;
         const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
         if (children) {
             return (
-                <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} {...props}>
+                <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} ref={ref} {...props}>
                     <div style={{
                         marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px',
                         marginLeft: '2px'
@@ -130,7 +130,7 @@ textexpand?: boolean;
         } else {
             // without 4-2 padding uniform...
             return (
-                <button className={cn(cn(ButtonVariants({variant,size,disabled}), ICObuttonVariants({shape})))} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} {...props}>
+                <button className={cn(cn(ButtonVariants({variant,size,disabled}), ICObuttonVariants({shape})))} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} ref={ref} {...props}>
                     <Icon icon={icon} color={calcColor(variant,Color)}/>
                 </button>
             )
@@ -140,7 +140,7 @@ textexpand?: boolean;
         const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
         if (children) {
             return (
-                <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} {...props}>
+                <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} ref={ref} {...props}>
                     <div style={{
                         marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px',
                         marginLeft: '2px'
@@ -154,7 +154,7 @@ textexpand?: boolean;
         } else {
             // without 4-2 padding uniform...
             return (
-                <button className={cn(cn(ButtonVariants({variant,size,disabled}), ICObuttonVariants({shape})))} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} {...props}>
+                <button className={cn(cn(ButtonVariants({variant,size,disabled}), ICObuttonVariants({shape})))} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} ref={ref} {...props}>
                     <div><Loader type={loading} size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} color={calcColor(variant, Color)}/></div>
                 </button>
             )
@@ -164,7 +164,7 @@ textexpand?: boolean;
         const Suffix = suffix ? Feather[suffix] : null;
         const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
         return (
-            <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} {...props}>
+            <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} ref={ref} {...props}>
                 {Prefix && <Prefix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{
                     marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
                 }} />}

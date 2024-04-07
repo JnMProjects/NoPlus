@@ -68,13 +68,16 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border border-b-0 border-l-acc-200 dark:border-d-acc-800 bg-l-bg/20 dark:bg-d-bg/20 glassblur",
-        className
+      "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border border-b-0 border-l-acc-200 dark:border-d-acc-800 bg-l-bg/20 dark:bg-d-bg/20 glassblur",
+      className
       )}
+      style={{ maxHeight: '65vh' }} // Set the max height to 90% of the viewport height
       {...props}
-    >
-      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
-      {children}
+      >
+        <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
+          <div style={{ overflowY: 'auto', flex: '1', scrollbarWidth: 'none', msOverflowStyle: 'none' }}> {/* Make this div scrollable and take up the remaining space */}
+            {children}
+        </div>
     </DrawerPrimitive.Content>
   </DrawerPortal>
 ))

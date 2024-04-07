@@ -16,7 +16,7 @@
     "build:storydocs": "storybook build --docs",
     "bst": "concurrently \"npm:build:storybook\"",
     "ghci": "npm ci && conc \"npm:ghci:*\"",
-    "chromatic": "npx chromatic --storybook-base-dir=noplus-web --zip",
+    "chromatic": "npx chromatic --storybook-base-dir=noplus-web --build-script-name=build:storybook --exit-once-uploaded --exit-zero-on-changes --zip",
     "test": "conc \"npm:test:*\"",
     "test:jest": "jest",
     "storybook": "storybook dev -p 6006"
@@ -50,7 +50,7 @@
       "components/ui/*"
     ],
     "@layouts/*": [
-      "components/layouts/*"
+      "components/layout/*"
     ]
   },
   "devDependencies": {

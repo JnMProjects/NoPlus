@@ -87,21 +87,18 @@ export const metadata: Metadata = {
   }
 };
 
-import { toggleTheme } from "@components/Theme"
-import ThemeProvider from "@components/Theme";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <SpeedInsights />
       <Analytics/>
       <body className={`${oxanium.variable} ${bungeeSpice.variable} font-oxanium bg-bg`}>
         {children}
-        <ThemeProvider />
       </body>
     </html>
   );

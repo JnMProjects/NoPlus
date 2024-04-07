@@ -28,5 +28,40 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ]
+    ],
+    "shortcuts": [
+        {
+            "name": "My Profile",
+            "short_name": "Profile",
+            "url": "/profile",
+            "icons": [
+                {
+                    "src": "brand/BlueInvisv0.1.svg",
+                    "type": "image/svg+xml"
+                }
+            ]
+        },
+        {
+            "name": "Play NoPlus",
+            "short_name": "Play",
+            "url": "/play",
+            "icons": [
+                {
+                    "src": "brand/LogoSecondaryv0.1.svg",
+                    "type": "image/svg+xml"
+                }
+            ]
+        }
+    ],
+    "share_target": {
+        "name": "Share on NoPlus",
+        "short_name": "Share",
+        "action": "/share",
+        "method": "POST",
+        "enctype": "application/x-www-form-urlencoded",
+        "params": {
+            "Title": "title",
+            "Description": "text"
+        }
+    }
 }

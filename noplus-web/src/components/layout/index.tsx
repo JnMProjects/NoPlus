@@ -30,3 +30,5 @@ export {
 export { Popup } from "./Popup";
 
 export { AspectRatio } from "./AspectRatio";
+
+export { Tooltip } from "./Tooltip";

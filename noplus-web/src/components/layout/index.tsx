@@ -28,3 +28,5 @@ export {
 } from "./Dialog";
 
 export { Popup } from "./Popup";
+
+export { AspectRatio } from "./AspectRatio";

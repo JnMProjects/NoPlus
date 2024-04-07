@@ -7,7 +7,13 @@ export default {
   component: Calendar,
 } as Meta;
 
-export const Default = () => {
+export const Base = () => {
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
+
+  return <Calendar />; // yes its missaligned a f
+}
+
+export const Popup = () => {
     const [date, setDate] = React.useState<Date | undefined>(new Date())
 
     return (

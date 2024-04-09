@@ -1,8 +1,37 @@
-import { Meta, Preview } from "@storybook/blocks"
+import { Meta, Canvas, Primary } from "@storybook/blocks"
+import { Checkbox } from "@ui/index"
 import * as CheckboxStories from "./Checkbox.stories"
 
 <Meta of={CheckboxStories} />
 # Checkbox
 ## The Checkbox is used to ask the User for confirmation
 
-<Preview of={CheckboxStories.PlayAround} />
+<Canvas of={CheckboxStories.PlayAround} />
+
+## Usage
+
+```tsx
+import { Checkbox } from "@ui/index"
+
+export function Page() {
+    const [checked, setChecked] = React.useState<"true" | "intermediate" | "false">("false");
+    let hardCheck = checked !== "false";
+    return (
+        <>
+            <Checkbox
+                checked={hardCheck}
+                intermediate={checked === "intermediate"}
+                onCheckedChange={() => {
+                    if (checked === "true") {
+                        setChecked("false");
+                    } else if (checked === "false") {
+                        setChecked("true");
+                    } else if (checked === "intermediate") {
+                        setChecked("false");
+                    }
+                }}
+            />
+        </>
+    )
+}
+```

@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Checkbox } from "@ui/index";
+import { Meta } from "@storybook/react";
+import { Checkbox, Button } from "@ui/index";
 import React from "react";
 
 const meta: Meta = {
@@ -38,11 +38,9 @@ export const Unchecked = () => {
     );
 }
 
-import { Button } from "@ui/index";
-
 export const Intermediate = () => {
-    const [checked, setChecked] = React.useState<"true" | "false" | "intermediate">("intermediate");
-    let hardCheck = checked === "false" ? false : true;
+    const [checked, setChecked] = React.useState<"true" | "intermediate" | "false">("intermediate");
+    let hardCheck = checked !== "false";
     return (
         <>
             <Checkbox
@@ -74,17 +72,21 @@ export const Checked = () => {
 
 export const Disabled = () => {
     const [checked, setChecked] = React.useState<"true" | "intermediate" | "false">("true");
-    let hardCheck = checked === "true";
+    let hardCheck = checked !== "false";
     return (
         <>
-            <Checkbox checked={checked === "true"} intermediate={hardCheck} disabled onCheckedChange={() => {
-                if (checked === "true") {
-                    setChecked("false");
-                } else if (checked === "false") {
-                    setChecked("true");
-                } else if (checked === "intermediate") {
-                    setChecked("false");
-                }
+            <Checkbox
+                checked={hardCheck}
+                disabled
+                intermediate={checked === "intermediate"}
+                onCheckedChange={() => {
+                    if (checked === "true") {
+                        setChecked("false");
+                    } else if (checked === "false") {
+                        setChecked("true");
+                    } else if (checked === "intermediate") {
+                        setChecked("false");
+                    }
                 }}
             >
                 {checked === "true" && "Checked Checkbox with Text"}
@@ -100,17 +102,20 @@ export const Disabled = () => {
 
 export const PlayAround = () => {
     const [checked, setChecked] = React.useState<"true" | "intermediate" | "false">("true");
-    let hardCheck = checked === "true";
+    let hardCheck = checked !== "false";
     return (
         <>
-            <Checkbox checked={checked === "true"} intermediate={hardCheck} onCheckedChange={() => {
-                if (checked === "true") {
-                    setChecked("false");
-                } else if (checked === "false") {
-                    setChecked("true");
-                } else if (checked === "intermediate") {
-                    setChecked("false");
-                }
+            <Checkbox
+                checked={hardCheck}
+                intermediate={checked === "intermediate"}
+                onCheckedChange={() => {
+                    if (checked === "true") {
+                        setChecked("false");
+                    } else if (checked === "false") {
+                        setChecked("true");
+                    } else if (checked === "intermediate") {
+                        setChecked("false");
+                    }
                 }}
             >
                 {checked === "true" && "Checked Checkbox with Text"}

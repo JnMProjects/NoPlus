@@ -16,7 +16,7 @@ const meta: Meta<typeof StatusDot> = {
         },
         label: {
             name: "Label",
-            defaultValue: true,
+            defaultValue: false,
             description: "Whether to show the label",
             control: {
                 type: "boolean",
@@ -29,6 +29,15 @@ const meta: Meta<typeof StatusDot> = {
                 type: "text",
             },
         },
+        size: {
+            name: "Size",
+            description: "The size of the dot",
+            defaultValue: "md",
+            control: {
+                type: "select",
+                options: ["sm", "md", "lg"],
+            },
+        }
     }
 }
 
@@ -40,6 +49,7 @@ export const Running: Story = {
         status: "running",
         label: false,
         tip: "Running",
+        size: "md",
     }
 }
 
@@ -48,6 +58,7 @@ export const Warning: Story = {
         status: "warning",
         label: false,
         tip: "Warning",
+        size: "md"
     }
 }
 
@@ -56,6 +67,7 @@ export const Info: Story = {
         status: "info",
         label: false,
         tip: "Info",
+        size: "md"
     }
 }
 
@@ -72,6 +84,7 @@ export const Cancelled: Story = {
         status: "cancelled",
         label: false,
         tip: "Cancelled",
+        size: "md"
     }
 }
 
@@ -80,6 +93,24 @@ export const Stopped: Story = {
         status: "stopped",
         label: false,
         tip: "Stopped",
+        size: "md"
     }
 }
 
+export const WithLabel: Story = {
+    args: {
+        status: "running",
+        label: true,
+        tip: "Running",
+        size: "md"
+    }
+}
+
+export const WithCustomTip: Story = {
+    args: {
+        status: "running",
+        label: false,
+        tip: "Custom Tip",
+        size: "md"
+    }
+}

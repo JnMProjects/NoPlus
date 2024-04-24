@@ -51,10 +51,12 @@ const StatusDot: React.FC<StatusDotProps> = ({ status, label, tip, size, classNa
 
     if (label) {
         return (
-            <>
+            <div className="flex items-center">
                 <img  className={cn(StatusDots({size, status}), className)} />
-                {description}
-            </>
+                <p className="p-2 text-l-txt dark:text-d-txt">
+                    {description}
+                </p>
+            </div>
         )
     } else {
         return (

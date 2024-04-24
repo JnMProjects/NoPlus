@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Toaster } from "@/components/ui/Toast";
 import { Oxanium, Bungee_Spice } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
@@ -98,6 +99,7 @@ export default function RootLayout({
       <SpeedInsights />
       <Analytics/>
       <body className={`${oxanium.variable} ${bungeeSpice.variable} font-oxanium bg-bg`}>
+        <Toaster />
         {children}
       </body>
     </html>

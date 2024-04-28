@@ -1,4 +1,3 @@
-import { Octokit } from "octokit";
 import { graphql } from "@octokit/graphql";
 
 const graphqlWithAuth = graphql.defaults({

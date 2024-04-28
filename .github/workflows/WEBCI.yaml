@@ -30,7 +30,7 @@ jobs:
         run: cd noplus-web && npm i
 
       - name: Test Tests 🧪
-        run: cd noplus-web && npm run test
+        run: cd noplus-web && npm run test:jest
         
   do-visualtests:
     name: Run Chromatic Visual Tests

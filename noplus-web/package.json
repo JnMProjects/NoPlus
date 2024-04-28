@@ -22,6 +22,7 @@
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -37,13 +38,16 @@
     "clsx": "^2.1.0",
     "cva": "^1.0.0-beta.1",
     "date-fns": "^3.5.0",
+    "gsap": "^3.12.5",
     "next": "^14.1.4",
+    "next-themes": "^0.3.0",
     "octokit": "^3.1.2",
     "react": "^18",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18",
     "react-feather": "^2.0.10",
     "react-spinners": "^0.13.8",
+    "sonner": "^1.4.41",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.0"

@@ -31,6 +31,7 @@ const config: StorybookConfig = {
         '@Slay': path.resolve(__dirname, '../src/components/story/layout'),
       };
     }
+    
     return config;
   },
 };

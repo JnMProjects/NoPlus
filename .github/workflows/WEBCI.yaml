@@ -10,8 +10,8 @@ on:
       - web-dev
 
 jobs:
-  test-next:
-    name: Test Next.js 🧪
+  test-jest:
+    name: Test Jest Tests 🧪
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code 📦
@@ -29,5 +29,32 @@ jobs:
       - name: Install dependencies 📦
         run: cd noplus-web && npm i
 
-      - name: Test Next.js 🧪
+      - name: Test Tests 🧪
         run: cd noplus-web && npm run test
+        
+  do-visualtests:
+    name: Run Chromatic Visual Tests
+    env:
+      GH_PFP_TOKEN: ${{ secrets.GH_PFP_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.11.0'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install dependencies
+        run: cd noplus-web && npm i
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: noplus-web

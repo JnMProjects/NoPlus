@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "cva";
 import React from "react";
 import { cn } from "../twm";
-import {Loader} from "@ui/Loader";
+import { Spinners as Loader } from "@load/Spinners";
 import * as Feather from "react-feather";
 import { Icon } from "./Feather";
 

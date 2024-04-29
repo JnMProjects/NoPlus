@@ -1,6 +1,6 @@
 import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks';
-import * as LoaderStories from './Loader.stories';
-import { Loader } from '@ui/Loader';
+import * as SpinnerStories from './Spinner.stories';
+import { Spinners } from '@load/Spinners';
 import {
     Drawer,
     DrawerTrigger,
@@ -16,23 +16,23 @@ import {
     CollapseItem,
 } from '@layout';
 
-<Meta of={LoaderStories} />
+<Meta of={SpinnerStories} />
 
-# Loader
+# Spinners
 ## Loading Spinners / Animations
 
 ### Default
-<Canvas of={LoaderStories.Default} />
+<Canvas of={SpinnerStories.Default} />
 
 ## Arguments
-Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loader.
+Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Spinner.
 
-<Controls of={LoaderStories.Default} />
+<Controls of={SpinnerStories.Default} />
 
 ## Different Types
 <Drawer>
     <DrawerTrigger>
-        <Loader type='bar' />
+        <Spinners type='bar' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -41,8 +41,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Bar} />
-            <Controls of={LoaderStories.Bar} exclude={['Size', 'Margin', 'Radius']} />
+            <Canvas of={SpinnerStories.Bar} />
+            <Controls of={SpinnerStories.Bar} exclude={['Size', 'Margin', 'Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -53,7 +53,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='beat' />
+        <Spinners type='beat' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -62,8 +62,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Beat} />
-            <Controls of={LoaderStories.Beat} exclude={['Width','Height','Radius']} />
+            <Canvas of={SpinnerStories.Beat} />
+            <Controls of={SpinnerStories.Beat} exclude={['Width','Height','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -74,7 +74,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='bounce' />
+        <Spinners type='bounce' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -83,8 +83,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Bounce} />
-            <Controls of={LoaderStories.Bounce} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Bounce} />
+            <Controls of={SpinnerStories.Bounce} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -95,7 +95,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='circle' />
+        <Spinners type='circle' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -104,8 +104,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Circle} />
-            <Controls of={LoaderStories.Circle} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Circle} />
+            <Controls of={SpinnerStories.Circle} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -116,7 +116,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='climbingbox' size={15} />
+        <Spinners type='climbingbox' size={15} />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -125,8 +125,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.ClimbingBox} />
-            <Controls of={LoaderStories.ClimbingBox} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.ClimbingBox} />
+            <Controls of={SpinnerStories.ClimbingBox} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -137,7 +137,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='clip' />
+        <Spinners type='clip' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -146,8 +146,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Clip} />
-            <Controls of={LoaderStories.Clip} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Clip} />
+            <Controls of={SpinnerStories.Clip} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -158,7 +158,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='clock' />
+        <Spinners type='clock' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -167,8 +167,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Clock} />
-            <Controls of={LoaderStories.Clock} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Clock} />
+            <Controls of={SpinnerStories.Clock} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -179,7 +179,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='dot' />
+        <Spinners type='dot' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -188,8 +188,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Dot} />
-            <Controls of={LoaderStories.Dot} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Dot} />
+            <Controls of={SpinnerStories.Dot} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -200,7 +200,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='fade' />
+        <Spinners type='fade' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -209,8 +209,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Fade} />
-            <Controls of={LoaderStories.Fade} exclude={['Size']} />
+            <Canvas of={SpinnerStories.Fade} />
+            <Controls of={SpinnerStories.Fade} exclude={['Size']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -221,7 +221,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='grid' />
+        <Spinners type='grid' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -230,8 +230,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Grid} />
-            <Controls of={LoaderStories.Grid} exclude={['Width','Height','Radius']} />
+            <Canvas of={SpinnerStories.Grid} />
+            <Controls of={SpinnerStories.Grid} exclude={['Width','Height','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -242,7 +242,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='hash' />
+        <Spinners type='hash' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -252,8 +252,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
                 My Favorite
             </DrawerDescription>
-            <Canvas of={LoaderStories.Hash} />
-            <Controls of={LoaderStories.Hash} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Hash} />
+            <Controls of={SpinnerStories.Hash} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -264,7 +264,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='moon' />
+        <Spinners type='moon' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -273,8 +273,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Moon} />
-            <Controls of={LoaderStories.Moon} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Moon} />
+            <Controls of={SpinnerStories.Moon} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -285,7 +285,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='pacman' />
+        <Spinners type='pacman' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -294,8 +294,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Pacman} />
-            <Controls of={LoaderStories.Pacman} exclude={['Width','Height','Radius']} />
+            <Canvas of={SpinnerStories.Pacman} />
+            <Controls of={SpinnerStories.Pacman} exclude={['Width','Height','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -306,7 +306,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='ppg' />
+        <Spinners type='ppg' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -316,8 +316,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
                 shortend to ppg
             </DrawerDescription>
-            <Canvas of={LoaderStories.Propagate} />
-            <Controls of={LoaderStories.Propagate} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Propagate} />
+            <Controls of={SpinnerStories.Propagate} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -328,7 +328,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='puff' />
+        <Spinners type='puff' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -337,8 +337,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Puff} />
-            <Controls of={LoaderStories.Puff} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Puff} />
+            <Controls of={SpinnerStories.Puff} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -349,7 +349,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='pulse' />
+        <Spinners type='pulse' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -358,8 +358,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Pulse} />
-            <Controls of={LoaderStories.Pulse} exclude={['Width','Height','Radius']} />
+            <Canvas of={SpinnerStories.Pulse} />
+            <Controls of={SpinnerStories.Pulse} exclude={['Width','Height','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -370,7 +370,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='ring' />
+        <Spinners type='ring' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -379,8 +379,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Ring} />
-            <Controls of={LoaderStories.Ring} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Ring} />
+            <Controls of={SpinnerStories.Ring} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -391,7 +391,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='rise' />
+        <Spinners type='rise' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -401,8 +401,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
                 Ugly af
             </DrawerDescription>
-            <Canvas of={LoaderStories.Rise} />
-            <Controls of={LoaderStories.Rise} exclude={['Width','Height','Radius']} />
+            <Canvas of={SpinnerStories.Rise} />
+            <Controls of={SpinnerStories.Rise} exclude={['Width','Height','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -413,7 +413,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='rotate' />
+        <Spinners type='rotate' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -422,8 +422,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Rotate} />
-            <Controls of={LoaderStories.Rotate} exclude={['Width','Height','Radius']} />
+            <Canvas of={SpinnerStories.Rotate} />
+            <Controls of={SpinnerStories.Rotate} exclude={['Width','Height','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -434,7 +434,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='scale' />
+        <Spinners type='scale' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -443,8 +443,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Scale} />
-            <Controls of={LoaderStories.Scale} exclude={['Size']} />
+            <Canvas of={SpinnerStories.Scale} />
+            <Controls of={SpinnerStories.Scale} exclude={['Size']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -455,7 +455,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='skew' />
+        <Spinners type='skew' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -465,8 +465,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             <DrawerDescription>
                 Beautiful
             </DrawerDescription>
-            <Canvas of={LoaderStories.Skew} />
-            <Controls of={LoaderStories.Skew} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Skew} />
+            <Controls of={SpinnerStories.Skew} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -477,7 +477,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        <Loader type='square' />
+        <Spinners type='square' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -486,8 +486,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Square} />
-            <Controls of={LoaderStories.Square} exclude={['Width','Height','Margin','Radius']} />
+            <Canvas of={SpinnerStories.Square} />
+            <Controls of={SpinnerStories.Square} exclude={['Width','Height','Margin','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -498,8 +498,7 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 <Drawer>
     <DrawerTrigger>
-        
-        <Loader type='sync' />
+        <Spinners type='sync' />
     </DrawerTrigger>
     <DrawerContent>
         <DrawerHeader>
@@ -508,8 +507,8 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
             </DrawerTitle>
             <DrawerDescription>
             </DrawerDescription>
-            <Canvas of={LoaderStories.Sync} />
-            <Controls of={LoaderStories.Sync} exclude={['Width','Height','Radius']} />
+            <Canvas of={SpinnerStories.Sync} />
+            <Controls of={SpinnerStories.Sync} exclude={['Width','Height','Radius']} />
             <DrawerClose>
                 Close
             </DrawerClose>
@@ -520,4 +519,4 @@ Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Loa
 </Drawer>
 
 
-_Spacer_
+_Spacer_@load/Spinners@/components/ui/loaders/Spinners

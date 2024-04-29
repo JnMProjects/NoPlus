@@ -2,8 +2,6 @@ import { Button } from './Button';
 
 export { Avatar, AvatarGroup } from './Avatar';
 
-export { Spinners } from './Loaders/Spinners';
-
 export { Badge } from './Badge';
 
 export { Icon } from './Feather';

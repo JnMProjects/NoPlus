@@ -1,14 +1,14 @@
-import { Loader } from "@ui/Loader";
+import { Spinners } from "@/components/ui/loaders/Spinners";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Loader> = {
-    title: "Components/UI/Loader",
-    component: Loader,
+const meta: Meta<typeof Spinners> = {
+    title: "Components/UI/Loaders/Spinner",
+    component: Spinners,
     argTypes: {
         type: {
             name: "Type",
             defaultValue: "clip",
-            description: "The type of loader",
+            description: "The type of Spinner",
             control: {
                 type: "select",
                 options: ["bar", "beat", "bounce", "circle", "climbingbox", "clip", "clock", "dot", "fade", "grid", "hash", "moon", "pacman", "ppg", "puff", "pulse", "ring", "rise", "rotate", "scale", "skew", "square", "sync"],
@@ -17,7 +17,7 @@ const meta: Meta<typeof Loader> = {
         size: {
             name: "Size",
             defaultValue: 35,
-            description: "The size of the loader",
+            description: "The size of the Spinner",
             control: {
                 type: "number",
             },
@@ -26,7 +26,7 @@ const meta: Meta<typeof Loader> = {
         color: {
             name: "Color",
             defaultValue: "#CDAE23",
-            description: "The color of the loader",
+            description: "The color of the Spinner",
             control: {
                 type: "color",
             },
@@ -34,28 +34,28 @@ const meta: Meta<typeof Loader> = {
         active: {
             name: "Active",
             defaultValue: true,
-            description: "Whether the loader is active",
+            description: "Whether the Spinner is active",
             control: {
                 type: "boolean",
             },
         },
         width: {
             name: "Width",
-            description: "The width of the loader // Only for some types",
+            description: "The width of the Spinner // Only for some types",
             control: {
                 type: "number",
             },
         },
         height: {
             name: "Height",
-            description: "The height of the loader // Only for some types",
+            description: "The height of the Spinner // Only for some types",
             control: {
                 type: "number",
             },
         },
         margin: {
             name: "Margin",
-            description: "The margin of the loader // Only for some types",
+            description: "The margin of the Spinner // Only for some types",
             control: {
                 type: "number",
             },
@@ -63,7 +63,7 @@ const meta: Meta<typeof Loader> = {
         },
         radius: {
             name: "Radius",
-            description: "The radius of the loader // Only for some types",
+            description: "The radius of the Spinner // Only for some types",
             control: {
                 type: "number",
             },
@@ -71,7 +71,7 @@ const meta: Meta<typeof Loader> = {
     },
 };
 export default meta;
-type Story = StoryObj<typeof Loader>;
+type Story = StoryObj<typeof Spinners>;
 
 export const Default: Story = {
     args: {

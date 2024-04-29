@@ -1,7 +1,7 @@
 import * as ldr from 'ldrs'
 
 interface loaderProps {
-    type: 'ring' | 'ring2' | 'tailSpin' | 'lineSpinner' | 'squircle' | 'square' | 'reuleaux' | 'tailChase' | 'dotSpinner' | 'spiral' | 'bouncy' | 'treadmill' | 'bouncyArk' | 'waveform' | 'hatch' | 'hourglass' | 'zoomies' | 'lineWobble' | 'infinity' | 'trefoil' | 'cardio' | 'helix' | 'grid' | 'quantum' | 'wobble' | 'orbit' | 'chaoticOrbit' | 'superballs' | 'trio' | 'momentum' | 'dotWave' | 'leapfrog' | 'newton' | 'dotStream' | 'dotPulse' | 'metronome' | 'jelly' | 'jellyTriangle' | 'mirage' | 'ping' | 'pulsar' | 'ripples' | 'miyagi' | 'pinwheel'
+    type: 'ring' | 'ring2' | 'tailSpin' | 'lineSpinner' | 'squircle' | 'square' | 'reuleaux' | 'tailChase' | 'dotSpinner' | 'spiral' | 'bouncy' | 'treadmill' | 'bouncyArc' | 'waveform' | 'hatch' | 'hourglass' | 'zoomies' | 'lineWobble' | 'infinity' | 'trefoil' | 'cardio' | 'helix' | 'grid' | 'quantum' | 'wobble' | 'orbit' | 'chaoticOrbit' | 'superballs' | 'trio' | 'momentum' | 'dotWave' | 'leapfrog' | 'newton' | 'dotStream' | 'dotPulse' | 'metronome' | 'jelly' | 'jellyTriangle' | 'mirage' | 'ping' | 'pulsar' | 'ripples' | 'miyagi' | 'pinwheel'
     size?: number // Jeder Hatt eigenen Default
     speed?: number // same nach unten
     stroke?: number
@@ -10,7 +10,7 @@ interface loaderProps {
     color?: string // das kann ich defaulten
 }
 
-const ldrs: React.FC<loaderProps> = ({type = "helix", size, speed, stroke, strokeLength, bgOpacity, color = '#CDAE23'}) => {
+const Loader: React.FC<loaderProps> = ({type = "helix", size, speed, stroke, strokeLength, bgOpacity, color = '#CDAE23'}) => {
     switch (type) {
         case 'ring':
             ldr.ring.register()
@@ -48,7 +48,7 @@ const ldrs: React.FC<loaderProps> = ({type = "helix", size, speed, stroke, strok
         case 'treadmill':
             ldr.treadmill.register()
             return <l-treadmill size={size = 85} speed={speed = 1.3} color={color} />
-        case 'bouncyArk':
+        case 'bouncyArc':
             ldr.bouncyArc.register()
             return <l-bouncy-arc size={size = 85} speed={speed = 1.6} color={color} />
         case 'waveform':
@@ -147,4 +147,4 @@ const ldrs: React.FC<loaderProps> = ({type = "helix", size, speed, stroke, strok
     }
 }
 
-export { ldrs }
+export default Loader

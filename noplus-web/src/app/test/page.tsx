@@ -1,40 +1,23 @@
 import {
-    Item,
-    Drawer,
-    DrawerTrigger,
-    DrawerContent,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerDescription,
-    DrawerClose,
-    DrawerFooter
+    ModalDialog,
+    ModalDialogWrapper
 } from "@layout/."
 
+import {
+    Button
+} from "@ui/."
+
+import Loader from "@/components/ui/loaders/Loader";
+
 import * as Feather from "react-feather";
+import { toast } from "sonner";
 
 export default function test() {
     return (<>
-        <Drawer>
-        <Item title="Item" errored pre={<Feather.Codepen/>}>
-            HEHEHEHA
-        </Item>
-        <DrawerTrigger>
-            Press Me
-        </DrawerTrigger>
-            <DrawerContent>
-                <DrawerHeader>
-                    <DrawerTitle>Test Drawer</DrawerTitle>
-                    <DrawerDescription>Drawer Description</DrawerDescription>
-                    <Item title="Test">
-                        <Feather.Cloud/>
-                    </Item>
-                    <DrawerClose><Feather.X/></DrawerClose>
-                </DrawerHeader>
-                <DrawerFooter>
-                    <Feather.Cloud/>
-                </DrawerFooter>
-            </DrawerContent>
-        </Drawer>
+            <ModalDialogWrapper>
+                <ModalDialog className="text-l-txt dark:text-d-txt" title="" trigger="1" close="hide*" closevariant="text" action="hide*" actionvariant="text"  />
+            </ModalDialogWrapper>
+            <Button onClick={() => {toast("Test")}} />
         </>
     );
 }

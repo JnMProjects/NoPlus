@@ -148,7 +148,7 @@ const RawAlertRawDialogCancel = React.forwardRef<
     )}
     {...props} asChild
   >
-    <Button type={closevariant="soft"} outlined>{children}</Button>
+    <Button type={closevariant ? closevariant : "soft"} outlined>{children}</Button>
   </RawAlertRawDialogPrimitive.Cancel>
 ))
 RawAlertRawDialogCancel.displayName = RawAlertRawDialogPrimitive.Cancel.displayName
@@ -173,7 +173,7 @@ interface AlertRawDialogProps {
 const ModalDialog: React.FC<AlertRawDialogProps & React.HTMLAttributes<HTMLElement>> = ({ children, trigger, triggervariant, title, titlestyle, description, descriptionstyle, close, closevariant, action, actionvariant, onOpen, onClose, onAction, ...props }) => {
   return (<>
     <RawAlertRawDialogTrigger triggervariant={triggervariant} onClick={onOpen}>
-        {trigger="Open"}
+      {trigger !== "hide*" ? (trigger ? trigger : "Open Dialog") : ""}
     </RawAlertRawDialogTrigger>
     <RawAlertRawDialogContent>
       <RawAlertRawDialogHeader>
@@ -187,11 +187,11 @@ const ModalDialog: React.FC<AlertRawDialogProps & React.HTMLAttributes<HTMLEleme
       </RawAlertRawDialogHeader>
       {props.extracontent}
       <RawAlertRawDialogFooter>
-        <RawAlertRawDialogCancel closevariant={closevariant} onClick={onClose}>
-          {close="Cancel"}
+        <RawAlertRawDialogCancel closevariant={closevariant} onClick={onClose}> 
+          {close !== "hide*" ? (close ? close : "Cancel") : ""}
         </RawAlertRawDialogCancel>
         <RawModalDialogAction actionvariant={actionvariant} onClick={onAction}>
-          {action="Proceed"}
+          {action !== "hide*" ? (action ? action : "Proceed") : ""}
         </RawModalDialogAction>
       </RawAlertRawDialogFooter>
     </RawAlertRawDialogContent>

@@ -2,7 +2,7 @@ import { Button } from './Button';
 
 export { Avatar, AvatarGroup } from './Avatar';
 
-export { Loader } from './Loader';
+export { Spinners } from './Loaders/Spinners';
 
 export { Badge } from './Badge';
 

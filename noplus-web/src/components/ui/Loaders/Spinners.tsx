@@ -13,7 +13,7 @@ interface LoaderProps {
     style?: React.CSSProperties;
 }
 
-const Loader: React.FC<LoaderProps> = ({ type, size = 15, color = '#CDAE23', active = true, height, width, margin, radius, ...props }) => {
+const Spinners: React.FC<LoaderProps> = ({ type, size = 15, color = '#CDAE23', active = true, height, width, margin, radius, ...props }) => {
     switch (type) {
         case 'bar':
             return <loaders.BarLoader color={color} height={height || 4} width={width || 100} loading={active} {...props}  />;
@@ -66,4 +66,4 @@ const Loader: React.FC<LoaderProps> = ({ type, size = 15, color = '#CDAE23', act
     }
 };
 
-export { Loader };
+export { Spinners };

@@ -116,7 +116,7 @@ export default function RootLayout({
     <html lang="en">
       <SpeedInsights />
       <Analytics/>
-      <body className={`${oxanium.variable} ${bungeeSpice.variable} font-oxanium bg-bg`}>
+      <body className={`${oxanium.variable} ${bungeeSpice.variable} font-oxanium bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt`}>
         <Toaster />
         {children}
       </body>

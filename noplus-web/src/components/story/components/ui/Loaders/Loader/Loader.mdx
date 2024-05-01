@@ -21,223 +21,980 @@ import {
 <img src="https://raw.githubusercontent.com/GriffinJohnston/ldrs/fefd7c60922e284c490b06f2be5f746b0b8f6400/thumbnail-dark.png" />
 
 --
+<div className='flex flex-row items-center justify-center p-2'>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='ring' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Ring 
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Ring} />
+                <Controls of={LoaderStories.Ring} exclude={['strokeLength']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='ring' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Ring 
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.Ring} />
-            <Controls of={LoaderStories.Ring} exclude={['strokeLength']} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='ring2' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Ring 2 
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Ring2} />
+                <Controls of={LoaderStories.Ring2} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='ring2' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Ring 2 
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.Ring2} />
-            <Controls of={LoaderStories.Ring2} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='tailSpin' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Tail Spin 
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.TailSpin} />
+                <Controls of={LoaderStories.TailSpin} exclude={['strokeLength', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='tailSpin' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Tail Spin 
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.TailSpin} />
-            <Controls of={LoaderStories.TailSpin} exclude={['strokeLength', 'bgOpacity']} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='lineSpinner' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Line Spinner 
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.LineSpinner} />
+                <Controls of={LoaderStories.LineSpinner} exclude={['strokeLength', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='lineSpinner' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Line Spinner 
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.LineSpinner} />
-            <Controls of={LoaderStories.LineSpinner} exclude={['strokeLength', 'bgOpacity']} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='squircle' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Squircle 
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Squircle} />
+                <Controls of={LoaderStories.Squircle} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='squircle' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Squircle 
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.Squircle} />
-            <Controls of={LoaderStories.Squircle} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='square' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Square 
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Square} />
+                <Controls of={LoaderStories.Square} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='square' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Square 
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.Square} />
-            <Controls of={LoaderStories.Square} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='reuleaux' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Reuleaux 
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Reuleaux} />
+                <Controls of={LoaderStories.Reuleaux} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='reuleaux' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Reuleaux 
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.Reuleaux} />
-            <Controls of={LoaderStories.Reuleaux} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='tailChase' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Tail Chase 
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.TailChase} />
+                <Controls of={LoaderStories.TailChase} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='tailChase' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Tail Chase 
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.TailChase} />
-            <Controls of={LoaderStories.TailChase} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='dotSpinner' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Dot Spinner
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.DotSpinner} />
+                <Controls of={LoaderStories.DotSpinner} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='dotSpinner' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Dot Spinner
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.DotSpinner} />
-            <Controls of={LoaderStories.DotSpinner} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='spiral' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Spiral
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Spiral} />
+                <Controls of={LoaderStories.Spiral} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+</div>
 
-<Drawer>
-    <DrawerTrigger>
-        <Loader type='spiral' />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
-                Spiral
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
-            <Canvas of={LoaderStories.Spiral} />
-            <Controls of={LoaderStories.Spiral} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
-            <DrawerClose>
-                Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+<div className='flex flex-row items-center justify-center p-2'>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='bouncy' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Bouncy
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Bouncy} />
+                <Controls of={LoaderStories.Bouncy} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='treadmill' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Treadmill
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Treadmill} />
+                <Controls of={LoaderStories.Treadmill} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='bouncyArc' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Bouncy Arc
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.BouncyArc} />
+                <Controls of={LoaderStories.BouncyArc} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='waveform' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Waveform
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Waveform} />
+                <Controls of={LoaderStories.Waveform} exclude={['strokeLength', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='hatch' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Hatch
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Hatch} />
+                <Controls of={LoaderStories.Hatch} exclude={['strokeLength', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='hourglass' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Hourglass
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Hourglass} />
+                <Controls of={LoaderStories.Hourglass} exclude={['strokeLength', 'stroke']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='zoomies' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Zoomies
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Zoomies} />
+                <Controls of={LoaderStories.Zoomies} exclude={['strokeLength']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='lineWobble' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Line Wobble
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.LineWobble} />
+                <Controls of={LoaderStories.LineWobble} exclude={['strokeLength']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='infinity' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Infinity
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Infinity} />
+                <Controls of={LoaderStories.Infinity} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='trefoil' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Trefoil
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Trefoil} />
+                <Controls of={LoaderStories.Trefoil} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+</div>
+
+<div className='flex flex-row items-center justify-center p-2'>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='cardio' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Cardio
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Cardio} />
+                <Controls of={LoaderStories.Cardio} exclude={['stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='helix' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Helix
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Helix} />
+                <Controls of={LoaderStories.Helix} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='grid' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Grid
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Grid} />
+                <Controls of={LoaderStories.Grid} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='quantum' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Quantum
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Quantum} />
+                <Controls of={LoaderStories.Quantum} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='wobble' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Wobble
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Wobble} />
+                <Controls of={LoaderStories.Wobble} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='orbit' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Orbit
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Orbit} />
+                <Controls of={LoaderStories.Orbit} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='chaoticorbit' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Chaotic Orbit
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.ChaoticOrbit} />
+                <Controls of={LoaderStories.ChaoticOrbit} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='superballs' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Superballs
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Superballs} />
+                <Controls of={LoaderStories.Superballs} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='trio' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Trio
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Trio} />
+                <Controls of={LoaderStories.Trio} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='momentum' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Momentum
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Momentum} />
+                <Controls of={LoaderStories.Momentum} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+</div>
+
+<div className='flex flex-row items-center justify-center p-2'>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='dotWave' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Dot Wave
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.DotWave} />
+                <Controls of={LoaderStories.DotWave} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='leapfrog' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Leapfrog
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Leapfrog} />
+                <Controls of={LoaderStories.Leapfrog} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='newton' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Newtons Cradle
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.NewtonsCradle} />
+                <Controls of={LoaderStories.NewtonsCradle} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='dotStream' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Dot Stream
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.DotStream} />
+                <Controls of={LoaderStories.DotStream} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='dotPulse' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Dot Pulse
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.DotPulse} />
+                <Controls of={LoaderStories.DotPulse} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='metronome' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Metronome
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Metronome} />
+                <Controls of={LoaderStories.Metronome} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='jelly' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Jelly
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Jelly} />
+                <Controls of={LoaderStories.Jelly} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='jellyTriangle' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Jelly Triangle
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.JellyTriangle} />
+                <Controls of={LoaderStories.JellyTriangle} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='mirage' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Mirage
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Mirage} />
+                <Controls of={LoaderStories.Mirage} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='ping' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Ping
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Ping} />
+                <Controls of={LoaderStories.Ping} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+</div>
+
+<div className='flex flex-row items-center justify-center'>
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='pulsar' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Pulsar
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Pulsar} />
+                <Controls of={LoaderStories.Pulsar} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='ripples' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Ripples
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Ripples} />
+                <Controls of={LoaderStories.Ripples} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='miyagi' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Miyagi
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Miyagi} />
+                <Controls of={LoaderStories.Miyagi} exclude={['strokeLength', 'stroke', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+
+    <Drawer>
+        <DrawerTrigger>
+            <Loader type='pinwheel' />
+        </DrawerTrigger>
+        <DrawerContent>
+            <DrawerHeader>
+                <DrawerTitle>
+                    Pinwheel
+                </DrawerTitle>
+                <DrawerDescription>
+                </DrawerDescription>
+                <Canvas of={LoaderStories.Pinwheel} />
+                <Controls of={LoaderStories.Pinwheel} exclude={['strokeLength', 'bgOpacity']} />
+                <DrawerClose>
+                    Close
+                </DrawerClose>
+            </DrawerHeader>
+            <DrawerFooter>
+            </DrawerFooter>
+        </DrawerContent>
+    </Drawer>
+</div>

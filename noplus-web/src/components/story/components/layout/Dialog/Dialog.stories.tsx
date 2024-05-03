@@ -22,7 +22,7 @@ export const NonModal = () => {
     return (
         <DialogWrapper trigger="Open" >
             <Dialog title="Title" description="Description">
-                <Badge type="info" shadow="md" size="md">Any Element</Badge>
+                <Badge type="info" shadow="md" size="sm">Any Element</Badge>
             </Dialog>
         </DialogWrapper>
     )

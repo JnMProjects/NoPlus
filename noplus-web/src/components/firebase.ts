@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 
 
 const firebaseConfig = {
-  apiKey: process.env.FB_APIKEY,
+  apiKey: process.env.NEXT_PUBLIC_FB_APIKEY,
   authDomain: process.env.FB_AUTHDOMAIN,
   projectId: process.env.FB_PROJECTID,
   storageBucket: process.env.FB_STORAGEBUCKET,

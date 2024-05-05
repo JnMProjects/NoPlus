@@ -29,7 +29,8 @@ const config: StorybookConfig = {
         '@story': path.resolve(__dirname, '../src/components/story'),
         '@Sui': path.resolve(__dirname, '../src/components/story/ui'),
         '@Slay': path.resolve(__dirname, '../src/components/story/layout'),
-        '@load': path.resolve(__dirname, '../src/components/story/ui/loaders')
+        '@load': path.resolve(__dirname, '../src/components/story/ui/loaders'),
+        '@pre': path.resolve(__dirname, '../src/components/presets')
       };
     }
     

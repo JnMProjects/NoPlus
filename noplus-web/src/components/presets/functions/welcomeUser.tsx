@@ -1,5 +1,5 @@
 import { toast } from "sonner";
-import { fbauth } from "../firebase";
+import { fbauth } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function WelcomeUser() {

@@ -81,6 +81,9 @@
     ],
     "@load/*": [
       "./src/components/ui/loaders/*"
+    ],
+    "@pre/*": [
+      "./src/components/presets/*"
     ]
   },
   "devDependencies": {

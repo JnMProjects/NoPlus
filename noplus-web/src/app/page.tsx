@@ -5,7 +5,7 @@ import { Button } from '@ui/index';
 import { toast } from 'sonner';
 import * as feather from 'react-feather';
 import { ThemeToggleCircle } from '@components/Theme';
-import WelcomeUser from '@/components/presets/welcomeUser';
+import WelcomeUser from '@pre/functions/welcomeUser';
 
 export default function Home() {
   WelcomeUser()
@@ -13,7 +13,7 @@ export default function Home() {
     <main className='bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt'>
       <section className='flex flex-col items-center justify-center w-screen h-screen'>
         <Popup trigger="Press Me">
-          <Item >
+          <Item className='items-center justify-center'>
             <Button variant='secondary' onClick={() => {
               toast('Toasted! 🍞');
             }}>

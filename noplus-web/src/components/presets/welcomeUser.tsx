@@ -1,11 +1,10 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { toast } from "sonner";
 import { fbauth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function WelcomeUser() {
     const [user, loading, error] = useAuthState(fbauth);
-    const helloToast = toast("Hello")
+    const helloToast = typeof toast
     if (!loading) {
         if (user) {
             toast.success("Welcome back" + user?.displayName, {

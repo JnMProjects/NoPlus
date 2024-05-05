@@ -19,5 +19,4 @@ const fbauth = getAuth(fbapp)
 
 const fblytics = getAnalytics(fbapp)
 
-
 export { fbapp, fbauth, fblytics }

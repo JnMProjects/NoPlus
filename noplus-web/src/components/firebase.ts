@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
-
+import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FB_APIKEY,
@@ -14,6 +14,21 @@ const firebaseConfig = {
 }
 
 const fbapp = initializeApp(firebaseConfig);
+
+
+
+if (process.env.NODE_ENV === "development") {
+  // @ts-ignore
+  self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+}
+
+initializeAppCheck(fbapp, {
+  provider: new ReCaptchaV3Provider(
+    process.env.NEXT_PUBLIC_GOOGLE_RECAPCHA_PUBLIC_KEY as string
+  ),
+  isTokenAutoRefreshEnabled: true
+})
+
 
 const fbauth = getAuth(fbapp)
 

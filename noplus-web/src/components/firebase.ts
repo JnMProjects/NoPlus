@@ -1,3 +1,5 @@
+"use client"
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
@@ -17,21 +19,25 @@ const fbapp = initializeApp(firebaseConfig);
 
 
 
-if (process.env.NODE_ENV === "development") {
+
+let fbauth, fblytics;
+
+if (typeof window !== 'undefined') {
+  
+  if (process.env.NODE_ENV === "development") {
   // @ts-ignore
-  self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+    globalThis.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+  }
+  
+  initializeAppCheck(fbapp, {
+    provider: new ReCaptchaV3Provider(
+      process.env.NEXT_PUBLIC_GOOGLE_RECAPCHA_PUBLIC_KEY as string
+    ),
+    isTokenAutoRefreshEnabled: true
+  })
+
+  fbauth = getAuth(fbapp)
+  fblytics = getAnalytics(fbapp)
 }
-
-initializeAppCheck(fbapp, {
-  provider: new ReCaptchaV3Provider(
-    process.env.NEXT_PUBLIC_GOOGLE_RECAPCHA_PUBLIC_KEY as string
-  ),
-  isTokenAutoRefreshEnabled: true
-})
-
-
-const fbauth = getAuth(fbapp)
-
-const fblytics = getAnalytics(fbapp)
 
 export { fbapp, fbauth, fblytics }

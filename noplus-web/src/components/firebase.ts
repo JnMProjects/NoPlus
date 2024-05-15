@@ -1,9 +1,11 @@
 "use client"
 
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps, getApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { getAnalytics } from "firebase/analytics";
-import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
+import { getStorage } from "firebase/storage";
+import { getDatabase } from "firebase/database";
+import { getFunctions } from "firebase/functions";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FB_APIKEY,
@@ -18,26 +20,21 @@ const firebaseConfig = {
 const fbapp = initializeApp(firebaseConfig);
 
 
-
-
-let fbauth, fblytics;
-
-if (typeof window !== 'undefined') {
-  
-  if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "development") {
   // @ts-ignore
-    globalThis.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
-  }
-  
-  initializeAppCheck(fbapp, {
-    provider: new ReCaptchaV3Provider(
-      process.env.NEXT_PUBLIC_GOOGLE_RECAPCHA_PUBLIC_KEY as string
-    ),
-    isTokenAutoRefreshEnabled: true
-  })
-
-  fbauth = getAuth(fbapp)
-  fblytics = getAnalytics(fbapp)
+  globalThis.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
 }
 
-export { fbapp, fbauth, fblytics }
+
+const FBRecapchaProvider =  new ReCaptchaV3Provider(process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_PUBLIC_KEY as string)
+
+const appCheck = initializeAppCheck(fbapp, {
+  provider: FBRecapchaProvider,
+  isTokenAutoRefreshEnabled: true
+  
+})
+
+const fbauth = getAuth(fbapp)
+const fblytics = getAnalytics(fbapp)
+
+export { fbapp, fbauth, fblytics, appCheck }

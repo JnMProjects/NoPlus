@@ -116,9 +116,9 @@ export default function RootLayout({
     <html lang="en">
       <SpeedInsights />
       <Analytics/>
-      <div id="recapcha-container"></div>
       <body className={`${oxanium.variable} ${bungeeSpice.variable} font-oxanium bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt`}>
         <Toaster />
+        <div id="recapcha-container"></div>
         {children}
       </body>
     </html>

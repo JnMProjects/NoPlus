@@ -345,8 +345,8 @@ module.exports = {
          
       },
       fontFamily: {
-        oxanium: ['var(--font-family-oxanium)', 'sans'],
-        bungeeSpice: ['var(--font-family-bungee-spice)', 'sans'],
+        oxanium: ['var(--font-family-oxanium)'],
+        bungeeSpice: ['var(--font-family-bungee-spice)'],
       },
       keyframes: {
         "collapse-down": {

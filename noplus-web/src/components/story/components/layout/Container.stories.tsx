@@ -13,9 +13,6 @@ const meta: Meta<typeof Container> = {
                 <h1>1</h1>
             </>,
             description: "In this example, text and icons",
-            control: {
-                type: "children",
-            },
         },
         intent: {
             name: "Intent",

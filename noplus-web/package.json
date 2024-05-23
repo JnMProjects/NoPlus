@@ -43,6 +43,7 @@
     "firebase": "^10.11.1",
     "gsap": "^3.12.5",
     "ldrs": "^1.0.1",
+    "next": "^14.2.3",
     "next-themes": "^0.3.0",
     "node-fetch": "^3.3.2",
     "octokit": "^3.2.1",

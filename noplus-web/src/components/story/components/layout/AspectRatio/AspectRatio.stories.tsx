@@ -10,7 +10,6 @@ const meta: Meta = {
         children: {
             name: "Children",
             description: "The content to display inside the aspect ratio",
-            control: React.ReactNode,
         },
         ratio: {
             name: "Ratio",

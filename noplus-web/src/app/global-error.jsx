@@ -2,6 +2,7 @@
 
 import * as Sentry from "@sentry/nextjs";
 import Error from "next/error";
+import React from "react";
 import { useEffect } from "react";
 
 export default function GlobalError({ error }) {
@@ -12,7 +13,7 @@ export default function GlobalError({ error }) {
   return (
     <html>
       <body>
-        <Error />
+        <Error/>
       </body>
     </html>
   );

@@ -19,5 +19,3 @@ async function parseGitAvatar(username: string) {
 
     return response.user.avatarUrl;
 }
-
-export { parseGitAvatar };

@@ -3,7 +3,7 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FB_APIKEY,
@@ -44,6 +44,14 @@ if (typeof window !== "undefined" && process.title == 'browser' && !fbappcheckin
 
 const fstore = getFirestore();
 const fbauth = getAuth();
-const fblytics = getAnalytics(fbapp)
+
+let fblytics: ReturnType<typeof getAnalytics> | undefined;
+
+isSupported().then((supported) => {
+  if (!supported) {
+    return;
+  }
+  fblytics = getAnalytics(fbapp)
+})
 
 export { fbapp, fbauth, fblytics, fstore, fbappcheckinstance as appCheck }

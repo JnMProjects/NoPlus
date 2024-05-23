@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { AspectRatio } from "@layout/index";
 import Image from "next/image";
+import React from "react";
 
 const meta: Meta = {
     title: "Components/Layout/AspectRatio",
@@ -9,7 +10,7 @@ const meta: Meta = {
         children: {
             name: "Children",
             description: "The content to display inside the aspect ratio",
-            control: "React.ReactNode",
+            control: React.ReactNode,
         },
         ratio: {
             name: "Ratio",

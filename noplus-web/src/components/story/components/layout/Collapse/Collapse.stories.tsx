@@ -25,9 +25,6 @@ const meta: Meta<typeof Collapse> = {
             name: "Children",
             defaultValue: "Children",
             description: "The children of the collapse",
-            control: {
-                type: "children",
-            },
         },
     },
 };

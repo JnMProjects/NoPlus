@@ -1,16 +1,7 @@
 {
-    "dotnet.defaultSolution": "NoPlus/NoPlus.sln",
-    "tailwindCSS.experimental.classRegex": [
-        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-        ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-      ],
-    "terminal.integrated.shellArgs.linux": ["-c", "cd /noplus-web; exec bash"],
-    "terminal.integrated.shellArgs.windows": ["-NoExit", "-Command", "cd /noplus-web"],
-    "terminal.integrated.profiles.windows": {
-      "PowerShell": {
-          "source": "PowerShell",
-          "args": ["-NoExit", "-Command", "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; powershell; cd /noplus-web"]
-      }
-    },
-    "terminal.integrated.fontFamily": "Cascadia Code",
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ]
 }

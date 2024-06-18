@@ -67,8 +67,6 @@ jobs:
     needs: testRunner
     runs-on: ubuntu-latest
     permissions: write-all
-    strategy:
-      fail-fast: false
     steps:
       - name: Checkout code ✅
         uses: actions/checkout@v4
@@ -115,8 +113,6 @@ jobs:
     needs: testRunner
     runs-on: ubuntu-latest
     permissions: write-all
-    strategy:
-      fail-fast: false
     steps:
       - name: Checkout code ✅
         uses: actions/checkout@v4

@@ -1,0 +1,332 @@
+{
+  "Nodes": [
+    {
+      "Annotation": "all_tundra_nodes",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "ToBuildDependencies": [
+        1,
+        2,
+        3
+      ],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 0
+    },
+    {
+      "Annotation": "ScriptAssemblies",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 1
+    },
+    {
+      "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json",
+      "DisplayName": "BuildPlayerDataGenerator TypeDb-All",
+      "Action": "\"D:/git/unity/2022.3.3f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Assembly-CSharp.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Cinemachine.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/io.sentry.unity.runtime.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Scripts.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Unity.Recorder.Base.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Unity.Recorder.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Unity.TextMeshPro.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Unity.Timeline.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/Unity.VisualScripting.State.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/UnityEngine.TestRunner.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies/UnityEngine.UI.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Microsoft.Bcl.AsyncInterfaces.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Buffers.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Collections.Immutable.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Memory.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Numerics.Vectors.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Reflection.Metadata.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Runtime.CompilerServices.Unsafe.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Text.Encodings.Web.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Text.Json.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Threading.Tasks.Extensions.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.Android.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.iOS.dll\" -a=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.Native.dll\" -s=\"D:/git/unity/2022.3.3f1/Editor/Data/Managed/UnityEngine\" -s=\"D:/git/unity/2022.3.3f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx\" -s=\"D:/git/unity/2022.3.3f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard\" -s=\"D:/git/unity/2022.3.3f1/Editor/Data/NetStandard/Extensions/2.0.0\" -s=\"D:/git/unity/2022.3.3f1/Editor/Data/NetStandard/ref/2.1.0\" -s=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/ScriptAssemblies\" -s=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom\" -s=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator\" -s=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc\" -s=\"C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
+      "Inputs": [
+        "D:/git/unity/2022.3.3f1/Editor/Data/Tools/netcorerun/netcorerun.exe",
+        "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
+        "Library/ScriptAssemblies/Assembly-CSharp.dll",
+        "Library/ScriptAssemblies/Cinemachine.dll",
+        "Library/ScriptAssemblies/io.sentry.unity.runtime.dll",
+        "Library/ScriptAssemblies/Scripts.dll",
+        "Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll",
+        "Library/ScriptAssemblies/Unity.Recorder.Base.dll",
+        "Library/ScriptAssemblies/Unity.Recorder.dll",
+        "Library/ScriptAssemblies/Unity.TextMeshPro.dll",
+        "Library/ScriptAssemblies/Unity.Timeline.dll",
+        "Library/ScriptAssemblies/Unity.VisualScripting.Core.dll",
+        "Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll",
+        "Library/ScriptAssemblies/Unity.VisualScripting.State.dll",
+        "Library/ScriptAssemblies/UnityEngine.TestRunner.dll",
+        "Library/ScriptAssemblies/UnityEngine.UI.dll",
+        "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll",
+        "Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll",
+        "Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Microsoft.Bcl.AsyncInterfaces.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Buffers.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Collections.Immutable.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Memory.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Numerics.Vectors.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Reflection.Metadata.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Runtime.CompilerServices.Unsafe.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Text.Encodings.Web.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Text.Json.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Threading.Tasks.Extensions.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.Android.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.iOS.dll",
+        "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.Native.dll"
+      ],
+      "Outputs": [
+        "Library/BuildPlayerData/Editor/TypeDb-All.json"
+      ],
+      "AllowUnexpectedOutput": true,
+      "Env": [],
+      "DebugActionIndex": 2
+    },
+    {
+      "Annotation": "ScriptAssembliesAndTypeDB",
+      "DisplayName": null,
+      "Inputs": [],
+      "Outputs": [],
+      "ToBuildDependencies": [
+        1,
+        2
+      ],
+      "OverwriteOutputs": false,
+      "DebugActionIndex": 3
+    }
+  ],
+  "FileSignatures": [
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.BuildTools.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.Core.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.CSharpSupport.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.DotNet.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.NativeProgramSupport.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.Stevedore.Program.exe"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.TinyProfiler2.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.GNU.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.LLVM.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.VisualStudio.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.Toolchain.Xcode.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.Tools.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.TundraBackend.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Bee.VisualStudioSolution.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/BeeBuildProgramCommon.Data.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/BeeBuildProgramCommon.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/BeeLocalCacheTool.exe"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Newtonsoft.Json.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/NiceIO.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/PlayerBuildProgramLibrary.Data.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/PlayerBuildProgramLibrary.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/ScriptCompilationBuildProgram.Data.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/ScriptCompilationBuildProgram.exe"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/SharpYaml.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.Api.Attributes.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.Cecil.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Mdb.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Pdb.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.Cecil.Rocks.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Api.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Bee.BuildLogic.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.IL2CPP.Bee.IL2CPPExeCompileCppBuildProgram.Data.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.Linker.Api.dll"
+    },
+    {
+      "File": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline/Unity.Options.dll"
+    },
+    {
+      "File": "Library/Bee/1900b0aESkipCompile-inputdata.json"
+    }
+  ],
+  "StatSignatures": [
+    {
+      "File": "Assets/csc.rsp"
+    },
+    {
+      "File": "Assets/mcs.rsp"
+    },
+    {
+      "File": "Library/Bee/1900b0aESkipCompile-inputdata.json"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Microsoft.Bcl.AsyncInterfaces.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Buffers.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Collections.Immutable.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Memory.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Numerics.Vectors.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Reflection.Metadata.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Runtime.CompilerServices.Unsafe.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Text.Encodings.Web.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Text.Json.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.System.Threading.Tasks.Extensions.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.Android.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.iOS.dll"
+    },
+    {
+      "File": "Library/PackageCache/io.sentry.unity@cfd1f01ace/Runtime/Sentry.Unity.Native.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Assembly-CSharp.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Cinemachine.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/io.sentry.unity.runtime.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Scripts.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Recorder.Base.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Recorder.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.TextMeshPro.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Timeline.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.VisualScripting.Core.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.VisualScripting.State.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/UnityEngine.TestRunner.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/UnityEngine.UI.dll"
+    }
+  ],
+  "GlobSignatures": [
+    {
+      "Path": "D:/git/unity/2022.3.3f1/Editor/Data/Tools/BuildPipeline"
+    }
+  ],
+  "ContentDigestExtensions": [
+    ".rsp",
+    ".dll",
+    ".exe",
+    ".pdb"
+  ],
+  "StructuredLogFileName": "Library/Bee/tundra.log.json",
+  "StateFileName": "Library/Bee/TundraBuildState.state",
+  "StateFileNameTmp": "Library/Bee/TundraBuildState.state.tmp",
+  "StateFileNameMapped": "Library/Bee/TundraBuildState.state.map",
+  "ScanCacheFileName": "Library/Bee/tundra.scancache",
+  "ScanCacheFileNameTmp": "Library/Bee/tundra.scancache.tmp",
+  "DigestCacheFileName": "Library/Bee/tundra.digestcache",
+  "DigestCacheFileNameTmp": "Library/Bee/tundra.digestcache.tmp",
+  "CachedNodeOutputDirectoryName": "Library/Bee/CachedNodeOutput",
+  "EmitDataForBeeWhy": 0,
+        "NamedNodes": {
+          "all_tundra_nodes": 0,
+          "ScriptAssemblies": 1,
+          "ScriptAssembliesAndTypeDB": 3
+        }
+,  "DefaultNodes": [
+    0
+  ],
+  "SharedResources": [],
+  "Scanners": [],
+  "Identifier": "Library/Bee/1900b0aESkipCompile.dag.json",
+  "PayloadsFile": "C:/Users/jackr/GITHUB/NoPlus/NoPlus/Library/Bee/1900b0aESkipCompile.dag.payloads",
+  "RelativePathToRoot": "../.."
+}

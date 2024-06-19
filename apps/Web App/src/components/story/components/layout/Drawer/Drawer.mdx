@@ -1,0 +1,51 @@
+import {Canvas, Meta} from '@storybook/blocks';
+import * as DrawerStory from './Drawer.stories';
+
+<Meta of={DrawerStory} />
+
+# Drawer
+
+<Canvas of={DrawerStory.Default} />
+
+The Drawer component is used to display a modal that slides in from the side of the screen. It is used to display additional content or actions that are not part of the main view.
+
+### Pre Styled!!!
+
+## Usage
+
+```tsx
+import {
+    Drawer,
+    DrawerTrigger,
+    DrawerContent,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerDescription,
+    DrawerClose,
+    DrawerFooter
+} from "@layout/.";
+
+<Drawer>
+    <DrawerTrigger>
+        {/* Trigger goes here */}
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                {/* Title goes here // Text Possible */} 
+            </DrawerTitle>
+            <DrawerDescription>
+                {/* Description goes here // Text Possible */}
+            </DrawerDescription>
+            <DrawerClose>
+                {/* Close button goes here // Also Text Possible */}
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+            {/* Footer goes here // Text Only */}
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+```
+
+Important to note is that the Buttons Are Styled in Text Only.

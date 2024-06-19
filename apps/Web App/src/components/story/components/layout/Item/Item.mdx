@@ -1,0 +1,27 @@
+import { Canvas, Meta } from "@storybook/blocks"
+import * as ItemStories from "./Item.stories"
+
+<Meta of={ItemStories} />
+# Item
+### The Item Component is used as A Holder for other Components inside itself
+
+## Default
+<Canvas of={ItemStories.Default} />
+
+### The Item Component also can be used as A Error Holder
+
+## Errored
+<Canvas of={ItemStories.Error} />
+
+
+## Usage
+
+```tsx
+import {
+    Item,
+} from "@layout/."
+
+<Item {/*Optionaly errored*/} pre={/* for example an icon */}>
+    {/*Your Content Here*/}
+</Item>
+```

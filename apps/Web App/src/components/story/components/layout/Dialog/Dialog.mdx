@@ -1,0 +1,50 @@
+import { Meta, Canvas, Controlls,Primary } from '@storybook/blocks';
+import * as DialogStories from './Dialog.stories';
+import { Dialog, DialogWrapper, Collapse, CollapseGroup } from '@layout/.';
+
+<Meta of={DialogStories} />
+# Dialog
+### There are two types of dialogs: modal and non-modal. Modal dialogs force users to interact with them before continuing. Non-modal dialogs continue to allow interaction with the app.
+<CollapseGroup>
+    <Collapse trigger="Modal" title="Modal Dialogs" defaultExpanded>
+        <Canvas of={DialogStories.Modal} />
+        **Modal Dialogs** are used to draw the user's attention to a specific task or piece of information. They are used to interrupt the user's workflow and require the user to take an action before they can continue.
+        You also cant close them by clicking outside the dialog.
+        <Collapse trigger="Props" title="Styles and more...">
+            - **trigger**=""  - The trigger for the dialog
+            - **title**="" - The title of the dialog
+            - **description**="" - The description of the dialog
+            - **onOpen**=() - The function to be called when the dialog is opened
+            - **onClose**=() - The function to be called when the dialog is Canceled / Aborted
+            - **onAction**=() - The function to be called when the dialog is Accepted / Proceeded is pressed
+        </Collapse>
+        <Collapse trigger="Code" title="Implementation">
+            ```tsx
+            <ModalDialogWrapper>
+                <ModalDialog trigger="Open" title="Title" description="Description" onOpen={/* On Opening of Dialog */} onClose={/* On Abort */}  onAction={/* On Proceed */}/>
+            </ModalDialogWrapper>
+            ```
+        </Collapse>
+    </Collapse>
+    <div className="w-full h-1 bg-l-acc-300/60 dark:bg-d-acc-700/60 py-2 border border-dashed border-d-bg dark:border-l-bg animate-pulse" />
+    <Collapse trigger="Non Modal" title="Dialog">
+        <Canvas of={DialogStories.NonModal} />
+        _Default_ **Dialogs** are used to let the user fill in some information or to confirm an action. They are designed to be non-intrusive but still divert the users attention to the dialog.
+        They also accept children unlike the Modal Dialogs.
+        <Collapse trigger="Props" title="Styles and more...">
+            - **trigger**=""  - The trigger for the dialog
+            - **title**="" - The title of the dialog
+            - **description**="" - The description of the dialog
+            - **children**= tsx - The children of the dialog
+        </Collapse>
+        <Collapse trigger="Code" title="Implementation">
+            ```tsx
+            <DialogWrapper trigger="Open" >
+                <Dialog title="Title" description="Description">
+                    <Badge type="secondary" shadow="md" size="sm">Any Element</Badge>
+                </Dialog>
+            </DialogWrapper>
+            ```
+        </Collapse>
+    </Collapse>
+</CollapseGroup>

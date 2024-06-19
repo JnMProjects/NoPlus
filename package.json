@@ -1,0 +1,20 @@
+{
+  "name": "noplus",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "next:web": "turbo dev:next --filter=noplus-web",
+    "story:web": "turbo dev:story --filter=noplus-web",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "prettier": "latest"
+  },
+  "packageManager": "pnpm@9.1.2",
+  "engines": {
+    "node": ">=18"
+  }
+}

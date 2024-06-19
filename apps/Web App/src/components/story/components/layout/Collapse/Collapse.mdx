@@ -1,0 +1,48 @@
+import { Meta, Canvas, Controlls,Primary } from '@storybook/blocks';
+import { CollapseGroup, Collapse } from '@layout/Collapse';
+import * as CollapseStories from './Collapse.stories';
+
+<Meta of={CollapseStories}/>
+# Collapse
+
+<Primary/>
+
+## Different Types
+<CollapseGroup>
+    <Collapse trigger="Single Collapse" title="Title" defaultExpanded>
+        ```tsx
+        import { Collapse, CollapseGroup } from '@layout/.'
+
+        <CollapseGroup>
+            <Collapse trigger="Single Collapse" title="Title" defaultExpanded>
+            // Children
+            </Collapse>
+        </CollapseGroup>
+        ```
+    </Collapse>
+    <Collapse trigger="Multiple Collapses" title="">
+        <CollapseGroup>
+            <Collapse trigger=" " title="Description" defaultExpanded>
+                This Multicolapse can hold multiple collapses
+
+                Collapses can be nested in a CollapseGroup
+                if you pass the defaultExpanded prop to the Collapse it will be expanded by default
+
+                After you close any Collapse its Components state will be resetet to default
+            </Collapse>
+            <Collapse trigger="Code" title="Code">
+                ```tsx
+                import { Collapse, CollapseGroup } from '@layout/.'
+                <CollapseGroup>
+                    <Collapse trigger="Description" title="Title" defaultExpanded>
+                        // Description
+                    </Collapse>
+                    <Collapse trigger="Code" title="Title">
+                        // Code
+                    </Collapse>
+                </CollapseGroup>
+                ```
+            </Collapse>
+        </CollapseGroup>
+    </Collapse>
+</CollapseGroup>

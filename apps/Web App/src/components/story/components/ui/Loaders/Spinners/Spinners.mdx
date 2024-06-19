@@ -1,0 +1,522 @@
+import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks';
+import * as SpinnerStories from './Spinner.stories';
+import { Spinners } from '@load/Spinners';
+import {
+    Drawer,
+    DrawerTrigger,
+    DrawerContent,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerDescription,
+    DrawerClose,
+    DrawerFooter,
+    Collapse,
+    CollapseTrigger,
+    CollapseContent,
+    CollapseItem,
+} from '@layout';
+
+<Meta of={SpinnerStories} />
+
+# Spinners
+## Loading Spinners / Animations
+
+### Default
+<Canvas of={SpinnerStories.Default} />
+
+## Arguments
+Note These are ALL OPTIONAL AND POSSIBLE ARGUMENTS not all are used in every Spinner.
+
+<Controls of={SpinnerStories.Default} />
+
+## Different Types
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='bar' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Bar 
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Bar} />
+            <Controls of={SpinnerStories.Bar} exclude={['Size', 'Margin', 'Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='beat' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Beat 
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Beat} />
+            <Controls of={SpinnerStories.Beat} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='bounce' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Bounce 
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Bounce} />
+            <Controls of={SpinnerStories.Bounce} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='circle' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Circle
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Circle} />
+            <Controls of={SpinnerStories.Circle} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='climbingbox' size={15} />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Climbing Box
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.ClimbingBox} />
+            <Controls of={SpinnerStories.ClimbingBox} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='clip' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Clip
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Clip} />
+            <Controls of={SpinnerStories.Clip} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='clock' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Clock
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Clock} />
+            <Controls of={SpinnerStories.Clock} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='dot' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Dot
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Dot} />
+            <Controls of={SpinnerStories.Dot} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='fade' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Fade
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Fade} />
+            <Controls of={SpinnerStories.Fade} exclude={['Size']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='grid' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Grid
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Grid} />
+            <Controls of={SpinnerStories.Grid} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='hash' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Hash
+            </DrawerTitle>
+            <DrawerDescription>
+                My Favorite
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Hash} />
+            <Controls of={SpinnerStories.Hash} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='moon' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Moon
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Moon} />
+            <Controls of={SpinnerStories.Moon} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='pacman' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Pacman
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Pacman} />
+            <Controls of={SpinnerStories.Pacman} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='ppg' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Propagate
+            </DrawerTitle>
+            <DrawerDescription>
+                shortend to ppg
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Propagate} />
+            <Controls of={SpinnerStories.Propagate} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='puff' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Puff
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Puff} />
+            <Controls of={SpinnerStories.Puff} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='pulse' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Pulse
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Pulse} />
+            <Controls of={SpinnerStories.Pulse} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='ring' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Ring
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Ring} />
+            <Controls of={SpinnerStories.Ring} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='rise' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Rise
+            </DrawerTitle>
+            <DrawerDescription>
+                Ugly af
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Rise} />
+            <Controls of={SpinnerStories.Rise} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='rotate' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Rotate
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Rotate} />
+            <Controls of={SpinnerStories.Rotate} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='scale' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Scale
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Scale} />
+            <Controls of={SpinnerStories.Scale} exclude={['Size']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='skew' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Skew
+            </DrawerTitle>
+            <DrawerDescription>
+                Beautiful
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Skew} />
+            <Controls of={SpinnerStories.Skew} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='square' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Square
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Square} />
+            <Controls of={SpinnerStories.Square} exclude={['Width','Height','Margin','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+<Drawer>
+    <DrawerTrigger>
+        <Spinners type='sync' />
+    </DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>
+                Sync
+            </DrawerTitle>
+            <DrawerDescription>
+            </DrawerDescription>
+            <Canvas of={SpinnerStories.Sync} />
+            <Controls of={SpinnerStories.Sync} exclude={['Width','Height','Radius']} />
+            <DrawerClose>
+                Close
+            </DrawerClose>
+        </DrawerHeader>
+        <DrawerFooter>
+        </DrawerFooter>
+    </DrawerContent>
+</Drawer>
+
+
+_Spacer_@load/Spinners@/components/ui/loaders/Spinners

@@ -19,3 +19,14 @@ async function parseGitAvatar(username: string) {
 
     return response.user.avatarUrl;
 }
+
+export default async function GET(req: any, res: any) {
+    const { username } = req.query;
+
+    try {
+        const avatarUrl = await parseGitAvatar(username);
+        res.status(200).json({ avatarUrl });
+    } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}

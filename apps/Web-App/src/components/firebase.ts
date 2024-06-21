@@ -34,11 +34,10 @@ if (typeof window !== "undefined" && process.title == 'browser' && !fbappcheckin
     const recv3token = process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_PUBLIC_KEY;
 
     fbappcheckinstance = firebaseAppCheck.initializeAppCheck(fbapp, {
-      provider: new firebaseAppCheck.ReCaptchaV3Provider(fbappcheckinstance),
-      isTokenAutoRefreshEnabled: true,
-      
+      provider: new firebaseAppCheck.ReCaptchaV3Provider("6LcWUNEpAAAAALpHEz4a8Qqo8c97f661CPSZqw2U"),
+      isTokenAutoRefreshEnabled: true
     });
-    console.log("AppCheckInstance", fbappcheckinstance);
+    // console.log("AppCheckInstance", fbappcheckinstance);
   });
 }
 

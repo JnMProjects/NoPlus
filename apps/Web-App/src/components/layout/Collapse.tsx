@@ -7,14 +7,18 @@ import { ChevronDown } from "react-feather"
 import { cn } from "../twm"
 
 interface CGroupProps {
-    children?: React.ReactNode;
+  title?: string
+  children?: React.ReactNode;
 }
 
-const CollapseGroup: React.FC<CGroupProps> = ({ children, ...props }) => {
+const CollapseGroup: React.FC<CGroupProps> = ({ children, title, ...props }) => {
   return (
-    <CollapsePrimitive.Root type="multiple" {...props} defaultValue={["default"]} className="border-t border-b border-d-bg dark:border-l-bg" >
+    <>
+      {title && <h2>{title}</h2>}
+      <CollapsePrimitive.Root type="multiple" {...props} defaultValue={["default"]} className="border-t border-b border-d-bg dark:border-l-bg" >
       {children}
-    </CollapsePrimitive.Root>
+      </CollapsePrimitive.Root>
+    </>
   );
 }
 

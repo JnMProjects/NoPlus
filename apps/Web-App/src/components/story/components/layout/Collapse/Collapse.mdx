@@ -7,8 +7,7 @@ import * as CollapseStories from './Collapse.stories';
 
 <Primary/>
 
-## Different Types
-<CollapseGroup>
+<CollapseGroup title='Different Types'>
     <Collapse trigger="Single Collapse" title="Title" defaultExpanded>
         ```tsx
         import { Collapse, CollapseGroup } from '@layout/.'
@@ -23,17 +22,16 @@ import * as CollapseStories from './Collapse.stories';
     <Collapse trigger="Multiple Collapses" title="">
         <CollapseGroup>
             <Collapse trigger=" " title="Description" defaultExpanded>
-                This Multicolapse can hold multiple collapses
-
-                Collapses can be nested in a CollapseGroup
-                if you pass the defaultExpanded prop to the Collapse it will be expanded by default
-
-                After you close any Collapse its Components state will be resetet to default
+                - This Multicolapse can hold multiple collapses.
+                - Collapses can be nested in a CollapseGroup.
+                - You can add a title to the CollapseGroup.
+                - if you pass the defaultExpanded prop to the Collapse it will be expanded by default.
+                - After you close any Collapse its Components state will be resetet to default.
             </Collapse>
             <Collapse trigger="Code" title="Code">
                 ```tsx
                 import { Collapse, CollapseGroup } from '@layout/.'
-                <CollapseGroup>
+                <CollapseGroup title="Title">
                     <Collapse trigger="Description" title="Title" defaultExpanded>
                         // Description
                     </Collapse>

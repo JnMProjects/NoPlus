@@ -34,7 +34,11 @@ export async function GET(req:Request) {
     } else {
         try {
             const res = await parseGitAvatar(username)
-            return new Response(300)
+            return new Response(JSON.stringify({
+                status: 200,
+                message: "Success",
+                data: res
+            }))
         } catch (error) {
             console.error(error)
             return new Response(JSON.stringify({

@@ -1,184 +1,121 @@
-import { cva, VariantProps } from "cva";
-import React from "react";
-import { cn } from "../twm";
-import { Spinners as Loader } from "@load/Spinners";
-import * as Feather from "react-feather";
-import { Icon } from "./Feather";
+import * as React from "react";
+import { Slot, Slottable } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "cva";
+import { cn } from "@components/twm";
+import * as Feather from "react-feather"
 
-const ButtonVariants = cva({
-    base: " duration-150 border",
-    variants: {
-        variant: {
-            primary: "bg-l-prim-800 text-d-txt-100 border-l-prim-600 hover:border-l-acc-600 active:border-l-sec-500  hover:bg-l-prim-700 hover:text-d-txt-200 active:bg-l-prim-800 dark:bg-d-bg dark:text-d-txt-500 dark:hover:bg-d-prim-800 dark:hover:text-d-txt-100 dark:hover:border-indigo-900 dark:active:bg-d-prim-800 dark:active:text-d-sec-600 dark:active:border-d-acc-600",
-            secondary: "bg-l-sec text-l-txt border-amber-300 hover:bg-yellow-200 hover:text-l-txt-600 hover:border-orange-300 active:bg-yellow-300 active:text-l-txt-700 active:border-amber-600 dark:bg-yellow-300 dark:text-d-txt-800 dark:border-amber-500 dark:hover:bg-yellow-400 dark:hover:text-d-txt-900 dark:hover:border-amber-600 dark:active:bg-yellow-500 dark:active:text-d-txt-900 dark:active:border-amber-800",
-            tertiary: "bg-violet-300 text-l-txt border-fuchsia-500 hover:bg-indigo-300 hover:text-l-txt-900 hover:border-violet-700 active:bg-violet-300 active:border-violet-800 dark:bg-purple-500 dark:text-fuchsia-200 dark:border-violet-600 dark:hover:bg-purple-700 dark:hover:text-teal-300 dark:hover:border-indigo-400 dark:active:bg-purple-800 dark:active:text-teal-400 dark:active:border-indigo-700",
-            soft: " bg-cyan-300 text-blue-800 border-teal-400 hover:bg-sky-300 hover:text-indigo-700 hover:border-emerald-500 active:border-lime-400 active:text-indigo-800 dark:bg-teal-600 dark:text-sky-100 dark:hover:bg-emerald-700 dark:hover:text-cyan-100 dark:active:text-emerald-100 dark:active:border-teal-600", // teal and da blue stuff very beautiful
-            osoft: "bg-cyan-200/50 text-emerald-950 border-teal-400 hover:text-emerald-900 hover:border-teal-500 active:text-emerald-800 active:border-teal-600 dark:bg-teal-600/50 dark:text-sky-100 dark:border-emerald-500 dark:hover:text-cyan-100 dark:hover:border-teal-600 dark:active:text-emerald-200 dark:active:border-teal-700", // o for outlined
-            oprimary: " border-l-prim-400 bg-l-txt-300/40 hover:bg-l-txt-200/50 hover:border-l-prim-700 active:bg-l-txt-300/50 dark:bg-d-prim-600/50 dark:border-slate-700 dark:text-cyan-50/80 dark:hover:bg-d-prim-500/50 dark:hover:border-violet-200", // o for outlined
-            osecondary: "bg-l-sec-300/50 border-amber-500 hover:border-amber-600 hover:bg-l-sec-400/50 active:bg-l-sec-500/50 dark:bg-d-sec-500/40 dark:border-yellow-500 dark:hover:bg-d-sec-500/50 dark:hover:border-yellow-600 dark:active:border-yellow-700",
-            otertiary: "bg-violet-300/40 text-l-txt border-fuchsia-500 hover:bg-indigo-300/40 hover:text-l-txt-900 hover:border-violet-700 active:bg-violet-300/40 active:border-violet-800 dark:bg-purple-500/50 dark:text-fuchsia-200 dark:border-violet-600 dark:hover:bg-purple-700/50 dark:hover:text-teal-300 dark:hover:border-indigo-400 dark:active:bg-purple-800/40 dark:active:text-teal-400 dark:active:border-indigo-700",
-            text: "border-none bg-transparent text-l-txt hover:bg-slate-200/60 active:bg-gray-400/80 dark:text-d-txt dark:hover:bg-slate-900/60 dark:active:bg-gray-800/80", // invis bg just hover and active effect
-            otext: "border-none bg-transparent text-l-txt hover:bg-slate-200/60 active:bg-gray-400/80 dark:text-d-txt dark:hover:bg-slate-900/60 dark:active:bg-gray-800/80",
+const buttonVariants = cva(
+    {
+        base: "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+        variants: {
+            variant: {
+                default: "bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt hover:bg-l-bg/80 dark:hover:bg-d-bg/80",
+                destructive:
+                  "bg-system-error-dark dark:bg-system-error-light text-d-txt dark:text-l-txt hover:bg-system-error-dark/80 dark:hover:bg-system-error-light/80",
+                outline:
+                  "border border-l-sec bg-l-bg-300/50 hover:bg-l-bg-400/60 text-l-txt hover:text-l-txt-700 dark:border-d-sec dark:bg-d-bg-700/50 dark:hover:bg-d-bg-600/60 dark:text-d-txt dark:hover:text-d-acc-400",
+                secondary:
+                  "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+                ghost: "hover:bg-l-acc-300/50 dark:hover:bg-d-acc-800/50 text-l-txt dark:text-d-txt hover:text-l-txt-700",
+                link: "text-l-txt dark:text-d-txt hover:text-l-txt-700 dark:hover:text-d-txt-400 duration-200 underline-offset-4 hover:underline",
+                expandIcon:
+                  "group relative bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt hover:bg-l-bg/80 dark:hover:bg-d-bg/80",
+                ringHover:
+                  "bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt hover:bg-l-bg/80 dark:hover:bg-d-bg/80 transition-all duration-300  hover:ring-2 hover:ring-l-sec/90 dark:hover:ring-d-acc-800/90 hover:ring-offset-2",
+                shine:
+                  "bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt animate-shine bg-gradient-to-r from-d-prim dark:from-l-prim via-d-prim/75 dark:via-l-prim/75 to-d-prim dark:to-l-prim bg-[length:400%_100%] ",
+                gooeyRight:
+                  "bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt relative z-0 overflow-hidden transition-all duration-500 before:absolute before:inset-0 before:-z-10 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-[100%] before:bg-gradient-to-r from-zinc-400 dark:from-zinc-800 before:transition-transform before:duration-1000  hover:before:translate-x-[0%] hover:before:translate-y-[0%] ",
+                gooeyLeft:
+                  "bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt relative z-0 overflow-hidden transition-all duration-500 after:absolute after:inset-0 after:-z-10 after:translate-x-[-150%] after:translate-y-[150%] after:scale-[2.5] after:rounded-[100%] after:bg-gradient-to-l from-zinc-400 dark:from-zinc-800 after:transition-transform after:duration-1000  hover:after:translate-x-[0%] hover:after:translate-y-[0%] ",
+                linkHover1:
+                  "bg-transparent relative after:absolute after:text-l-txt dark:after:text-d-txt after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300",
+                linkHover2:
+                  "relative after:absolute after:bg-primary after:bottom-2 after:h-[1px] after:w-2/3 after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300",
+            },
+            size: {
+                default: "h-10 px-4 py-2",
+                sm: "h-9 rounded-md px-3",
+                lg: "h-11 rounded-md px-8",
+                icon: "h-10 w-10",
+            },
         },
-        size: {
-            sm: " px-2 py-1 text-sm font-normal ",
-            md: " px-4 py-2 text-base font-semibold  border-2",
-            lg: " px-6 py-3 text-lg font-bold  border-2",
+        defaultVariants: {
+            variant: "default",
+            size: "default",
         },
-        textexpand: {
-            true: ""
-        },
-        rounded: {
-            true: " rounded-xl",
-            false: "rounded-md",
-        },
-        disabled: {
-            true: "cursor-not-allowed pointer-events-none opacity-70 dark:opacity-50",
-        }
-    },
-    compoundVariants: [
-        {
-            size: "sm",
-            textexpand: true,
-            className: "tracking-tighter hover:-tracking-tight"
-        },
-        {
-            size: "md",
-            textexpand: true,
-            className: "tracking-tight hover:tracking-normal"
-        },
-        {
-            size: "lg",
-            textexpand: true,
-            className: "tracking-normal hover:tracking-wide"
-        },
-    ],
-    defaultVariants: {
-        variant: "secondary",
-        size: "md",
-        rounded: true,
     }
-})
+);
 
-const ICObuttonVariants = cva({
-    variants: {
-        shape: {
-            round: " rounded-full",
-            square: " rounded-xl",
-        },
-        size: {
-            sm: "p-2",
-            md: "p-3",
-            lg: "p-4",
-        }
-    },
-    defaultVariants: {
-        shape: "round",
-        size: "md",
-    }
-})
-
-const calcColor = (variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined, Color:string | undefined) => {
-    if (Color) {
-        return Color;
-    } else {
-        if (variant === "primary" || variant === "oprimary") {
-            return "#CDAE23"
-        } else if (variant === "secondary" || variant === "osecondary") {
-            return "#059669"
-        } else if (variant === "tertiary" || variant === "otertiary") {
-            return "#84cc16"
-        } else if (variant === "soft" || variant === "osoft") {
-            return "#d97706"
-        } else if (variant === "text" || variant === "otext") {
-            return ""
-        }
-    }
+interface IconProps {
+  Icon: keyof typeof Feather
+  iconPlacement: "left" | "right";
 }
 
-const Button = React.forwardRef<HTMLButtonElement, React.HTMLAttributes<HTMLButtonElement> & VariantProps<typeof ButtonVariants> & VariantProps<typeof ICObuttonVariants> & {
-// Different return Controllers
-icon?: keyof typeof Feather;
-disabled?: boolean;
-loading?: 'circle' | 'bar' | 'beat' | 'bounce' | 'clip' | 'clock' | 'climbingbox' | 'dot' | 'fade' | 'grid' | 'hash' | 'moon' | 'pacman' | 'ppg' | 'puff' | 'pulse' | 'rise' | 'ring' | 'rotate' | 'scale' | 'skew' | 'square' | 'sync';
-Color?: string | undefined;
-outlined?: boolean;
-shape?: "round" | "square";
+interface IconRefProps {
+  Icon?: never;
+  iconPlacement?: undefined;
+}
 
-// addatives of normal button
-prefix?: keyof typeof Feather;
-suffix?: keyof typeof Feather;
-type?: "primary" | "secondary" | "tertiary" | "soft" | "text";
-textexpand?: boolean;
-}>(({ loading, disabled, icon, children, textexpand=false, size="md", rounded=true, className, prefix, suffix, outlined, type, shape, Color, ...props }, ref) => {
-    if (icon && !loading) {
-        const Suffix = suffix ? Feather[suffix] : null;
-        const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
-        if (children) {
-            return (
-                <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} ref={ref} {...props}>
-                    <div style={{
-                        marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px',
-                        marginLeft: '2px'
-                    }}><Icon icon={icon} color={calcColor(variant,Color)} size={size}/></div>
-                    {children}
-                    {Suffix && <Suffix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{
-                        marginLeft: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
-                    }} />}
-                </button>
-            )
-        } else {
-            // without 4-2 padding uniform...
-            return (
-                <button className={cn(cn(ButtonVariants({variant,size,disabled}), ICObuttonVariants({shape})))} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} ref={ref} {...props}>
-                    <Icon icon={icon} color={calcColor(variant,Color)}/>
-                </button>
-            )
-        }
-    } else if (!icon && loading) {
-        const Suffix = suffix ? Feather[suffix] : null;
-        const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
-        if (children) {
-            return (
-                <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} ref={ref} {...props}>
-                    <div style={{
-                        marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px',
-                        marginLeft: '2px'
-                    }}><Loader type={loading} size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} color={calcColor(variant, Color)}/></div>
-                    {children}
-                    {Suffix && <Suffix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{
-                        marginLeft: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
-                    }} />}
-                </button>
-            )
-        } else {
-            // without 4-2 padding uniform...
-            return (
-                <button className={cn(cn(ButtonVariants({variant,size,disabled}), ICObuttonVariants({shape})))} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} ref={ref} {...props}>
-                    <div><Loader type={loading} size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} color={calcColor(variant, Color)}/></div>
-                </button>
-            )
-        }
-    } else if (!icon && !loading) {
-        const Prefix = prefix ? Feather[prefix] : null;
-        const Suffix = suffix ? Feather[suffix] : null;
-        const variant: "primary" | "secondary" | "tertiary" | "soft" | "text" | "osoft" | "oprimary" | "osecondary"  | "otertiary" | "otext" | undefined = outlined ? `o${type}` : type as any; // IT WORKS !!!!!!!! IF IT AINT BROKE DONT FIX IT
-        return (
-            <button className={cn(ButtonVariants({variant, size, rounded, textexpand, disabled}), className)} style={{ display: 'inline-flex', alignItems: 'center', width: 'auto' }} disabled={disabled} ref={ref} {...props}>
-                {Prefix && <Prefix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{
-                    marginRight: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
-                }} />}
-                {children}
-                {Suffix && <Suffix size={size === 'sm' ? 10 : size === 'md' ? 15 : size === 'lg' ? 20 : 10} style={{
-                    marginLeft: size === 'sm' ? '2px' : size === 'md' ? '0.25rem' : size == 'lg' ? '0.5rem' : '2px'
-                }} />}
-            </button>
-        )
-    }
-})
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
+
+export type ButtonIconProps = IconProps | IconRefProps;
+
+const Button = React.forwardRef<
+  HTMLButtonElement,
+  ButtonProps & ButtonIconProps
+>(
+  (
+    {
+      className,
+      variant="default",
+      size,
+      asChild = false,
+      Icon,
+      iconPlacement,
+      ...props
+    },
+    ref
+  ) => {
+    const Comp = asChild ? Slot : "button";
+    const IconComponent = Icon ? Feather[Icon] : null;
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      >
+        {Icon && iconPlacement === "left" && IconComponent && (
+          <div className="w-0 translate-x-[0%] pr-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-100 group-hover:pr-2 group-hover:opacity-100">
+            <IconComponent className="pr-2"/>
+          </div>
+        )}
+        <Slottable>{props.children}</Slottable>
+        {Icon && iconPlacement === "right" && IconComponent && (
+          <div className="w-0 translate-x-[0%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-100 group-hover:pl-2 group-hover:opacity-100">
+            <IconComponent className="pl-2"/>
+          </div>
+        )}
+      </Comp>
+    );
+  }
+);
 Button.displayName = "Button";
 
-export { Button, ButtonVariants };
+const ShimmerborderButton = ({ children }: { children: React.ReactNode }) => {
+    return (
+      <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] shadow-lg focus:outline-none focus:ring-1 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50">
+        <span className="absolute inset-[-1000%] animate-[spin_5s_linear_infinite_reverse] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#fff_0%,#000_7%)] bg-[conic-gradient(from_90deg_at_50%_50%,#000_0%,#fff_5%)]" />
+        <span className="inline-flex h-full w-44 cursor-pointer items-center justify-center rounded-full bg-primary-900 px-3 py-1 font-semibold text-zinc-800 dark:text-zinc-200 backdrop-blur-xl bg-white/30 dark:bg-zinc-900/50">
+          {children}
+        </span> 
+      </button>
+    )
+}
 
-
-
+export { Button, ShimmerborderButton, buttonVariants };
+        

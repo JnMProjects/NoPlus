@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@ui/Button";
-import * as Feather from "react-feather";
-import * as FIcon from "@ui/Feather";
+import { Button, ShimmerborderButton } from "@ui/Button";
+import * as Feather from "react-feather"
 
 const meta: Meta = {
     title: "Components/UI/Button",
@@ -13,12 +12,12 @@ const meta: Meta = {
             defaultValue: "Button",
             control: "text",
         },
-        type: {
-            name: "Type",
+        variant: {
+            name: "Variant",
             description: "The variant of the button",
             control: {
                 type: "select",
-                options: ["primary", "secondary", "tertiary", "text", "icon"],
+                options: ["default", "destructive", "outline", "ghost", "link", "expandIcon", "ringHover", "shine", "gooeyLeft", "gooeyRight", "linkHover1", "linkHover2"],
             },
         },
         size: {
@@ -26,185 +25,83 @@ const meta: Meta = {
             description: "The size of the button",
             control: {
                 type: "select",
-                options: ["sm", "md", "lg"],
+                options: ["sm", "lg", "icon"],
             },
         },
-        rounded: {
-            name: "Rounded",
-            description: "Whether the button should be rounded",
-            control: "boolean",
-        },
-        disabled: {
-            name: "Disabled",
-            description: "Whether the button should be disabled",
-            control: "boolean",
-        },
-        outlined: {
-            name: "Outlined",
-            description: "Whether the button should be outlined",
-            control: "boolean",
-        },
-        textexpand: {
-            name: "Text Expand",
-            description: "Hover animation for text buttons",
-            defaultValue: false,
-            control: "boolean",
-        },
-        shape: {
-            name: "Shape",
-            description: "The shape of the button",
-            control: {
-                type: "select",
-                options: ["round", "square"],
-            },
-        },
-        Prefix: {
-            name: "Prefix",
-            description: "The prefix icon of the button",
-            control: {
-                type: "select",
-                options: Object.keys(Feather),
-            },
-        },
-        Suffix: {
-            name: "Suffix",
-            description: "The suffix icon of the button",
-            control: {
-                type: "select",
-                options: Object.keys(Feather),
-            },
-        },
-        Icon: {
+        icon: {
             name: "Icon",
-            description: "The icon of the button",
+            description: "The Icon To Display",
             control: {
                 type: "select",
                 options: Object.keys(Feather),
-            },
+            }
         },
-        Loading: {
-            name: "Loading",
-            description: "The loading state of the button",
+        iconPlacement: {
+            name: "Icon Placement",
+            description: "The Placement of the icon",
             control: {
                 type: "select",
-                options: Object.keys(FIcon.Icon),
-            },
-        },
+                options: ["left", "right"]
+            }
+        }
     }
 }
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {
-    args: {
-        children: "Button",
-        type: "secondary",
-        size: "md",
-        rounded: true,
-        disabled: false,
-        outlined: false,
-        textexpand: false,
-    }
+export const Default = () => {
+    return <Button>Button</Button>
 }
 
-export const Primary: Story = {
-    args: {
-        ...Default.args,
-        type: "primary",
-        children: "Primary",
-    }
+export const Destructive = () => {
+    return <Button variant="destructive">Button</Button>
 }
 
-export const Secondary: Story = {
-    args: {
-        ...Default.args,
-        type: "secondary",
-        children: "Secondary",
-    }
+export const Outline = () => {
+    return <Button variant="outline">Button</Button>
 }
 
-export const Tertiary: Story = {
-    args: {
-        ...Default.args,
-        type: "tertiary",
-        children: "Tertiary",
-    }
+export const Ghost = () => {
+    return <Button variant="ghost">Button</Button>
 }
 
-export const Soft: Story = {
-    args: {
-        ...Default.args,
-        type: "soft",
-        children: "Soft"
-    }
+export const Link = () => {
+    return <Button variant="link">Button</Button>
 }
 
-export const Text: Story = {
-    args: {
-        ...Default.args,
-        type: "text",
-        children: "Text",
-    }
+export const ExpandIconLeft = () => {
+    return <Button variant="expandIcon" iconPlacement="left" Icon="ArrowLeft" >Button</Button>
 }
 
-export const OutlinedPrimary: Story = {
-    args: {
-        ...Primary.args,
-        outlined: true,
-    }
+export const ExpandIconRight = () => {
+    return <Button variant="expandIcon" iconPlacement="right" Icon="ArrowRight" >Button</Button>
 }
 
-export const OutlinedSecondary: Story = {
-    args: {
-        ...Secondary.args,
-        outlined: true,
-    }
+export const RingHover = () => {
+    return <Button variant="ringHover">Button</Button>
 }
 
-export const OutlinedTertiary: Story = {
-    args: {
-        ...Tertiary.args,
-        outlined: true,
-    }
+export const Shine = () => {
+    return <Button variant="shine">Button</Button>
 }
 
-export const OutlinedSoft: Story = {
-    args: {
-        ...Soft.args,
-        outlined: true,
-    }
+export const GooeyLeft = () => {
+    return <Button variant="gooeyLeft">Button</Button>
 }
 
-export const Disabled: Story = {
-    args: {
-        ...Default.args,
-        disabled: true,
-        children: "Disabled",
-    }
+export const GooeyRight = () => {
+    return <Button variant="gooeyRight">Button</Button>
 }
 
-export const Loading: Story = {
-    args: {
-        ...Default.args,
-        loading: "hash",
-        children: "Loading",
-    }
+export const LinkHoverEffect1 = () => {
+    return <Button variant="linkHover1">Not Working</Button>
 }
 
-export const JustLoading: Story = {
-    args: {
-        ...Default.args,
-        loading: "hash",
-        children: "",
-        shape: "round",
-    }
+export const LinkHoverEffect2 = () => {
+    return <Button variant="linkHover2">Not Working</Button>
 }
 
-export const Icon: Story = {
-    args: {
-        ...Default.args,
-        icon: "GitHub",
-        children: "",
-    }
+export const ShimmerBorderButton = () => {
+    return <ShimmerborderButton>Button</ShimmerborderButton>
 }

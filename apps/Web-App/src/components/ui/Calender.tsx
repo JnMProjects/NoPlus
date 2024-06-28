@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "react-feather"
 import { DayPicker } from "react-day-picker"
 
 import { cn } from "../twm"
-import { ButtonVariants } from "@ui/Button"
+import { buttonVariants } from "@ui/Button"
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>
 
@@ -26,7 +26,7 @@ function Calendar({
         caption_label: "text-sm text-l-txt dark:text-d-txt font-medium",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
-          ButtonVariants({ variant: "osoft"}),
+          buttonVariants({ variant: "outline"}),
           "h-7 w-7 p-0 opacity-50 hover:opacity-100"
         ),
         nav_button_previous: "absolute left-1",
@@ -38,7 +38,7 @@ function Calendar({
         row: "flex w-full mt-2",
         cell: "h-9 w-9 text-l-txt dark:text-d-txt text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-l-accent/50 dark:[&:has([aria-selected].day-outside)]:bg-d-accent/50 [&:has([aria-selected])]:bg-l-accent dark:[&:has([aria-selected])]:bg-d-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
-          ButtonVariants({ variant: "text" }),
+          buttonVariants({ variant: "ghost" }),
           "h-9 w-9 p-0 font-normal aria-selected:opacity-100"
         ),
         day_range_end: "day-range-end",

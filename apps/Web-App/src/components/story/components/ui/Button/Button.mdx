@@ -1,180 +1,37 @@
 import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks';
 import * as ButtonStories from './Button.stories';
-import { Button } from "@ui/Button";
-import {
-    Drawer,
-    DrawerTrigger,
-    DrawerContent,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerDescription,
-    DrawerClose,
-    DrawerFooter,
-    Collapse,
-    CollapseGroup,
-    Container,
-} from '@layout';
-import * as FeatherIcons from 'react-feather';
 
 <Meta of={ButtonStories} />
 # Button
-Button are used to initialize an action, either in the background or foreground of the app.
-It comes in different Combinations and automaticly adjust to Dark or Light Mode
-It can Display FeatherIcons and Loaders _That was an entire Week of my Life_
-## Default
+<Primary />
+## Button Variants
 
-<Canvas of={ButtonStories.Default}/>
-### Buttons Normaly are Being Controled by these Arguments
-<Controls of={ButtonStories.Default} exclude={['Shape','Icon','Loading','Prefix','Suffix']}/>
-### **But it can offer Mutch more**
+The `Button` component supports the following variants:
 
-<CollapseGroup>
-    <Collapse trigger="Variants" title="Everything from Primary to Soft" defaultExpanded>
-        **The Button Can have one of these variants (declared as type="")**
-        - type= "**primary**" - The Primary Button
-        - type="**secondary**" - The Secondary Button
-        - type="**tertiary**" - The Tertiary Button
-        - type="**soft**" - The Soft Button
-        - type="**text**" - The Text only Button Button
-        <Container row className="p-4 items-center justify-around w-full">
-            <Button type="primary" className='pr-2'>Primary</Button>
-            <Button type="secondary" className='pl-2 pr-2'>Secondary</Button>
-            <Button type="tertiary" className='pl-2 pr-2'>Tertiary</Button>
-            <Button type="soft" className='pl-2 pr-2'>Soft</Button>
-            <Button type="text"className='pl-2'>Text</Button>
-        </Container>
-        **These Buttons also have another Prop that combines with the type Prop:**
-        ### The Outline Prop
-        - **outlined** - Changes Variant Pool to Outline Pool
-        <Container row className="p-4 items-center justify-around w-full">
-            <Button type="primary" outlined className='pr-2'>Primary</Button>
-            <Button type="secondary" outlined className='pl-2 pr-2'>Secondary</Button>
-            <Button type="tertiary" outlined className='pl-2 pr-2'>Tertiary</Button>
-            <Button type="soft" outlined className='pl-2 pr-2'>Soft</Button>
-            <Button type="text" outlined className='pl-2'>Text</Button>
-        </Container> 
-        ### The Disabled Prop
-        - **disabled** - Changes the Button to a Disabled State
-        <Container row className="p-4 items-center justify-around w-full">
-            <Button type="primary" disabled className='pr-2'>Primary</Button>
-            <Button type="secondary" disabled className='pl-2 pr-2'>Secondary</Button>
-            <Button type="tertiary" disabled className='pl-2 pr-2'>Tertiary</Button>
-            <Button type="soft" disabled className='pl-2 pr-2'>Soft</Button>
-            <Button type="text" disabled className='pl-2'>Text</Button>
-        </Container>
-        _
-        <Drawer>
-            <DrawerTrigger>
-                Try It!
-            </DrawerTrigger>
-            <DrawerContent>
-                <DrawerHeader>
-                    <DrawerTitle >
-                        Try It!
-                    </DrawerTitle>
-                    <DrawerDescription>
-                        Try the Variants and Outlines
-                    </DrawerDescription>
-                    _Friendly Reminder:_
+- `default`: The default button variant.
+- `destructive`: A button variant for destructive actions.
+- `outline`: A button variant with an outline.
+- `secondary`: A secondary button variant.
+- `ghost`: A button variant with a transparent background.
+- `link`: A button variant that looks like a link.
+- `expandIcon`: A button variant with an expand icon.
+- `ringHover`: A button variant with a hover effect.
+- `shine`: A button variant with a shine animation.
+- `gooeyRight`: A button variant with a gooey effect on the right side.
+- `gooeyLeft`: A button variant with a gooey effect on the left side.
+- `linkHover1`: A button variant with a hover effect on the bottom border.
+- `linkHover2`: A button variant with a hover effect on the bottom border.
 
-                    _types = primary,secondary,tertiary,soft,text_
+## Button Sizes
 
-                    _outline_
+The `Button` component supports the following sizes:
 
-                    _disabled_
-                    <Canvas of={ButtonStories.Primary}/>
-                    <Controls of={ButtonStories.Primary} exclude={['Shape','Icon','Loading','Prefix','Suffix']}/>
-                    <DrawerClose>
-                        Close
-                    </DrawerClose>
-                </DrawerHeader>
-                <DrawerFooter>
-                </DrawerFooter>
-            </DrawerContent>
-        </Drawer>
-    </Collapse> 
-    <Collapse trigger="Icons" title="Prefixes, Suffixes and Icons">
-        **Prefixes, Suffixes and Icons use FeatherIcons as a Base**
-        _This means that all FeatherIcons are valid Props_
-        - **prefix**=<FeatherIcons.GitBranch size={12}/> - The Prefix will be displayed before the Button Text (Children)
-        - children <FeatherIcons.GitCommit size={12} /> - The Button Text
-        - **suffix**=<FeatherIcons.GitPullRequest size={12}/> - The Suffix will be displayed after the Button Text (Children)
-        #### The Icon Prop
-        **The Icon functions the same as the Prefix and Suffix but is build to be used as a Standalone Button with icon**
-        it comes with auto collering and auto sizing
+- `default`: The default button size.
+- `sm`: A small button size.
+- `lg`: A large button size.
+- `icon`: A button size for icon-only buttons.
 
-        <Button type='soft' outlined prefix='GitBranch'>Prefix</Button>
-        <Button type='soft' outlined suffix='GitPullRequest'>Suffix</Button>
-        <Button type='soft' outlined icon='GitCommit'></Button>
-        _
-        <Drawer>
-            <DrawerTrigger>
-                Try It!
-            </DrawerTrigger>
-            <DrawerContent>
-                <DrawerHeader>
-                    <DrawerTitle >
-                        Try It!
-                    </DrawerTitle>
-                    <DrawerDescription>
-                        Try the Prefixes, Suffixes and Icons
-                    </DrawerDescription>
-                    _Friendly Reminder:_
+## Example Usage
 
-                    _prefix="[IconName]"_
-
-                    _suffix="[IconName]"_
-
-                    _icon="[IconName]"_
-                    <Canvas of={ButtonStories.Primary}/>
-                    <Controls of={ButtonStories.Primary} exclude={['Shape','Loading']}/>
-                    <DrawerClose>
-                        Close
-                    </DrawerClose>
-                </DrawerHeader>
-                <DrawerFooter>
-                </DrawerFooter>
-            </DrawerContent>
-        </Drawer>
-    </Collapse>
-    <Collapse trigger="Loaders in Buttons" title="Loading...">
-        **The Loaders are designed after the Icon Prop** (read @UI/Button#Icons for more info)
-        #### Different Loaders
-        **There are actualy too many loaders to be shown here so please read @UI/Loader**
-
-        - **loading** = "[Loader Name]" - The Loader will be displayed before the Button Text (Children)
-
-        When keeping the Children / Text clear the Loader turns Round like the Icon
-
-        <Button type='soft' loading='hash' className='pr-2'>With Text</Button>
-        <Button type='soft' loading='hash' className='pr-2'></Button>
-        _
-        <Drawer>
-            <DrawerTrigger>
-                Try It!
-            </DrawerTrigger>
-            <DrawerContent>
-                <DrawerHeader>
-                    <DrawerTitle >
-                        Try It!
-                    </DrawerTitle>
-                    <DrawerDescription>
-                        Try the Loaders
-                    </DrawerDescription>
-                    _Friendly Reminder:_
-
-                    _loading="[Loader Name]"_
-                    <Canvas of={ButtonStories.Primary}/>
-                    <Controls of={ButtonStories.Primary} exclude={['Shape','Icon','Prefix','Suffix','Icon']}/>
-                    <DrawerClose>
-                        Close
-                    </DrawerClose>
-                </DrawerHeader>
-                <DrawerFooter>
-                </DrawerFooter>
-            </DrawerContent>
-        </Drawer>
-
-    </Collapse>
-</CollapseGroup>
-
+Here's an example of how to use the `Button` component:
+<Source of={ButtonStories.Default} />

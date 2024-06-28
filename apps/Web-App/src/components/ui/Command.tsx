@@ -7,6 +7,7 @@ import { Search } from "react-feather"
 
 import { cn } from "@components/twm"
 import { Dialog, DialogWrapper } from "@layout/Dialog"
+import { Popup } from "@layout/Popup"
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
@@ -16,6 +17,7 @@ const Command = React.forwardRef<
     ref={ref}
     className={cn(
       "flex h-full w-full flex-col overflow-hidden rounded-md bg-l-bg-200 dark:bg-d-bg-800 text-l-txt dark:text-d-txt-100 border border-l-acc dark:border-d-acc",
+      "[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-l-prim dark:[&_[cmdk-group-heading]]:text-d-prim [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5",
       className
     )}
     {...props}
@@ -25,17 +27,28 @@ Command.displayName = CommandPrimitive.displayName
 
 interface CommandDialogProps extends DialogProps {
   trigger: string
+  triggervariant?: "text" | "primary" | "secondary" | "tertiary" | "soft"
 }
 
-const asDialog = ({ children, trigger, ...props }: CommandDialogProps) => {
+const asDialog = ({ children, trigger, triggervariant, ...props }: CommandDialogProps) => {
   return ( 
-    <DialogWrapper trigger={trigger}>
+    <DialogWrapper trigger={trigger} triggervariant={triggervariant}>
         <Dialog className="overflow-hidden p-0 shadow-lg" {...props}>
           <Command passthrough className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-l-prim dark:[&_[cmdk-group-heading]]:text-d-prim [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
             {children}
           </Command>
         </Dialog>
     </DialogWrapper>
+  )
+}
+
+const asPopup = ({ children, trigger, triggervariant, ...props}: CommandDialogProps) => {
+  return (
+    <Popup trigger={trigger} triggervariant={triggervariant}>
+      <Command passthrough className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-l-prim dark:[&_[cmdk-group-heading]]:text-d-prim [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
+            {children}
+      </Command>
+    </Popup>
   )
 }
 
@@ -135,7 +148,7 @@ const Shortcut = ({
   return (
     <span
       className={cn(
-        "ml-auto text-xs tracking-widest text-l-txt-500 dark:text-d-txt-500",
+        "ml-auto text-s tracking-widest font-bold text-l-txt-500 dark:text-slate-100",
         className
       )}
       {...props}
@@ -147,6 +160,7 @@ Shortcut.displayName = "CommandShortcut"
 export {
   Command as Base,
   asDialog,
+  asPopup,
   Input,
   List,
   Empty,

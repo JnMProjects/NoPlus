@@ -1,0 +1,88 @@
+import { Meta, Canvas, Primary } from "@storybook/blocks"
+import * as CommandStories from "./Command.stories"
+import { Collapse, CollapseGroup } from '@layout/.'
+
+<Meta of={CommandStories} />
+# Command
+The Command component is used for giving the User a fast and Simple way to Interact and/or Sellect something.
+--
+<Primary />
+
+<CollapseGroup title="Usecases:">
+    <Collapse trigger="As a Component">
+        <Canvas of={CommandStories.AsDefault} />
+    </Collapse>
+    <Collapse trigger="As a Dialog">
+        <Canvas of={CommandStories.AsDialog} />
+    </Collapse>
+    <Collapse trigger="As a Popup">
+        <Canvas of={CommandStories.AsPopup} />
+    </Collapse>
+</CollapseGroup>
+
+--
+
+<CollapseGroup title="The SubComponents">
+    <Collapse trigger="Command.Base" title="The Base" defaultExpanded>
+        The Base Component wraps the Command.
+
+        If you want to use it as a Dialog or Popup, replace it with
+        - Command.asDialog
+        - Command.asPopup
+
+        <CollapseGroup>
+            <Collapse trigger="Command.Input" title="The Input">
+                The Input field is customizable with the Prop:
+                - placeholder=""
+                The Set String will be displayed until input is given
+            </Collapse>
+            <Collapse trigger="Command.List" title="The List of Searchobjects">
+                The List Component serves as A Wrapper
+
+                <CollapseGroup>
+                    <Collapse trigger="Command.Empty" title="The Not Found String object">
+                        -- Child of .List --                The Empty Components Children will be displayed when the Input doesnt match any of the Objects provided in the .List
+
+
+                    </Collapse>
+                    <Collapse trigger="Command.Group" title="The Group Wrapper">
+                        -- Child of .List --                The Group Component wraps the Items and takes a heading as a String Prop
+
+
+                        - heading=""
+
+                        <CollapseGroup>
+                            <Collapse trigger="Command.Item" title="The Item">
+                                -- Child of .Group --
+
+                                The Item takes several Props in form of Children:
+                                - An Icon as an Import form "react-feather" (add className="mr-2 h-4 w-4")
+                                - A < span >, the Search Prop
+                                - A Shortcut (Explained in Command.Shortcut)
+
+                                Functions:
+                                - onSelect={() => {}} takes a arrow function if selected // .Shortcut DOES NOT ADD AUTOMATIC SHORTCUTS
+
+                                <CollapseGroup>
+                                    <Collapse trigger="Command.Shortcut" title="The Shortcut">
+                                        -- Child of .Item --
+
+                                        The Command.Shortcut Component aligns the Children on the Right with Collor,
+                                        BUT IT DOES NOT ADD AUTOMATIC Shortcuts
+                                    </Collapse>
+                                </CollapseGroup>
+                            </Collapse>
+                            <Collapse trigger="Command.Seperator" title="The Cosmetic Seperator">
+                                -- Child of .Group --
+
+                                The Seperator allows a seperation bar to be placed within a Group
+
+                                Takes no Props
+                            </Collapse>
+                        </CollapseGroup>
+                    </Collapse>
+                </CollapseGroup>
+            </Collapse>
+        </CollapseGroup>
+    </Collapse>
+</CollapseGroup>

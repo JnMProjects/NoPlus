@@ -49,6 +49,24 @@ const BadgeVariants = cva(
     }
 )
 
+/**
+ * A customizable badge component.
+ *
+ * @component
+ * @example
+ * // Example usage of Badge component
+ * <Badge type="primary" size="md">New</Badge>
+ *
+ * @param {React.HTMLAttributes<HTMLSpanElement>} props - The HTML attributes for the badge.
+ * @param {VariantProps<typeof BadgeVariants>} props - The variant props for the badge.
+ * @param {boolean} [props.opacity=false] - Whether the badge should have opacity.
+ * @param {keyof typeof Feather} [props.prefix] - The prefix icon for the badge.
+ * @param {keyof typeof Feather} [props.suffix] - The suffix icon for the badge.
+ * @param {"primary" | "secondary" | "accent" | "success" | "danger" | "warning" | "info"} [props.type="secondary"] - The type of the badge.
+ * @param {"sm" | "md" | "lg"} [props.shadow="sm"] - The shadow size of the badge.
+ * @param {React.Ref<HTMLSpanElement>} ref - The ref for the badge.
+ * @returns {JSX.Element} The rendered Badge component.
+ */
 const Badge = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement> & VariantProps<typeof BadgeVariants> & {
     opacity?: boolean;
     prefix?: keyof typeof Feather;
@@ -76,6 +94,33 @@ const Badge = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanEle
 })
 Badge.displayName = "Badge";
 
+/**
+ * A component that displays an icon with a badge.
+ *
+ * @component
+ * @example
+ * <BadgedIcon
+ *   type="primary"
+ *   size="md"
+ *   shadow="sm"
+ *   opacity={false}
+ *   icon="FeatherIconName"
+ *   className="custom-class"
+ *   color="#000000"
+ *   IconSize={30}
+ * />
+ *
+ * @param {React.HTMLAttributes<HTMLSpanElement>} props - The HTML attributes for the span element.
+ * @param {VariantProps<typeof BadgeVariants>} props - The variant props for the badge.
+ * @param {("primary" | "secondary" | "accent" | "success" | "danger" | "warning" | "info")} [props.type="secondary"] - The type of the badge.
+ * @param {("sm" | "md" | "lg")} [props.shadow="sm"] - The shadow size of the badge.
+ * @param {boolean} [props.opacity=false] - Whether the badge should have opacity.
+ * @param {keyof typeof Feather} props.icon - The name of the Feather icon to display.
+ * @param {string} [props.color] - The color of the icon.
+ * @param {number} [props.IconSize=30] - The size of the icon.
+ * @param {React.Ref<HTMLSpanElement>} ref - The ref to attach to the span element.
+ * @returns {JSX.Element} The rendered BadgedIcon component.
+ */
 const BadgedIcon = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement> & VariantProps<typeof BadgeVariants> & {
     type?: "primary" | "secondary" | "accent" | "success" | "danger" | "warning" | "info";
     shadow?: "sm" | "md" | "lg";

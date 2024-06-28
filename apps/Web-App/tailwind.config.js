@@ -381,6 +381,10 @@ module.exports = {
           from: { opacity: '0', transform: 'translateX(2px)' },
           to: { opacity: '1', transform: 'translateX(0)' },
         },
+        "shine": {
+            from: { backgroundPosition: '200% 0' },
+            to: { backgroundPosition: '-200% 0' },
+        },
       },
       animation: {
         "collapse-down": "collapse-down 0.2s ease-out",
@@ -391,6 +395,7 @@ module.exports = {
         "slideRightAndFade": 'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         "slideDownAndFade": 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         "slideLeftAndFade": 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        "shine": "shine 8s ease-in-out infinite",
       },
     },
   },

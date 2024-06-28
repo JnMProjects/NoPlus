@@ -20,13 +20,29 @@ async function parseGitAvatar(username: string) {
     return response.user.avatarUrl;
 }
 
-export default async function GET(req: any, res: any) {
-    const { username } = req.query;
+export async function GET(req:Request) {
+    const headers = await req.headers
+    const username = headers.get('username');    
+    console.log("GET GIT PROFILE")
 
-    try {
-        const avatarUrl = await parseGitAvatar(username);
-        res.status(200).json({ avatarUrl });
-    } catch (error) {
-        res.status(500).json({ error: "Internal Server Error" });
+
+    if (!username) {
+        return new Response(JSON.stringify({
+            status: 300,
+            message: "No Input Given"
+        }))
+    } else {
+        try {
+            const res = await parseGitAvatar(username)
+            return new Response(300)
+        } catch (error) {
+            console.error(error)
+            return new Response(JSON.stringify({
+                status: 500,
+                message: "Internal Server Error",
+                error: error
+            }))
+
+        }
     }
 }

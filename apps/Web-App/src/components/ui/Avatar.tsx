@@ -12,6 +12,28 @@ interface AvatarProps extends React.HTMLAttributes<HTMLImageElement> {
 
 
 
+/**
+ * Avatar component displays a user's avatar image.
+ *
+ * @component
+ * @example
+ * // Usage:
+ * <Avatar
+ *   username="john_doe"
+ *   placeholder={false}
+ *   size={100}
+ *   className="avatar"
+ *   links={true}
+ * />
+ *
+ * @param {object} props - The component props.
+ * @param {string} props.username - The username of the user.
+ * @param {boolean} [props.placeholder=false] - Determines whether to show a placeholder avatar or not.
+ * @param {number} [props.size] - The size of the avatar image in pixels.
+ * @param {string} [props.className] - Additional CSS class names for the avatar component.
+ * @param {boolean} [props.links=false] - Determines whether to wrap the avatar image with a link or not.
+ * @returns {JSX.Element} The Avatar component.
+ */
 const Avatar: React.FC<AvatarProps> = ({ username, placeholder = false, size, className, links, ...props }) => {
     const [avatarUrl, setAvatarUrl] = React.useState<string | undefined>(undefined);
     const [profileLink, setProfileLink] = React.useState<string | undefined>(undefined);
@@ -51,6 +73,17 @@ interface AvatarGroupProps extends React.HTMLAttributes<HTMLImageElement> {
     holderstyle?: string;
 }
 
+/**
+ * AvatarGroup component displays a group of avatars with an optional count of hidden users.
+ *
+ * @param users - An array of usernames to display as avatars.
+ * @param limit - The maximum number of avatars to display. Defaults to the length of the `users` array.
+ * @param size - The size of each avatar in pixels. Defaults to 100.
+ * @param className - Additional CSS class names to apply to the container div.
+ * @param holderstyle - Additional inline styles to apply to the container div.
+ * @param props - Additional props to pass to the container div.
+ * @returns The AvatarGroup component.
+ */
 const AvatarGroup: React.FC<AvatarGroupProps> = ({ users, limit = users.length, size = 100, className, holderstyle, ...props }) => {
     const visibleUsers = users.slice(0, limit);
     const hiddenUsers = users.length - limit

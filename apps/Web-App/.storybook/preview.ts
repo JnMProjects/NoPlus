@@ -59,7 +59,6 @@ const preview: Preview = {
       defaultTheme: 'dark',
   }),],
 
-  tags: ["autodocs"]
 };
 addons.setConfig({
   theme: jnmp,

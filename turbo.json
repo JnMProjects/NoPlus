@@ -29,6 +29,10 @@
     "dev:story": {
       "cache": false,
       "persistent": true   
+    },
+    "webdev": {
+      "cache": false,
+      "persistent": true
     }
   }
 }

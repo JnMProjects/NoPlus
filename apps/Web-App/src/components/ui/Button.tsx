@@ -65,6 +65,20 @@ export interface ButtonProps
 
 export type ButtonIconProps = IconProps | IconRefProps;
 
+/**
+ * A customizable button component.
+ *
+ * @component Button
+ * @param {string} className - The CSS class name for the button.
+ * @param {string} variant - The variant of the button (default, primary, secondary, etc.).
+ * @param {string} size - The size of the button (small, medium, large, etc.).
+ * @param {boolean} asChild - Determines if the button should be rendered as a child component.
+ * @param {React.ElementType} Icon - The icon component to be displayed within the button.
+ * @param {string} iconPlacement - The placement of the icon within the button (left, right, etc.).
+ * @param {React.Ref<HTMLButtonElement>} ref - The ref object for the button element.
+ * @param {React.ButtonHTMLAttributes<HTMLButtonElement>} props - Additional props for the button element.
+ * @returns {JSX.Element} The rendered button component.
+ */
 const Button = React.forwardRef<
   HTMLButtonElement,
   ButtonProps & ButtonIconProps

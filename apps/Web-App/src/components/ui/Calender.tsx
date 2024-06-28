@@ -9,6 +9,15 @@ import { buttonVariants } from "@ui/Button"
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>
 
+/**
+ * Renders a calendar component.
+ *
+ * @param className - The CSS class name for the calendar component.
+ * @param classNames - Additional CSS class names for the calendar component.
+ * @param showOutsideDays - Determines whether to show days outside the current month.
+ * @param props - Additional props to pass to the underlying DayPicker component.
+ * @returns The rendered calendar component.
+ */
 function Calendar({
   className,
   classNames,
@@ -65,12 +74,16 @@ Calendar.displayName = "Calendar"
 
 import { Popup } from "../layout"
 
+/**
+ * Renders a calendar wrapped in a popup.
+ * @returns The CalendarPopup component.
+ */
 const CalendarPopup = () => {
-    return (
-        <Popup trigger="Show Calendar">
-            <Calendar />
-        </Popup>
-    )
+  return (
+    <Popup trigger="Show Calendar">
+      <Calendar />
+    </Popup>
+  )
 }
 
 export { Calendar, CalendarPopup }

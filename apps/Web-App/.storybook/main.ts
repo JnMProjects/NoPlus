@@ -18,8 +18,6 @@ const config: StorybookConfig = {
     options: {},
   },
 
-  docs: {},
-
   staticDirs: ["../public"],
 
   webpackFinal: async (config) => {
@@ -43,7 +41,9 @@ const config: StorybookConfig = {
 
   typescript: {
     reactDocgen: 'react-docgen-typescript'
-  }
+  },
+
+  docs: {}
 };
 export default config;
 

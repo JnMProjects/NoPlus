@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "webdev": "turbo dev:next dev:story --filter=noplus-web",
     "lint": "turbo lint",
     "next:web": "turbo dev:next --filter=noplus-web",
     "story:web": "turbo dev:story --filter=noplus-web",

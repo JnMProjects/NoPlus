@@ -6,6 +6,22 @@ import { Check, Minus } from "react-feather"
 
 import { cn } from "@components/twm"
 
+/**
+ * Checkbox component.
+ * 
+ * @component
+ * @example
+ * ```tsx
+ * <Checkbox intermediate={true}>Checkbox Label</Checkbox>
+ * ```
+ * 
+ * @param {object} props - The component props.
+ * @param {string} props.className - The additional class name for the checkbox container.
+ * @param {React.Ref} props.ref - The ref for the checkbox container.
+ * @param {boolean} props.intermediate - Determines if the checkbox is in an intermediate state.
+ * @param {React.ReactNode} props.children - The label for the checkbox.
+ * @returns {React.ReactElement} The rendered Checkbox component.
+ */
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> & {

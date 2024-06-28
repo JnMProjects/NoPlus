@@ -26,7 +26,7 @@ const DrawerTrigger = React.forwardRef<
         className={cn(" w-auto h-auto", className)}
         {...props}
     >
-      <Button type={variant="secondary"} outlined>{children}</Button>
+      <Button variant="outline">{children}</Button>
     </DrawerPrimitive.Trigger>
 ))
 DrawerTrigger.displayName = DrawerPrimitive.Trigger.displayName
@@ -42,7 +42,7 @@ const DrawerClose = React.forwardRef<
     className={cn("", className)}
     {...props}
   >
-    <Button type="soft" >{children}</Button>
+    <Button variant="outline" >{children}</Button>
   </DrawerPrimitive.Close>
 ))
 DrawerClose.displayName = "DrawerClose"

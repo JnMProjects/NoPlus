@@ -21,7 +21,7 @@ React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger> & { variant?: "p
     asChild
     {...props}
 >
-  <Button type={variant="tertiary"} outlined prefix={prefix}>{children}</Button>
+  <Button>{children}</Button>
 </PopoverPrimitive.Trigger>
 ))
 PopoverTrigger.displayName = PopoverPrimitive.Trigger.displayName

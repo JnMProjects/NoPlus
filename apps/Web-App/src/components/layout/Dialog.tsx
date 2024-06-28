@@ -27,7 +27,7 @@ const RawAlertRawDialogTrigger = React.forwardRef<
     ref={ref}
     asChild
   >
-    <Button type={triggervariant="primary"}>{children}</Button>
+    <Button >{children}</Button>
   </RawAlertRawDialogPrimitive.Trigger>
 ))
 RawAlertRawDialogTrigger.displayName = RawAlertRawDialogPrimitive.Trigger.displayName
@@ -131,7 +131,7 @@ const RawModalDialogAction = React.forwardRef<
     className={cn("", className)}
     {...props} asChild
   >
-    <Button type={actionvariant}>{children}</Button>
+    <Button >{children}</Button>
   </RawAlertRawDialogPrimitive.Action>
 ))
 RawModalDialogAction.displayName = RawAlertRawDialogPrimitive.Action.displayName
@@ -148,7 +148,7 @@ const RawAlertRawDialogCancel = React.forwardRef<
     )}
     {...props} asChild
   >
-    <Button type={closevariant ? closevariant : "soft"} outlined>{children}</Button>
+    <Button variant="outline" >{children}</Button>
   </RawAlertRawDialogPrimitive.Cancel>
 ))
 RawAlertRawDialogCancel.displayName = RawAlertRawDialogPrimitive.Cancel.displayName
@@ -214,7 +214,7 @@ const RawDialogTrigger = React.forwardRef<
     className={cn("mt-2 sm:mt-0", className)}
     {...props}
   >
-    <Button type={triggervariant}>{children}</Button>
+    <Button>{children}</Button>
   </RawDialogPrimitive.Trigger>
 ))
 RawDialogTrigger.displayName = RawDialogPrimitive.Trigger.displayName
@@ -232,7 +232,7 @@ const RawDialogClose = React.forwardRef<
     className={cn("mt-2 sm:mt-0", className)}
     {...props}
   >
-    {children && <Button type={closevariant}>{children}</Button>}
+    {children && <Button>{children}</Button>}
   </RawDialogPrimitive.Close>
 ))
 RawDialogClose.displayName = RawDialogPrimitive.Close.displayName

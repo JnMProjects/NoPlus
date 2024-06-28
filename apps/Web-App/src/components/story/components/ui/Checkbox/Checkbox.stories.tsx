@@ -56,7 +56,7 @@ export const Intermediate = () => {
                     }
                 }}
             >Intermediate</Checkbox>
-            <Button onClick={() => setChecked("intermediate")} type="text">Reset Intermediate</Button>
+            <Button onClick={() => setChecked("intermediate")} variant="ghost">Reset Intermediate</Button>
         </>
     );
 }
@@ -93,9 +93,9 @@ export const Disabled = () => {
                 {checked === "intermediate" && "Intermediate Checkbox with Text"}
                 {checked === "false" && "Unchecked Checkbox with Text"}
             </Checkbox>
-            <Button onClick={() => setChecked("true")} type="text">Set to True</Button>
-            <Button onClick={() => setChecked("intermediate")} type="text">Set to Intermediate</Button>
-            <Button onClick={() => setChecked("false")} type="text">Set to False</Button>
+            <Button onClick={() => setChecked("true")} variant="ghost">Set to True</Button>
+            <Button onClick={() => setChecked("intermediate")} variant="ghost">Set to Intermediate</Button>
+            <Button onClick={() => setChecked("false")} variant="ghost">Set to False</Button>
         </>
     );
 }
@@ -122,9 +122,9 @@ export const PlayAround = () => {
                 {checked === "intermediate" && "Intermediate Checkbox with Text"}
                 {checked === "false" && "Unchecked Checkbox with Text"}
             </Checkbox>
-            <Button onClick={() => setChecked("true")} type="text">Set to True</Button>
-            <Button onClick={() => setChecked("intermediate")} type="text">Set to Intermediate</Button>
-            <Button onClick={() => setChecked("false")} type="text">Set to False</Button>
+            <Button onClick={() => setChecked("true")} variant="ghost">Set to True</Button>
+            <Button onClick={() => setChecked("intermediate")} variant="ghost">Set to Intermediate</Button>
+            <Button onClick={() => setChecked("false")} variant="ghost">Set to False</Button>
         </>
     );
 }
